@@ -1,12 +1,16 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const services = document.querySelectorAll(".service");
-  services.forEach((service, index) => {
-    service.style.opacity = 0;
-    service.style.transform = "translateY(50px)";
-    setTimeout(() => {
-      service.style.transition = "all 0.5s ease-in-out";
-      service.style.opacity = 1;
-      service.style.transform = "translateY(0)";
-    }, index * 200);
-  });
+function goToLayer(layerId) {
+  const allLayers = document.querySelectorAll('.layer');
+  allLayers.forEach(layer => layer.classList.remove('active'));
+
+  const nextLayer = document.getElementById(layerId);
+  nextLayer.classList.add('active');
+}
+
+function goBack(previousLayerId) {
+  goToLayer(previousLayerId);
+}
+
+// Initialize the first layer
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('layer1').classList.add('active');
 });
