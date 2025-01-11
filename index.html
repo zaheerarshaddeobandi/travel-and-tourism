@@ -3,40 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel & Tourism Consultancy</title>
+  <title>Deep Dive Tourism Experience</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <h1>Explore the World with <span>Travel & Tourism</span></h1>
-      <p>Your dream destinations are just a click away.</p>
-      <a href="#services" class="btn">Explore Now</a>
-    </div>
-  </header>
+  <div id="layer1" class="layer">
+    <h1>Welcome to the World of Travel</h1>
+    <p>Explore different destinations, each deeper than the last.</p>
+    <button onclick="goToLayer('layer2')">Dive Deeper</button>
+  </div>
 
-  <section id="services" class="services">
-    <h2>Our Services</h2>
-    <div class="service-container">
-      <div class="service">
-        <h3>Destination Booking</h3>
-        <p>Book your trips to the most exotic locations around the globe.</p>
-      </div>
-      <div class="service">
-        <h3>Custom Packages</h3>
-        <p>Plan a trip tailored to your preferences and budget.</p>
-      </div>
-      <div class="service">
-        <h3>24/7 Support</h3>
-        <p>We’re here to assist you at every step of your journey.</p>
-      </div>
-    </div>
-  </section>
+  <div id="layer2" class="layer hidden">
+    <h1>Discover Exotic Destinations</h1>
+    <p>Find hidden gems and unique experiences.</p>
+    <button onclick="goToLayer('layer3')">Go Deeper</button>
+    <button onclick="goBack('layer1')">Go Back</button>
+  </div>
 
-  <footer class="footer">
-    <p>&copy; 2025 Travel & Tourism. All Rights Reserved.</p>
-  </footer>
+  <div id="layer3" class="layer hidden">
+    <h1>Uncover Mysteries of the World</h1>
+    <p>Dive into adventures you've never imagined.</p>
+    <button onclick="goToLayer('layer4')">Explore More</button>
+    <button onclick="goBack('layer2')">Go Back</button>
+  </div>
 
+  <div id="layer4" class="layer hidden">
+    <h1>You’ve Reached the Depths</h1>
+    <p>Welcome to the most immersive experience of your life!</p>
+    <button onclick="goBack('layer3')">Go Back</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
