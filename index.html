@@ -1,146 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel & Tourism Consultancy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body, h1, h2, h3, p {
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-        }
-        body {
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        header {
-            background: url('https://via.placeholder.com/1500x600') no-repeat center center;
-            background-size: cover;
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 3.5rem;
-            font-weight: 600;
-        }
-        header p {
-            font-size: 1.5rem;
-            margin-top: 10px;
-        }
-        .container {
-            width: 90%;
-            margin: auto;
-        }
-        .services {
-            display: flex;
-            justify-content: space-around;
-            margin: 40px 0;
-        }
-        .service-card {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 30%;
-            text-align: center;
-        }
-        .service-card h3 {
-            margin-top: 10px;
-        }
-        .testimonials {
-            background-color: #f8f8f8;
-            padding: 40px 0;
-        }
-        .testimonial {
-            text-align: center;
-            margin: 20px;
-        }
-        .testimonial p {
-            font-style: italic;
-            font-size: 1.2rem;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        .contact-form button {
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 15px 20px;
-            font-size: 1.1rem;
-            cursor: pointer;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel & Tourism Consultancy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<header>
+  <header class="header">
     <div class="container">
-        <h1>Welcome to the Best Travel Consultancy</h1>
-        <p>Plan your next vacation with expert guidance and customized services</p>
+      <h1>Explore the World with <span>Travel & Tourism</span></h1>
+      <p>Your dream destinations are just a click away.</p>
+      <a href="#services" class="btn">Explore Now</a>
     </div>
-</header>
+  </header>
 
-<div class="services container">
-    <div class="service-card">
-        <img src="https://via.placeholder.com/200x200" alt="Service 1" />
-        <h3>Adventure Tours</h3>
-        <p>Explore offbeat destinations with expert guides for a thrilling experience.</p>
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-container">
+      <div class="service">
+        <h3>Destination Booking</h3>
+        <p>Book your trips to the most exotic locations around the globe.</p>
+      </div>
+      <div class="service">
+        <h3>Custom Packages</h3>
+        <p>Plan a trip tailored to your preferences and budget.</p>
+      </div>
+      <div class="service">
+        <h3>24/7 Support</h3>
+        <p>We’re here to assist you at every step of your journey.</p>
+      </div>
     </div>
-    <div class="service-card">
-        <img src="https://via.placeholder.com/200x200" alt="Service 2" />
-        <h3>Honeymoon Packages</h3>
-        <p>Curated romantic getaways to make your special time unforgettable.</p>
-    </div>
-    <div class="service-card">
-        <img src="https://via.placeholder.com/200x200" alt="Service 3" />
-        <h3>Corporate Travel</h3>
-        <p>Business travel solutions with full-service assistance and convenience.</p>
-    </div>
-</div>
+  </section>
 
-<div class="testimonials">
-    <div class="container">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonial">
-            <p>"The honeymoon package was perfect! Every detail was taken care of." - Ayesha & Tariq</p>
-        </div>
-        <div class="testimonial">
-            <p>"Amazing adventure tour to the mountains. Highly recommend it!" - Zain & Ali</p>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <h2>Contact Us</h2>
-    <form class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-</div>
-
-<footer>
-    <p>&copy; 2025 Travel & Tourism Consultancy | <a href="#">Privacy Policy</a></p>
-</footer>
+  <footer class="footer">
+    <p>&copy; 2025 Travel & Tourism. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>
