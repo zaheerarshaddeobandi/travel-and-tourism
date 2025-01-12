@@ -1,341 +1,341 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore India offers custom travel packages, consultancy services, and expert advice for your dream vacation in India.">
-    <title>Explore India - Travel & Consultancy</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f8ff;
-        }
-        header {
-            background: linear-gradient(to right, #003366, #0073e6);
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            margin: 5px 0;
-        }
-        nav {
-            background-color: #005580;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            position: relative;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            padding: 10px 15px;
-            display: block;
-        }
-        nav ul li ul {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #004466;
-            padding: 0;
-        }
-        nav ul li:hover ul {
-            display: block;
-        }
-        nav ul li ul li {
-            width: 200px;
-        }
-        nav ul li ul li a {
-            padding: 10px;
-            text-align: left;
-        }
-        .hero-section {
-            background: url('https://via.placeholder.com/1600x600?text=Explore+India') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 150px 20px;
-        }
-        .hero-section h2 {
-            margin: 0;
-            font-size: 3em;
-        }
-        .content-section {
-            padding: 20px;
-            background-color: #fff;
-            margin: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .content-section h2 {
-            font-size: 2em;
-        }
-        .packages {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .package {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            width: 30%;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .package img {
-            width: 100%;
-            border-radius: 5px;
-        }
-        .testimonial {
-            background-color: #f9f9f9;
-            padding: 30px;
-            text-align: center;
-        }
-        .testimonial h3 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        .testimonial p {
-            font-style: italic;
-        }
-        .contact-form {
-            background-color: #fff;
-            padding: 30px;
-            margin: 20px 0;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        footer {
-            background: #003366;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
-        footer a {
-            color: #80c1ff;
-            text-decoration: none;
-        }
-        @media (max-width: 768px) {
-            .packages {
-                flex-direction: column;
-            }
-            .package {
-                width: 100%;
-            }
-        }
-        .about-section {
-            background-color: #e6f7ff;
-            padding: 40px 20px;
-        }
-        .about-section h2 {
-            text-align: center;
-            font-size: 2.5em;
-            color: #003366;
-        }
-        .about-section p {
-            font-size: 1.2em;
-            text-align: center;
-            color: #555;
-        }
-        .service-section {
-            background-color: #f0f0f0;
-            padding: 40px 20px;
-        }
-        .service-section h2 {
-            text-align: center;
-            font-size: 2.5em;
-            color: #003366;
-        }
-        .service-list {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 30px;
-            text-align: center;
-        }
-        .service-item {
-            width: 30%;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .service-item h3 {
-            font-size: 1.8em;
-            color: #003366;
-        }
-        .service-item p {
-            color: #555;
-            font-size: 1.1em;
-        }
-        .team-section {
-            padding: 40px 20px;
-        }
-        .team-section h2 {
-            text-align: center;
-            font-size: 2.5em;
-            color: #003366;
-        }
-        .team-list {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-        .team-member {
-            text-align: center;
-            width: 200px;
-        }
-        .team-member img {
-            width: 100%;
-            border-radius: 50%;
-        }
-        .team-member h3 {
-            color: #003366;
-            margin-top: 10px;
-        }
-        .team-member p {
-            color: #555;
-        }
-        .faq-section {
-            background-color: #f9f9f9;
-            padding: 40px 20px;
-        }
-        .faq-section h2 {
-            text-align: center;
-            font-size: 2.5em;
-            color: #003366;
-        }
-        .faq-item {
-            margin-bottom: 20px;
-        }
-        .faq-item h3 {
-            font-size: 1.8em;
-            color: #003366;
-        }
-        .faq-item p {
-            color: #555;
-        }
-        .testimonials-slider {
-            background-color: #e6f9ff;
-            padding: 50px 20px;
-        }
-        .testimonials-slider h2 {
-            text-align: center;
-            font-size: 2.5em;
-            color: #003366;
-        }
-        .testimonials-slider .slider {
-            display: flex;
-            overflow-x: scroll;
-            gap: 20px;
-        }
-        .testimonial-card {
-            background-color: #fff;
-            border-radius: 5px;
-            padding: 20px;
-            width: 250px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .testimonial-card p {
-            font-style: italic;
-            color: #555;
-        }
-        .testimonial-card h3 {
-            text-align: center;
-            font-size: 1.2em;
-            color: #003366;
-        }
-        .blog-section {
-            padding: 50px 20px;
-        }
-        .blog-section h2 {
-            text-align: center;
-            font-size: 2.5em;
-            color: #003366;
-        }
-        .blog-list {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .blog-item {
-            background-color: #fff;
-            padding: 20px;
-            width: 30%;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .blog-item img {
-            width: 100%;
-            border-radius: 5px;
-        }
-        .blog-item h3 {
-            text-align: center;
-            color: #003366;
-            font-size: 1.8em;
-        }
-        .blog-item p {
-            color: #555;
-            font-size: 1.1em;
-        }
-        .blog-item a {
-            text-decoration: none;
-            color: #0073e6;
-            font-weight: bold;
-        }
-        .newsletter-section {
-            background-color: #e6f7ff;
-            padding: 50px 20px;
-        }
-        .newsletter-section h2 {
-            text-align: center;
-            font-size: 2.5em;
-            color: #003366;
-        }
-        .newsletter-form {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .newsletter-form input[type="email"] {
-            padding: 10px;
-            width: 300px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-        .newsletter-form button {
-            padding: 10px 20px;
-            background-color: #003366;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+1.  <!DOCTYPE html>
+2.  <html lang="en">
+3.  <head>
+4.      <meta charset="UTF-8">
+5.      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+6.      <meta name="description" content="Explore India offers custom travel packages, consultancy services, and expert advice for your dream vacation in India.">
+7.      <title>Explore India - Travel & Consultancy</title>
+8.      <style>
+9.          body {
+10.             font-family: Arial, sans-serif;
+11.             margin: 0;
+12.             padding: 0;
+13.             background-color: #f0f8ff;
+14.         }
+15.         header {
+16.             background: linear-gradient(to right, #003366, #0073e6);
+17.             color: white;
+18.             text-align: center;
+19.             padding: 20px 0;
+20.         }
+21.         header h1 {
+22.             margin: 0;
+23.             font-size: 2.5em;
+24.         }
+25.         header p {
+26.             margin: 5px 0;
+27.         }
+28.         nav {
+29.             background-color: #005580;
+30.         }
+31.         nav ul {
+32.             list-style: none;
+33.             margin: 0;
+34.             padding: 0;
+35.             display: flex;
+36.             justify-content: center;
+37.         }
+38.         nav ul li {
+39.             position: relative;
+40.             margin: 0 15px;
+41.         }
+42.         nav ul li a {
+43.             text-decoration: none;
+44.             color: white;
+45.             padding: 10px 15px;
+46.             display: block;
+47.         }
+48.         nav ul li ul {
+49.             display: none;
+50.             position: absolute;
+51.             top: 100%;
+52.             left: 0;
+53.             background-color: #004466;
+54.             padding: 0;
+55.         }
+56.         nav ul li:hover ul {
+57.             display: block;
+58.         }
+59.         nav ul li ul li {
+60.             width: 200px;
+61.         }
+62.         nav ul li ul li a {
+63.             padding: 10px;
+64.             text-align: left;
+65.         }
+66.         .hero-section {
+67.             background: url('https://via.placeholder.com/1600x600?text=Explore+India') no-repeat center center/cover;
+68.             color: white;
+69.             text-align: center;
+70.             padding: 150px 20px;
+71.         }
+72.         .hero-section h2 {
+73.             margin: 0;
+74.             font-size: 3em;
+75.         }
+76.         .content-section {
+77.             padding: 20px;
+78.             background-color: #fff;
+79.             margin: 20px;
+80.             border-radius: 5px;
+81.             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+82.         }
+83.         .content-section h2 {
+84.             font-size: 2em;
+85.         }
+86.         .packages {
+87.             display: flex;
+88.             flex-wrap: wrap;
+89.             gap: 20px;
+90.             justify-content: center;
+91.         }
+92.         .package {
+93.             border: 1px solid #ddd;
+94.             border-radius: 5px;
+95.             padding: 15px;
+96.             width: 30%;
+97.             text-align: center;
+98.             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+99.         }
+100.        .package img {
+101.            width: 100%;
+102.            border-radius: 5px;
+103.        }
+104.        .testimonial {
+105.            background-color: #f9f9f9;
+106.            padding: 30px;
+107.            text-align: center;
+108.        }
+109.        .testimonial h3 {
+110.            font-size: 2em;
+111.            margin-bottom: 20px;
+112.        }
+113.        .testimonial p {
+114.            font-style: italic;
+115.        }
+116.        .contact-form {
+117.            background-color: #fff;
+118.            padding: 30px;
+119.            margin: 20px 0;
+120.            border-radius: 5px;
+121.            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+122.        }
+123.        .contact-form input, .contact-form textarea {
+124.            width: 100%;
+125.            padding: 10px;
+126.            margin: 10px 0;
+127.            border: 1px solid #ddd;
+128.            border-radius: 5px;
+129.        }
+130.        footer {
+131.            background: #003366;
+132.            color: white;
+133.            text-align: center;
+134.            padding: 10px 0;
+135.        }
+136.        footer a {
+137.            color: #80c1ff;
+138.            text-decoration: none;
+139.        }
+140.        @media (max-width: 768px) {
+141.            .packages {
+142.                flex-direction: column;
+143.            }
+144.            .package {
+145.                width: 100%;
+146.            }
+147.        }
+148.        .about-section {
+149.            background-color: #e6f7ff;
+150.            padding: 40px 20px;
+151.        }
+152.        .about-section h2 {
+153.            text-align: center;
+154.            font-size: 2.5em;
+155.            color: #003366;
+156.        }
+157.        .about-section p {
+158.            font-size: 1.2em;
+159.            text-align: center;
+160.            color: #555;
+161.        }
+162.        .service-section {
+163.            background-color: #f0f0f0;
+164.            padding: 40px 20px;
+165.        }
+166.        .service-section h2 {
+167.            text-align: center;
+168.            font-size: 2.5em;
+169.            color: #003366;
+170.        }
+171.        .service-list {
+172.            display: flex;
+173.            justify-content: space-between;
+174.            flex-wrap: wrap;
+175.            gap: 30px;
+176.            text-align: center;
+177.        }
+178.        .service-item {
+179.            width: 30%;
+180.            background-color: #fff;
+181.            padding: 20px;
+182.            border-radius: 5px;
+183.            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+184.        }
+185.        .service-item h3 {
+186.            font-size: 1.8em;
+187.            color: #003366;
+188.        }
+189.        .service-item p {
+190.            color: #555;
+191.            font-size: 1.1em;
+192.        }
+193.        .team-section {
+194.            padding: 40px 20px;
+195.        }
+196.        .team-section h2 {
+197.            text-align: center;
+198.            font-size: 2.5em;
+199.            color: #003366;
+200.        }
+201.        .team-list {
+202.            display: flex;
+203.            justify-content: center;
+204.            flex-wrap: wrap;
+205.            gap: 40px;
+206.        }
+207.        .team-member {
+208.            text-align: center;
+209.            width: 200px;
+210.        }
+211.        .team-member img {
+212.            width: 100%;
+213.            border-radius: 50%;
+214.        }
+215.        .team-member h3 {
+216.            color: #003366;
+217.            margin-top: 10px;
+218.        }
+219.        .team-member p {
+220.            color: #555;
+221.        }
+222.        .faq-section {
+223.            background-color: #f9f9f9;
+224.            padding: 40px 20px;
+225.        }
+226.        .faq-section h2 {
+227.            text-align: center;
+228.            font-size: 2.5em;
+229.            color: #003366;
+230.        }
+231.        .faq-item {
+232.            margin-bottom: 20px;
+233.        }
+234.        .faq-item h3 {
+235.            font-size: 1.8em;
+236.            color: #003366;
+237.        }
+238.        .faq-item p {
+239.            color: #555;
+240.        }
+241.        .testimonials-slider {
+242.            background-color: #e6f9ff;
+243.            padding: 50px 20px;
+244.        }
+245.        .testimonials-slider h2 {
+246.            text-align: center;
+247.            font-size: 2.5em;
+248.            color: #003366;
+249.        }
+250.        .testimonials-slider .slider {
+251.            display: flex;
+252.            overflow-x: scroll;
+253.            gap: 20px;
+254.        }
+255.        .testimonial-card {
+256.            background-color: #fff;
+257.            border-radius: 5px;
+258.            padding: 20px;
+259.            width: 250px;
+260.            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+261.        }
+262.        .testimonial-card p {
+263.            font-style: italic;
+264.            color: #555;
+265.        }
+266.        .testimonial-card h3 {
+267.            text-align: center;
+268.            font-size: 1.2em;
+269.            color: #003366;
+270.        }
+271.        .blog-section {
+272.            padding: 50px 20px;
+273.        }
+274.        .blog-section h2 {
+275.            text-align: center;
+276.            font-size: 2.5em;
+277.            color: #003366;
+278.        }
+279.        .blog-list {
+280.            display: flex;
+281.            justify-content: space-between;
+282.            flex-wrap: wrap;
+283.            gap: 20px;
+284.        }
+285.        .blog-item {
+286.            background-color: #fff;
+287.            padding: 20px;
+288.            width: 30%;
+289.            border-radius: 5px;
+290.            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+291.        }
+292.        .blog-item img {
+293.            width: 100%;
+294.            border-radius: 5px;
+295.        }
+296.        .blog-item h3 {
+297.            text-align: center;
+298.            color: #003366;
+299.            font-size: 1.8em;
+300.        }
+301.        .blog-item p {
+302.            color: #555;
+303.            font-size: 1.1em;
+304.        }
+305.        .blog-item a {
+306.            text-decoration: none;
+307.            color: #0073e6;
+308.            font-weight: bold;
+309.        }
+310.        .newsletter-section {
+311.            background-color: #e6f7ff;
+312.            padding: 50px 20px;
+313.        }
+314.        .newsletter-section h2 {
+315.            text-align: center;
+316.            font-size: 2.5em;
+317.            color: #003366;
+318.        }
+319.        .newsletter-form {
+320.            display: flex;
+321.            justify-content: center;
+322.            gap: 20px;
+323.        }
+324.        .newsletter-form input[type="email"] {
+325.            padding: 10px;
+326.            width: 300px;
+327.            border-radius: 5px;
+328.            border: 1px solid #ddd;
+329.        }
+330.        .newsletter-form button {
+331.            padding: 10px 20px;
+332.            background-color: #003366;
+333.            color: white;
+334.            border: none;
+335.            border-radius: 5px;
+336.            cursor: pointer;
+337.        }
+338.    </style>
 </head>
 <body>
     <header>
@@ -362,81 +362,497 @@
         <h2>Welcome to Incredible India</h2>
         <p>Start your journey with us and explore the unmatched beauty of this nation.</p>
     </section>
-    <section class="content-section" id="destinations">
-        <h2>Top Destinations</h2>
-        <div class="packages">
-            <div class="package">
-                <img src="https://via.placeholder.com/300x200?text=Goa" alt="Goa">
-                <h3>Goa</h3>
-                <p>Experience beaches, nightlife, and serenity.</p>
+341.    <section class="about-section">
+342.        <h2>About Us</h2>
+343.        <p>We are dedicated to offering the best travel packages and expert consultancy to make your dream vacation come true.</p>
+344.    </section>
+    <section class="service-section">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <h3>Custom Travel Packages</h3>
+                <p>Tailored experiences that match your preferences and budget.</p>
             </div>
-            <div class="package">
-                <img src="https://via.placeholder.com/300x200?text=Jaipur" alt="Jaipur">
-                <h3>Jaipur</h3>
-                <p>The Pink City awaits with its rich heritage.</p>
+            <div class="service-item">
+                <h3>Travel Consultancy</h3>
+                <p>Expert advice to help you plan the perfect trip to India.</p>
             </div>
-            <div class="package">
-                <img src="https://via.placeholder.com/300x200?text=Kashmir" alt="Kashmir">
-                <h3>Kashmir</h3>
-                <p>Heaven on Earth - mountains, valleys, and rivers.</p>
+            <div class="service-item">
+                <h3>Group Tours</h3>
+                <p>Join guided group tours to explore India in a more organized way.</p>
             </div>
         </div>
     </section>
-    <section class="content-section" id="packages">
-        <h2>Travel Packages</h2>
-        <div class="packages">
-            <div class="package">
-                <img src="https://via.placeholder.com/300x200?text=Mountains" alt="Mountains">
-                <h3>Mountain Packages</h3>
-                <p>Explore the great Himalayas and scenic hill stations.</p>
+    <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-list">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/200" alt="Team Member 1">
+                <h3>John Doe</h3>
+                <p>Founder & CEO</p>
             </div>
-            <div class="package">
-                <img src="https://via.placeholder.com/300x200?text=Wildlife" alt="Wildlife">
-                <h3>Wildlife Packages</h3>
-                <p>Discover India's diverse flora and fauna.</p>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/200" alt="Team Member 2">
+                <h3>Jane Smith</h3>
+                <p>Travel Consultant</p>
             </div>
-            <div class="package">
-                <img src="https://via.placeholder.com/300x200?text=Rivers" alt="Rivers">
-                <h3>River Packages</h3>
-                <p>Enjoy river cruises and serene backwaters.</p>
-            </div>
-            <div class="package">
-                <img src="https://via.placeholder.com/300x200?text=Cruise" alt="Cruise">
-                <h3>Cruise Packages</h3>
-                <p>Luxury cruises to explore India's coastline.</p>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/200" alt="Team Member 3">
+                <h3>Emily Clark</h3>
+                <p>Tour Specialist</p>
             </div>
         </div>
     </section>
     <section class="testimonial">
         <h3>What Our Clients Say</h3>
-        <p>"Explore India made our trip unforgettable! The attention to detail was amazing." - Rahul Sharma</p>
-        <p>"A fantastic journey through the Himalayan mountains with the best guides and support!" - Priya Mehta</p>
-    </section>
-    <section class="content-section" id="consultancy">
-        <h2>Travel Consultancy</h2>
-        <p>Need help planning your trip? Our experts provide custom solutions for:</p>
-        <ul>
-            <li>Itinerary planning</li>
-            <li>Budget management</li>
-            <li>Accommodation selection</li>
-            <li>Travel insurance and more</li>
-        </ul>
+        <p>"The best travel experience we've ever had, thanks to Explore India!"</p>
+        <p>- A Happy Customer</p>
     </section>
     <section class="contact-form" id="contact">
         <h2>Contact Us</h2>
-        <form action="mailto:zaheerarshaddeobandi@gmail.com" method="POST" enctype="text/plain">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
     <footer>
-        <p>Contact us: <a href="mailto:zaheerarshaddeobandi@gmail.com">zaheerarshaddeobandi@gmail.com</a> | Phone: 7017283687</p>
-        <p>&copy; 2025 Explore India. All rights reserved.</p>
+        <p>&copy; 2025 Explore India | All Rights Reserved</p>
+        <p><a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a></p>
     </footer>
 </body>
 </html>
+345.    <section class="about-section">
+346.        <h2>About Us</h2>
+347.        <p>Explore India is your gateway to the wonders of India. From the snowy peaks of the Himalayas to the sun-kissed beaches of Goa, we provide customized travel packages and consultancy services to make your Indian vacation unforgettable.</p>
+348.        <p>Our mission is to make every trip as enjoyable and stress-free as possible. With a team of travel experts and local guides, we offer personalized experiences that allow you to discover the authentic beauty of India.</p>
+349.    </section>
+    <section class="service-section">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <h3>Custom Travel Packages</h3>
+                <p>We specialize in creating personalized travel packages that cater to your interests, budget, and preferences. Whether you're looking for a cultural tour, a beach retreat, or an adventurous trip to the mountains, we've got you covered.</p>
+            </div>
+            <div class="service-item">
+                <h3>Travel Consultancy</h3>
+                <p>Our expert consultants are here to guide you through every step of your trip planning. From choosing destinations to booking accommodations, we provide insightful advice to ensure your trip is flawless.</p>
+            </div>
+            <div class="service-item">
+                <h3>Group Tours</h3>
+                <p>Join our group tours and explore India with fellow travelers. These tours are designed for those who want to explore in a more structured way, with the benefit of experienced guides and a set itinerary.</p>
+            </div>
+        </div>
+    </section>
+    <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-list">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/200" alt="Team Member 1">
+                <h3>John Doe</h3>
+                <p>Founder & CEO</p>
+                <p>With years of experience in the travel industry, John founded Explore India to bring the best of India to travelers across the world.</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/200" alt="Team Member 2">
+                <h3>Jane Smith</h3>
+                <p>Travel Consultant</p>
+                <p>Jane is an expert in Indian destinations and specializes in planning bespoke travel itineraries for our clients.</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/200" alt="Team Member 3">
+                <h3>Emily Clark</h3>
+                <p>Tour Specialist</p>
+                <p>Emily is passionate about showcasing India's diverse landscapes, from the lush green valleys to the golden deserts.</p>
+            </div>
+        </div>
+    </section>
+    <section class="testimonial">
+        <h3>What Our Clients Say</h3>
+        <p>"The best travel experience we've ever had, thanks to Explore India! The guides were amazing and the trip was perfectly organized."</p>
+        <p>- Rahul and Priya Sharma</p>
+        <p>"Our family trip to the Himalayas was magical. Explore India made it stress-free and unforgettable. Highly recommend!"</p>
+        <p>- Anjali Kapoor</p>
+    </section>
+    <section class="contact-form" id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Explore India | All Rights Reserved</p>
+        <p><a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
+350.    <section class="about-section">
+351.        <h2>About Us</h2>
+352.        <p>Explore India is your gateway to the wonders of India. From the snowy peaks of the Himalayas to the sun-kissed beaches of Goa, we provide customized travel packages and consultancy services to make your Indian vacation unforgettable.</p>
+353.        <p>Our mission is to make every trip as enjoyable and stress-free as possible. With a team of travel experts and local guides, we offer personalized experiences that allow you to discover the authentic beauty of India.</p>
+354.    </section>
+355.    <section class="service-section">
+356.        <h2>Our Services</h2>
+357.        <div class="service-list">
+358.            <div class="service-item">
+359.                <h3>Custom Travel Packages</h3>
+360.                <p>We specialize in creating personalized travel packages that cater to your interests, budget, and preferences. Whether you're looking for a cultural tour, a beach retreat, or an adventurous trip to the mountains, we've got you covered.</p>
+361.            </div>
+362.            <div class="service-item">
+363.                <h3>Travel Consultancy</h3>
+364.                <p>Our expert consultants are here to guide you through every step of your trip planning. From choosing destinations to booking accommodations, we provide insightful advice to ensure your trip is flawless.</p>
+365.            </div>
+366.            <div class="service-item">
+367.                <h3>Group Tours</h3>
+368.                <p>Join our group tours and explore India with fellow travelers. These tours are designed for those who want to explore in a more structured way, with the benefit of experienced guides and a set itinerary.</p>
+369.            </div>
+370.        </div>
+371.    </section>
+372.    <section class="team-section">
+373.        <h2>Meet Our Team</h2>
+374.        <div class="team-list">
+375.            <div class="team-member">
+376.                <img src="https://via.placeholder.com/200" alt="Team Member 1">
+377.                <h3>John Doe</h3>
+378.                <p>Founder & CEO</p>
+379.                <p>With years of experience in the travel industry, John founded Explore India to bring the best of India to travelers across the world.</p>
+380.            </div>
+381.            <div class="team-member">
+382.                <img src="https://via.placeholder.com/200" alt="Team Member 2">
+383.                <h3>Jane Smith</h3>
+384.                <p>Travel Consultant</p>
+385.                <p>Jane is an expert in Indian destinations and specializes in planning bespoke travel itineraries for our clients.</p>
+386.            </div>
+387.            <div class="team-member">
+388.                <img src="https://via.placeholder.com/200" alt="Team Member 3">
+389.                <h3>Emily Clark</h3>
+390.                <p>Tour Specialist</p>
+391.                <p>Emily is passionate about showcasing India's diverse landscapes, from the lush green valleys to the golden deserts.</p>
+392.            </div>
+393.        </div>
+394.    </section>
+395.    <section class="testimonial">
+396.        <h3>What Our Clients Say</h3>
+397.        <p>"The best travel experience we've ever had, thanks to Explore India! The guides were amazing and the trip was perfectly organized."</p>
+398.        <p>- Rahul and Priya Sharma</p>
+399.        <p>"Our family trip to the Himalayas was magical. Explore India made it stress-free and unforgettable. Highly recommend!"</p>
+400.        <p>- Anjali Kapoor</p>
+401.    </section>
+402.    <section class="contact-form" id="contact">
+403.        <h2>Contact Us</h2>
+404.        <form action="#" method="POST">
+405.            <input type="text" name="name" placeholder="Your Name" required>
+406.            <input type="email" name="email" placeholder="Your Email" required>
+407.            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+408.            <button type="submit">Send Message</button>
+409.        </form>
+410.    </section>
+411.    <footer>
+412.        <p>&copy; 2025 Explore India | All Rights Reserved</p>
+413.        <p><a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a></p>
+414.    </footer>
+415.    <section class="blog-section">
+416.        <h2>Latest Blog Posts</h2>
+417.        <div class="blog-list">
+418.            <div class="blog-item">
+419.                <img src="https://via.placeholder.com/300x200?text=Blog1" alt="Blog Post 1">
+420.                <h3>Exploring the Himalayas</h3>
+421.                <p>The Himalayas are one of the most majestic mountain ranges in the world. In this blog, we share the best trekking routes and scenic spots.</p>
+422.                <a href="#">Read More</a>
+423.            </div>
+424.            <div class="blog-item">
+425.                <img src="https://via.placeholder.com/300x200?text=Blog2" alt="Blog Post 2">
+426.                <h3>The Best Beaches of Goa</h3>
+427.                <p>Goa is famous for its stunning beaches. Read about our top recommendations for a perfect beach holiday.</p>
+428.                <a href="#">Read More</a>
+429.            </div>
+430.            <div class="blog-item">
+431.                <img src="https://via.placeholder.com/300x200?text=Blog3" alt="Blog Post 3">
+432.                <h3>Cultural Heritage of Jaipur</h3>
+433.                <p>Jaipur, also known as the Pink City, is home to rich history and magnificent architecture. Explore its cultural treasures with us.</p>
+434.                <a href="#">Read More</a>
+435.            </div>
+436.        </div>
+437.    </section>
+438.    <section class="newsletter-section">
+439.        <h2>Subscribe to Our Newsletter</h2>
+440.        <p>Stay updated with the latest travel packages, offers, and news from Explore India.</p>
+441.        <div class="newsletter-form">
+442.            <input type="email" placeholder="Enter your email" required>
+443.            <button type="submit">Subscribe</button>
+444.        </div>
+445.    </section>
+446.    <section class="testimonials-slider">
+447.        <h2>Client Testimonials</h2>
+448.        <div class="slider">
+449.            <div class="testimonial-card">
+450.                <h3>Amazing Trip!</h3>
+451.                <p>"The team at Explore India made our trip seamless and enjoyable. We'll definitely be back!"</p>
+452.                <p>- Samir Reddy</p>
+453.            </div>
+454.            <div class="testimonial-card">
+455.                <h3>Unforgettable Experience</h3>
+456.                <p>"From the planning stages to the trip itself, everything was perfect. Highly recommended!"</p>
+457.                <p>- Natasha Gupta</p>
+458.            </div>
+459.            <div class="testimonial-card">
+460.                <h3>Wonderful Memories</h3>
+461.                <p>"We had such a wonderful time visiting India's best destinations. The guides were fantastic!"</p>
+462.                <p>- Kiran Joshi</p>
+463.            </div>
+464.        </div>
+465.    </section>
+466.    <section class="faq-section">
+467.        <h2>Frequently Asked Questions</h2>
+468.        <div class="faq-item">
+469.            <h3>What is the best time to visit India?</h3>
+470.            <p>The best time to visit India depends on the region. Winter (October to March) is ideal for most parts of the country, while the monsoon (June to September) is better for some regions.</p>
+471.        </div>
+472.        <div class="faq-item">
+473.            <h3>Do you offer customized tours?</h3>
+474.            <p>Yes, we specialize in creating custom itineraries based on your preferences, budget, and travel interests.</p>
+475.        </div>
+476.        <div class="faq-item">
+477.            <h3>How can I book a tour?</h3>
+478.            <p>You can book a tour through our website or contact us directly via email or phone. Our travel consultants will assist you with the booking process.</p>
+479.        </div>
+480.    </section>
+481.    <section class="gallery-section">
+482.        <h2>Photo Gallery</h2>
+483.        <div class="gallery">
+484.            <div class="gallery-item">
+485.                <img src="https://via.placeholder.com/300x200?text=Gallery1" alt="Gallery 1">
+486.                <p>Explore the serene beauty of the Himalayas during the winter.</p>
+487.            </div>
+488.            <div class="gallery-item">
+489.                <img src="https://via.placeholder.com/300x200?text=Gallery2" alt="Gallery 2">
+490.                <p>Enjoying the vibrant culture of Jaipur's ancient forts and palaces.</p>
+491.            </div>
+492.            <div class="gallery-item">
+493.                <img src="https://via.placeholder.com/300x200?text=Gallery3" alt="Gallery 3">
+494.                <p>Relaxing on the beaches of Goa with the perfect sunset view.</p>
+495.            </div>
+496.        </div>
+497.    </section>
+498.    <section class="event-section">
+499.        <h2>Upcoming Events</h2>
+500.        <div class="event-list">
+501.            <div class="event-item">
+502.                <h3>India International Travel Expo</h3>
+503.                <p>Join us at the India International Travel Expo, where you can discover amazing travel packages and opportunities.</p>
+504.                <p><strong>Date:</strong> March 15-17, 2025</p>
+505.            </div>
+506.            <div class="event-item">
+507.                <h3>Festival of Lights - Diwali Celebration</h3>
+508.                <p>Celebrate the Festival of Lights in India! Join us for a cultural extravaganza featuring traditional performances, food, and festivities.</p>
+509.                <p><strong>Date:</strong> October 2025</p>
+510.            </div>
+511.            <div class="event-item">
+512.                <h3>Yoga Retreat in Rishikesh</h3>
+513.                <p>Relax and rejuvenate with a yoga retreat in the spiritual city of Rishikesh, nestled on the banks of the Ganges River.</p>
+514.                <p><strong>Date:</strong> June 2025</p>
+515.            </div>
+516.        </div>
+517.    </section>
+518.    <section class="client-area">
+519.        <h2>Client Login</h2>
+520.        <form action="login.php" method="POST">
+521.            <input type="text" name="username" placeholder="Username" required>
+522.            <input type="password" name="password" placeholder="Password" required>
+523.            <button type="submit">Login</button>
+524.        </form>
+525.        <p><a href="#">Forgot your password?</a></p>
+526.    </section>
+527.    <section class="newsletter-section">
+528.        <h2>Stay Connected</h2>
+529.        <p>Sign up for our newsletter to get the latest travel deals and updates on our services.</p>
+530.        <form action="#" method="POST">
+531.            <input type="email" name="newsletter_email" placeholder="Enter your email" required>
+532.            <button type="submit">Subscribe</button>
+533.        </form>
+534.    </section>
+535.    <section class="quick-links">
+536.        <h2>Quick Links</h2>
+537.        <ul>
+538.            <li><a href="#home">Home</a></li>
+539.            <li><a href="#about">About Us</a></li>
+540.            <li><a href="#services">Services</a></li>
+541.            <li><a href="#contact">Contact</a></li>
+542.            <li><a href="#blog">Blog</a></li>
+543.            <li><a href="#faq">FAQ</a></li>
+544.            <li><a href="#privacy-policy">Privacy Policy</a></li>
+545.            <li><a href="#terms-of-service">Terms of Service</a></li>
+546.        </ul>
+547.    </section>
+548.    <section class="social-media-links">
+549.        <h2>Follow Us</h2>
+550.        <div class="social-links">
+551.            <a href="https://www.facebook.com" target="_blank" class="social-icon">Facebook</a>
+552.            <a href="https://www.twitter.com" target="_blank" class="social-icon">Twitter</a>
+553.            <a href="https://www.instagram.com" target="_blank" class="social-icon">Instagram</a>
+554.            <a href="https://www.linkedin.com" target="_blank" class="social-icon">LinkedIn</a>
+555.        </div>
+556.    </section>
+557.    <section class="terms-of-service" id="terms-of-service">
+558.        <h2>Terms of Service</h2>
+559.        <p>Welcome to Explore India! These Terms and Conditions outline the rules and regulations for the use of our website and services.</p>
+560.        <p>By accessing our website and booking any services, you agree to comply with and be bound by these terms. Please read them carefully.</p>
+561.        <h3>1. General Information</h3>
+562.        <p>Explore India provides travel consultancy and services, including personalized packages, tours, and related information for India.</p>
+563.        <h3>2. Booking & Payments</h3>
+564.        <p>All bookings must be confirmed by payment. Payments can be made through the available payment methods on our website.</p>
+565.        <h3>3. Cancellation Policy</h3>
+566.        <p>If you need to cancel or modify your booking, please inform us within the stated cancellation period to avoid cancellation fees.</p>
+567.        <h3>4. Liability</h3>
+568.        <p>Explore India is not liable for any loss or damages arising from your travel or use of our services. We strive to ensure a safe and enjoyable experience for all customers.</p>
+569.        <h3>5. Intellectual Property</h3>
+570.        <p>All content on our website, including images, text, and logos, is the intellectual property of Explore India and may not be reproduced without permission.</p>
+571.        <h3>6. Privacy</h3>
+572.        <p>Your privacy is important to us. For more information on how we collect and protect your data, please refer to our <a href="#privacy-policy">Privacy Policy</a>.</p>
+573.        <h3>7. Changes to the Terms</h3>
+574.        <p>We reserve the right to update or modify these Terms of Service at any time without prior notice. Any changes will be posted on this page.</p>
+575.        <h3>8. Contact</h3>
+576.        <p>If you have any questions regarding these Terms of Service, please contact us at <a href="mailto:support@exploreindia.com">support@exploreindia.com</a>.</p>
+577.    </section>
+578.    <section class="privacy-policy" id="privacy-policy">
+579.        <h2>Privacy Policy</h2>
+580.        <p>At Explore India, we value your privacy and are committed to safeguarding your personal information. This Privacy Policy outlines the types of personal information we collect and how we use it.</p>
+581.        <h3>1. Information Collection</h3>
+582.        <p>We collect information that you provide to us when you book a service, subscribe to our newsletter, or contact us. This includes your name, email address, phone number, and other relevant details.</p>
+583.        <h3>2. Use of Information</h3>
+584.        <p>Your personal information is used to provide you with services, send promotional offers, and improve our website and services. We do not sell or rent your personal information to third parties.</p>
+585.        <h3>3. Security</h3>
+586.        <p>We implement security measures to protect your personal data from unauthorized access or disclosure. However, no data transmission over the internet is 100% secure.</p>
+587.        <h3>4. Cookies</h3>
+588.        <p>We use cookies to enhance user experience on our website. You can disable cookies in your browser settings if you wish.</p>
+589.        <h3>5. Changes to Privacy Policy</h3>
+590.        <p>We reserve the right to modify this Privacy Policy at any time. Any changes will be posted on this page with an updated date.</p>
+591.        <h3>6. Contact Us</h3>
+592.        <p>If you have any questions or concerns regarding our Privacy Policy, please contact us at <a href="mailto:support@exploreindia.com">support@exploreindia.com</a>.</p>
+593.    </section>
+594.    <footer class="footer">
+595.        <div class="footer-content">
+596.            <div class="footer-logo">
+597.                <img src="https://via.placeholder.com/200x60?text=Explore+India+Logo" alt="Explore India Logo">
+598.            </div>
+599.            <div class="footer-links">
+600.                <ul>
+601.                    <li><a href="#about">About Us</a></li>
+602.                    <li><a href="#services">Services</a></li>
+603.                    <li><a href="#blog">Blog</a></li>
+604.                    <li><a href="#contact">Contact</a></li>
+605.                    <li><a href="#faq">FAQ</a></li>
+606.                    <li><a href="#privacy-policy">Privacy Policy</a></li>
+607.                    <li><a href="#terms-of-service">Terms of Service</a></li>
+608.                </ul>
+609.            </div>
+610.            <div class="footer-social">
+611.                <a href="https://www.facebook.com" target="_blank" class="social-icon">Facebook</a>
+612.                <a href="https://www.twitter.com" target="_blank" class="social-icon">Twitter</a>
+613.                <a href="https://www.instagram.com" target="_blank" class="social-icon">Instagram</a>
+614.                <a href="https://www.linkedin.com" target="_blank" class="social-icon">LinkedIn</a>
+615.            </div>
+616.        </div>
+617.        <div class="footer-bottom">
+618.            <p>&copy; 2025 Explore India. All rights reserved.</p>
+619.        </div>
+620.    </footer>
+621.    <script src="script.js"></script>
+622.    <script src="https://cdn.jsdelivr.net/npm/swiper@6.8.1/swiper-bundle.min.js"></script>
+623.    <script>
+624.        const swiper = new Swiper('.swiper-container', {
+625.            loop: true,
+626.            navigation: {
+627.                nextEl: '.swiper-button-next',
+628.                prevEl: '.swiper-button-prev',
+629.            },
+630.            pagination: {
+631.                el: '.swiper-pagination',
+632.                clickable: true,
+633.            },
+634.        });
+635.    </script>
+636.    <script>
+637.        document.querySelector('.newsletter-section form').addEventListener('submit', function(event) {
+638.            event.preventDefault();
+639.            const email = event.target.querySelector('input[name="newsletter_email"]').value;
+640.            if (email) {
+641.                alert(`Thank you for subscribing with ${email}`);
+642.                event.target.reset();
+643.            }
+644.        });
+645.    </script>
+646.    <script>
+647.        document.querySelector('.client-area form').addEventListener('submit', function(event) {
+648.            event.preventDefault();
+649.            const username = event.target.querySelector('input[name="username"]').value;
+650.            const password = event.target.querySelector('input[name="password"]').value;
+651.            if (username && password) {
+652.                alert(`Welcome back, ${username}!`);
+653.                event.target.reset();
+654.            }
+655.        });
+656.    </script>
+657.    <script>
+658.        document.querySelector('.faq-section').addEventListener('click', function(event) {
+659.            const faqItem = event.target.closest('.faq-item');
+660.            if (faqItem) {
+661.                const answer = faqItem.querySelector('.faq-answer');
+662.                answer.classList.toggle('hidden');
+663.            }
+664.        });
+665.    </script>
+666.    <style>
+667.        .faq-answer.hidden {
+668.            display: none;
+669.        }
+670.        .swiper-container {
+671.            width: 100%;
+672.            height: 300px;
+673.        }
+674.        .swiper-slide {
+675.            display: flex;
+676.            justify-content: center;
+677.            align-items: center;
+678.            background-color: #f3f3f3;
+679.            border: 2px solid #ccc;
+680.        }
+681.        .footer {
+682.            background-color: #282828;
+683.            color: white;
+684.            padding: 20px;
+685.            text-align: center;
+686.        }
+687.        .footer .footer-content {
+688.            display: flex;
+689.            justify-content: space-between;
+690.            align-items: center;
+691.        }
+692.        .footer-logo img {
+693.            max-width: 100px;
+694.        }
+695.        .footer-links ul {
+696.            list-style: none;
+697.            padding: 0;
+698.        }
+699.        .footer-links li {
+700.            margin: 5px 0;
+701.        }
+702.        .footer-links a {
+703.            color: white;
+704.            text-decoration: none;
+705.        }
+706.        .footer-social a {
+707.            color: white;
+708.            margin: 0 10px;
+709.            text-decoration: none;
+710.        }
+711.        .footer-bottom {
+712.            margin-top: 10px;
+713.        }
+714.    </style>
+715.    <link href="https://cdn.jsdelivr.net/npm/swiper@6.8.1/swiper-bundle.min.css" rel="stylesheet">
