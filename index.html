@@ -1,39 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deep Dive Tourism Experience</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Business Website</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: #005a9e;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            background: #0078d7;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1920x500') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .card h4 {
+            margin-bottom: 10px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-  <div id="layer1" class="layer">
-    <h1>Welcome to the World of Travel</h1>
-    <p>Explore different destinations, each deeper than the last.</p>
-    <button onclick="goToLayer('layer2')">Dive Deeper</button>
-  </div>
+    <!-- Header Section -->
+    <header>
+        <h1>My Professional Business</h1>
+        <p>Your tagline here</p>
+    </header>
 
-  <div id="layer2" class="layer hidden">
-    <h1>Discover Exotic Destinations</h1>
-    <p>Find hidden gems and unique experiences.</p>
-    <button onclick="goToLayer('layer3')">Go Deeper</button>
-    <button onclick="goBack('layer1')">Go Back</button>
-  </div>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="#testimonials">Testimonials</a>
+    </nav>
 
-  <div id="layer3" class="layer hidden">
-    <h1>Uncover Mysteries of the World</h1>
-    <p>Dive into adventures you've never imagined.</p>
-    <button onclick="goToLayer('layer4')">Explore More</button>
-    <button onclick="goBack('layer2')">Go Back</button>
-  </div>
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+        <h2>Welcome to Our Website</h2>
+    </div>
 
-  <div id="layer4" class="layer hidden">
-    <h1>You’ve Reached the Depths</h1>
-    <p>Welcome to the most immersive experience of your life!</p>
-    <button onclick="goBack('layer3')">Go Back</button>
-  </div>
+    <!-- About Section -->
+    <div class="container" id="about">
+        <h3>About Us</h3>
+        <p>We are a professional business offering tourism consultancy and packaging solutions to meet your needs.</p>
+    </div>
 
-  <script src="script.js"></script>
+    <!-- Services Section -->
+    <div class="container" id="services">
+        <h3>Our Services</h3>
+        <div class="grid">
+            <div class="card">
+                <h4>Tourism Consultancy</h4>
+                <p>Expert advice and custom packages to make your travel seamless.</p>
+            </div>
+            <div class="card">
+                <h4>Packaging Solutions</h4>
+                <p>Eco-friendly and personalized packaging for all your business needs.</p>
+            </div>
+            <div class="card">
+                <h4>Customer Support</h4>
+                <p>24/7 assistance to ensure your satisfaction with our services.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="container" id="testimonials">
+        <h3>What Our Clients Say</h3>
+        <div class="grid">
+            <div class="card">
+                <p>"Excellent consultancy! Made our trip unforgettable."</p>
+                <h4>- John Doe</h4>
+            </div>
+            <div class="card">
+                <p>"The best packaging solutions for our business needs."</p>
+                <h4>- Jane Smith</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container" id="contact">
+        <h3>Contact Us</h3>
+        <p>Email: info@business.com | Phone: +123-456-7890</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 My Professional Business | <a href="#">Privacy Policy</a></p>
+    </footer>
 </body>
 </html>
