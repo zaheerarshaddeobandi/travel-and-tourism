@@ -117,6 +117,25 @@
         .contact-form button:hover {
             background-color: #005a9e;
         }
+        /* CRM Form */
+        .crm-form input, .crm-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .crm-form button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .crm-form button:hover {
+            background-color: #218838;
+        }
         /* Responsive Styles */
         @media (max-width: 768px) {
             header h1 {
@@ -151,6 +170,7 @@
         <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
         <a href="#testimonials">Testimonials</a>
+        <a href="#crm">Customer Info</a>
     </nav>
 
     <!-- Hero Section -->
@@ -161,75 +181,29 @@
     <!-- About Us Section -->
     <div class="container" id="about">
         <h3>About Us</h3>
-        <p>We are a dedicated team offering world-class tourism consultancy and eco-friendly packaging solutions. Our expertise helps businesses and travelers make informed decisions and provide top-notch services, ensuring a seamless experience for all. We have worked with several clients globally, helping them achieve their business and travel goals efficiently.</p>
-        <p>At Zaheer Arshad, we focus on personalized, result-driven strategies that create lasting impact. Whether it’s assisting travelers in exploring new destinations or providing businesses with sustainable packaging, we always deliver excellence.</p>
+        <p>We are a dedicated team offering world-class tourism consultancy and eco-friendly packaging solutions. Our expertise helps businesses and travelers make informed decisions and provide top-notch services, ensuring a seamless experience for all.</p>
     </div>
 
-    <!-- Services Section -->
-    <div class="container" id="services">
-        <h3>Our Services</h3>
-        <div class="grid">
-            <div class="card">
-                <h4>Tourism Consultancy</h4>
-                <p>We offer expert advice and tailor-made travel packages to help you explore your dream destinations with ease. Our consultants are highly experienced and knowledgeable about global destinations, ensuring that your trip is customized for the best experience.</p>
-            </div>
-            <div class="card">
-                <h4>Packaging Solutions</h4>
-                <p>Our packaging services are designed to be eco-friendly and personalized to meet the needs of your business. From retail packaging to shipping materials, we ensure your products are packaged safely while being kind to the environment.</p>
-            </div>
-            <div class="card">
-                <h4>Customer Support</h4>
-                <p>Our dedicated support team is available 24/7 to assist you with all your travel and packaging queries. Whether you need help with booking a trip or customizing your packaging, we are here to ensure you have all the assistance you need.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Section -->
-    <div class="container" id="portfolio">
-        <h3>Our Portfolio</h3>
-        <div class="grid">
-            <div class="card">
-                <h4>Tourism Projects</h4>
-                <p>We’ve helped numerous travelers create their dream vacations. Here are some highlights of the travel itineraries we’ve curated.</p>
-                <img src="https://via.placeholder.com/300x200" alt="Tourism Project">
-            </div>
-            <div class="card">
-                <h4>Packaging Designs</h4>
-                <p>Our innovative and eco-friendly packaging solutions have transformed the way businesses approach their product presentation. Take a look at some of our successful packaging projects.</p>
-                <img src="https://via.placeholder.com/300x200" alt="Packaging Design">
-            </div>
-        </div>
-    </div>
-
-    <!-- Blog Section -->
-    <div class="container" id="blog">
-        <h3>Our Blog</h3>
-        <div class="grid">
-            <div class="card">
-                <h4>Travel Tips & Guides</h4>
-                <p>Get the latest tips, travel guides, and destination recommendations to make your next trip the best one yet.</p>
-                <a href="#">Read More</a>
-            </div>
-            <div class="card">
-                <h4>Packaging Innovations</h4>
-                <p>Stay updated on the latest trends in packaging, sustainability, and innovative solutions for your business needs.</p>
-                <a href="#">Read More</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Testimonials Section -->
-    <div class="container" id="testimonials">
-        <h3>What Our Clients Say</h3>
-        <div class="grid">
-            <div class="card">
-                <p>"Zaheer Arshad's consultancy helped us organize an amazing trip. Their package was perfectly suited to our needs."</p>
-                <h4>- John Doe</h4>
-            </div>
-            <div class="card">
-                <p>"The packaging solutions provided by Zaheer's team are top-notch. We saved both cost and resources while ensuring quality."</p>
-                <h4>- Jane Smith</h4>
-            </div>
+    <!-- CRM - Customer Information Section -->
+    <div class="container" id="crm">
+        <h3>Customer Information Form</h3>
+        <div class="crm-form">
+            <h4>Enter your details below</h4>
+            <form action="/add_customer" method="POST">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required><br><br>
+                
+                <label for="preferred_trip">Preferred Trip:</label>
+                <input type="text" id="preferred_trip" name="preferred_trip"><br><br>
+                
+                <button type="submit">Submit</button>
+            </form>
         </div>
     </div>
 
