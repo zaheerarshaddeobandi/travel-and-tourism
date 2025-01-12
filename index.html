@@ -3,230 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaheer Arshad - Professional Business Website</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        header {
-            background: #005a9e;
-            color: #fff;
-            padding: 40px 0;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 3rem;
-        }
-        header p {
-            font-size: 1.2rem;
-        }
-        nav {
-            background: #0078d7;
-            display: flex;
-            justify-content: center;
-            padding: 15px 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 1.2rem;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .hero {
-            background: url('https://via.placeholder.com/1920x700') no-repeat center center/cover;
-            height: 350px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-        }
-        .hero h2 {
-            font-size: 3rem;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        }
-        .container {
-            padding: 40px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .card {
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-        }
-        .card h4 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-        .card p {
-            font-size: 1rem;
-        }
-        .card img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-top: 15px;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-        footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        /* Contact Form */
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            background-color: #0078d7;
-            color: white;
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background-color: #005a9e;
-        }
-        /* CRM Form */
-        .crm-form input, .crm-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .crm-form button {
-            background-color: #28a745;
-            color: white;
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .crm-form button:hover {
-            background-color: #218838;
-        }
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-            header p {
-                font-size: 1rem;
-            }
-            nav a {
-                font-size: 1rem;
-            }
-            .hero h2 {
-                font-size: 2.2rem;
-            }
-        }
-    </style>
+    <title>Zaheer Arshad Travel Consultancy</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Main Container -->
+    <div class="main-container">
+        <header>
+            <h1>Zaheer Arshad Travel Consultancy</h1>
+            <p>Your dream vacation begins here. We provide expert travel planning and consultancy services for unforgettable experiences.</p>
+        </header>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Zaheer Arshad</h1>
-        <p>Your trusted tourism consultancy & packaging solutions provider</p>
-    </header>
+        <!-- Introduction to Consultancy -->
+        <section id="introduction">
+            <h2>Welcome to Your Personalized Travel Consultancy</h2>
+            <p>Our travel consultancy services are designed to make your trips stress-free and memorable. Whether you're seeking a relaxing holiday, an adventure-filled vacation, or a corporate retreat, we are here to guide you through every step of the process. From destination selection to the final booking, we ensure your vacation is tailored to your unique needs and preferences.</p>
+            <img src="image_path_here" alt="Consultancy Services" class="main-image">
+        </section>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#crm">Customer Info</a>
-    </nav>
+        <!-- Detailed Consultancy Process -->
+        <section id="consultancy-process">
+            <h2>How We Work - Our Consultancy Process</h2>
+            <p>Our process is simple yet thorough. We work closely with you at every stage to ensure your travel plans are perfect. Here’s what you can expect from us:</p>
+            
+            <h3>Step 1: Personalized Consultation</h3>
+            <p>Your journey begins with a consultation where we understand your preferences, budget, and travel goals. Whether you're looking for a peaceful beach vacation, a thrilling adventure, or a cultural journey, we craft a plan that matches your vision.</p>
+            <img src="image_path_here" alt="Personalized Consultation" class="step-image">
+            
+            <h3>Step 2: Customized Itinerary Design</h3>
+            <p>Once we understand your preferences, we design a personalized itinerary that includes the best destinations, accommodations, and experiences. We take into account your travel style, whether it’s luxury, budget, adventure, or family-friendly.</p>
+            <img src="image_path_here" alt="Customized Itinerary Design" class="step-image">
+            
+            <h3>Step 3: Bookings and Arrangements</h3>
+            <p>After your itinerary is finalized, we handle all bookings for flights, hotels, activities, and transportation. We partner with top-tier providers to ensure you receive the best value and quality for your trip.</p>
+            <img src="image_path_here" alt="Bookings and Arrangements" class="step-image">
+            
+            <h3>Step 4: Pre-Trip Preparation</h3>
+            <p>Before you leave, we provide you with a comprehensive travel package including your itinerary, essential contact information, tips for the trip, and much more. We also advise you on any necessary travel documents like visas and insurance.</p>
+            <img src="image_path_here" alt="Pre-Trip Preparation" class="step-image">
+            
+            <h3>Step 5: Support During Your Trip</h3>
+            <p>Even when you’re on your journey, we provide continuous support. Whether you need assistance with last-minute changes or a quick recommendation, we are just a phone call away to ensure your trip goes smoothly.</p>
+            <img src="image_path_here" alt="Support During Your Trip" class="step-image">
+            
+            <h3>Step 6: Post-Trip Feedback</h3>
+            <p>After your trip, we seek your feedback to ensure you had an exceptional experience. Your feedback helps us continually improve our services.</p>
+            <img src="image_path_here" alt="Post-Trip Feedback" class="step-image">
+        </section>
 
-    <!-- Hero Section -->
-    <div class="hero" id="home">
-        <h2>Welcome to Our Website</h2>
+        <!-- Popular Destinations -->
+        <section id="popular-destinations">
+            <h2>Top Travel Destinations</h2>
+            <p>Whether you're planning a beach vacation, a cultural exploration, or an adventure in nature, we have the perfect destination for you. Here are some of the top destinations that we highly recommend:</p>
+            
+            <h3>1. Goa - The Perfect Beach Getaway</h3>
+            <p>Relax on golden beaches, explore vibrant markets, and enjoy the rich local culture in Goa. Perfect for couples, families, and solo travelers.</p>
+            <img src="image_path_here" alt="Goa Beach" class="destination-image">
+            
+            <h3>2. Rajasthan - A Royal Journey</h3>
+            <p>Discover the rich heritage and royal history of Rajasthan. Explore majestic palaces, forts, and vibrant markets while experiencing traditional Rajasthani hospitality.</p>
+            <img src="image_path_here" alt="Rajasthan Forts" class="destination-image">
+            
+            <h3>3. Kerala - A Tranquil Escape</h3>
+            <p>Known for its backwaters, tea plantations, and rich cultural experiences, Kerala is ideal for those looking to unwind and connect with nature.</p>
+            <img src="image_path_here" alt="Kerala Backwaters" class="destination-image">
+            
+            <h3>4. Himachal Pradesh - Adventure Awaits</h3>
+            <p>If you're seeking adventure, Himachal Pradesh offers incredible trekking routes, breathtaking mountain views, and adventure sports like paragliding and skiing.</p>
+            <img src="image_path_here" alt="Himachal Pradesh Mountains" class="destination-image">
+        </section>
+
+        <!-- Cruise Travel Section -->
+        <section id="cruise-travel">
+            <h2>Explore the World with Our Cruise Packages</h2>
+            <p>Set sail and explore exotic destinations by sea. Our luxury cruise packages offer a unique way to travel while enjoying world-class amenities, scenic views, and thrilling excursions. Whether you want a relaxing cruise or a more adventurous one, we’ve got something for you.</p>
+            
+            <h3>Caribbean Cruises</h3>
+            <p>Sail through the beautiful Caribbean islands, enjoying sun-kissed beaches and crystal-clear waters. Perfect for relaxation and adventure.</p>
+            <img src="image_path_here" alt="Caribbean Cruise" class="destination-image">
+            
+            <h3>Alaskan Cruises</h3>
+            <p>Discover the stunning landscapes of Alaska, from glaciers to wildlife, on a premium cruise with guided tours and exceptional service.</p>
+            <img src="image_path_here" alt="Alaskan Cruise" class="destination-image">
+            
+            <h3>European River Cruises</h3>
+            <p>Experience the charm of Europe’s most beautiful cities and towns as you sail along its picturesque rivers. Enjoy onboard entertainment, gourmet dining, and excursions to historic landmarks.</p>
+            <img src="image_path_here" alt="European River Cruise" class="destination-image">
+        </section>
+
+        <!-- Wildlife Travel Section -->
+        <section id="wildlife-travel">
+            <h2>Unleash Your Adventure with Wildlife Tours</h2>
+            <p>For wildlife enthusiasts, we offer curated wildlife tours to some of the world’s best national parks and wildlife reserves. Whether you're looking to witness the majesty of the Bengal tiger or enjoy birdwatching in Africa, we have the perfect wildlife package for you.</p>
+            
+            <h3>Safari in Kenya</h3>
+            <p>Embark on a thrilling safari in Kenya’s Maasai Mara, where you can spot the 'Big Five' and witness one of the greatest wildlife migrations on earth.</p>
+            <img src="image_path_here" alt="Kenya Safari" class="destination-image">
+            
+            <h3>Wildlife in India</h3>
+            <p>Explore India’s rich biodiversity with guided tours to national parks like Ranthambore and Jim Corbett, where you can spot tigers, elephants, and more.</p>
+            <img src="image_path_here" alt="Indian Wildlife" class="destination-image">
+            
+            <h3>Polar Bear Watching in Canada</h3>
+            <p>Experience the thrill of polar bear watching in Canada’s Hudson Bay, one of the best places to see these magnificent creatures up close.</p>
+            <img src="image_path_here" alt="Polar Bear Watching" class="destination-image">
+        </section>
+
+        <!-- River Tours Section -->
+        <section id="river-tours">
+            <h2>Discover the World’s Most Famous Rivers</h2>
+            <p>We offer river tour packages that take you along some of the most iconic rivers in the world, including the Nile, Amazon, and Ganges. These tours allow you to explore the culture, history, and beauty that these rivers have to offer.</p>
+            
+            <h3>The Nile River - Egypt</h3>
+            <p>Experience the magic of ancient Egypt as you cruise along the Nile, with stops at iconic landmarks such as the Pyramids of Giza and Luxor.</p>
+            <img src="image_path_here" alt="Nile River" class="destination-image">
+            
+            <h3>The Amazon River - Brazil</h3>
+            <p>Explore the heart of the Amazon Rainforest and its wildlife on an adventurous river cruise, surrounded by lush jungles and exotic species.</p>
+            <img src="image_path_here" alt="Amazon River" class="destination-image">
+            
+            <h3>The Ganges - India</h3>
+            <p>Take a sacred journey down the Ganges, visiting holy sites and witnessing the rituals that have been a part of Indian culture for centuries.</p>
+            <img src="image_path_here" alt="Ganges River" class="destination-image">
+        </section>
+
+        <!-- Mountain Travel Section -->
+        <section id="mountain-travel">
+            <h2>Mountain Adventures Await You</h2>
+            <p>If you crave high-altitude adventures, we have several mountain travel packages for trekking, hiking, and mountaineering. Explore the mighty Himalayas, the Alps, and the Andes with us.</p>
+            
+            <h3>Himalayan Trekking</h3>
+            <p>Discover the majestic beauty of the Himalayas with treks to Everest Base Camp, Leh, and more. These treks offer breathtaking views and a chance to connect with nature.</p>
+            <img src="image_path_here" alt="Himalayan Trekking" class="destination-image">
+            
+            <h3>Alpine Adventures</h3>
+            <p>Visit the beautiful Alps and enjoy skiing, snowboarding, and alpine hiking. Perfect for thrill-seekers and nature lovers alike.</p>
+            <img src="image_path_here" alt="Alps Adventure" class="destination-image">
+            
+            <h3>The Andes - South America</h3>
+            <p>Explore the Andes, home to incredible trekking routes, including the Inca Trail. Witness ancient ruins and stunning mountain views along the way.</p>
+            <img src="image_path_here" alt="Andes Mountains" class="destination-image">
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <h2>What Our Clients Say</h2>
+            <p>Here’s what our clients have to say about our travel consultancy services:</p>
+            
+            <div class="testimonial">
+                <p>"Zaheer Arshad Travel Consultancy helped us plan an amazing honeymoon to Kerala. The trip was perfectly customized to our needs, and the experiences were unforgettable!"</p>
+                <p>- <strong>Riya & Sameer Sharma</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"We had the most incredible family vacation in Rajasthan, thanks to Zaheer's personalized itinerary and expert guidance. We can’t wait to travel with them again!"</p>
+                <p>- <strong>The Kapoor Family</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"Our corporate retreat in Goa was a massive success! The team had a great time, and the arrangements were top-notch. Thank you for making this trip unforgettable!"</p>
+                <p>- <strong>Team XYZ Corp</strong></p>
+            </div>
+        </section>
+
+        <!-- Get Started Section -->
+        <section id="get-started">
+            <h2>Start Planning Your Dream Vacation Today!</h2>
+            <p>Ready to start your journey? Contact us for a personalized consultation and let us help you create your perfect travel experience. Whether it’s a family vacation, honeymoon, or adventure tour, we’re here to help you every step of the way.</p>
+            <button>Contact Us Now</button>
+        </section>
     </div>
 
-    <!-- About Us Section -->
-    <div class="container" id="about">
-        <h3>About Us</h3>
-        <p>We are a dedicated team offering world-class tourism consultancy and eco-friendly packaging solutions. Our expertise helps businesses and travelers make informed decisions and provide top-notch services, ensuring a seamless experience for all.</p>
-    </div>
-
-    <!-- CRM - Customer Information Section -->
-    <div class="container" id="crm">
-        <h3>Customer Information Form</h3>
-        <div class="crm-form">
-            <h4>Enter your details below</h4>
-            <form action="/add_customer" method="POST">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
-                
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required><br><br>
-                
-                <label for="phone">Phone Number:</label>
-                <input type="text" id="phone" name="phone" required><br><br>
-                
-                <label for="preferred_trip">Preferred Trip:</label>
-                <input type="text" id="preferred_trip" name="preferred_trip"><br><br>
-                
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="container" id="contact">
-        <h3>Contact Us</h3>
-        <p>Email: info@zaheerarshad.com</p>
-        <p>Phone: 7017283687</p>
-        <div class="contact-form">
-            <h4>Get in Touch</h4>
-            <form action="#" method="post">
-                <input type="text" name="name" placeholder="Your Name" required><br>
-                <input type="email" name="email" placeholder="Your Email" required><br>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea><br>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Zaheer Arshad | All Rights Reserved | <a href="#">Privacy Policy</a></p>
+        <p>Zaheer Arshad Travel Consultancy &copy; 2025 | All Rights Reserved</p>
     </footer>
-
 </body>
 </html>
