@@ -3,338 +3,440 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate Travel Consultancy - Your Dream Vacation Awaits</title>
+    <meta name="description" content="Explore India offers custom travel packages, consultancy services, and expert advice for your dream vacation in India.">
+    <title>Explore India - Travel & Consultancy</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
+            background-color: #f0f8ff;
         }
-
         header {
-            background-color: #003366;
+            background: linear-gradient(to right, #003366, #0073e6);
             color: white;
-            padding: 20px;
             text-align: center;
+            padding: 20px 0;
         }
-
         header h1 {
-            font-size: 3em;
             margin: 0;
+            font-size: 2.5em;
         }
-
+        header p {
+            margin: 5px 0;
+        }
+        nav {
+            background-color: #005580;
+        }
         nav ul {
             list-style: none;
-            padding: 0;
             margin: 0;
-            background-color: #003366;
-            text-align: center;
+            padding: 0;
+            display: flex;
+            justify-content: center;
         }
-
         nav ul li {
-            display: inline-block;
             position: relative;
-            margin: 0 20px;
+            margin: 0 15px;
         }
-
         nav ul li a {
-            color: white;
             text-decoration: none;
-            font-size: 1.2em;
-            padding: 10px 20px;
-            background-color: #0057A0;
-            border-radius: 5px;
+            color: white;
+            padding: 10px 15px;
+            display: block;
         }
-
-        nav ul li a:hover {
-            background-color: #004A8C;
-        }
-
-        /* Dropdown Menu Styles */
         nav ul li ul {
             display: none;
             position: absolute;
             top: 100%;
             left: 0;
-            background-color: #0057A0;
-            border-radius: 5px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            min-width: 180px;
+            background-color: #004466;
+            padding: 0;
         }
-
-        nav ul li:hover > ul {
+        nav ul li:hover ul {
             display: block;
         }
-
         nav ul li ul li {
-            display: block;
+            width: 200px;
         }
-
         nav ul li ul li a {
             padding: 10px;
-            background-color: #003366;
+            text-align: left;
         }
-
-        nav ul li ul li a:hover {
-            background-color: #004A8C;
-        }
-
         .hero-section {
-            background: url('https://via.placeholder.com/1600x700?text=Scenic+View') no-repeat center center;
-            background-size: cover;
+            background: url('https://via.placeholder.com/1600x600?text=Explore+India') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 150px 0;
+            padding: 150px 20px;
         }
-
         .hero-section h2 {
+            margin: 0;
             font-size: 3em;
         }
-
-        .hero-section p {
-            font-size: 1.5em;
+        .content-section {
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
-        .about-us,
-        .services,
-        .packages,
-        .contact-us {
-            padding: 50px;
-            margin-top: 30px;
-            background-color: white;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+        .content-section h2 {
+            font-size: 2em;
         }
-
-        .about-us h2,
-        .services h2,
-        .packages h2,
-        .contact-us h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #003366;
-        }
-
-        .about-us p,
-        .services p {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
-
-        .services-section {
-            display: flex;
-            gap: 40px;
-        }
-
-        .service-card {
-            background: #f9f9f9;
-            padding: 30px;
-            border-radius: 8px;
-            width: 30%;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .service-card h3 {
-            font-size: 1.8em;
-            color: #003366;
-        }
-
-        .service-card p {
-            font-size: 1.1em;
-            color: #555;
-        }
-
-        .packages-section {
+        .packages {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
+            justify-content: center;
         }
-
-        .package-card {
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 30%;
-            transition: transform 0.3s ease;
-        }
-
-        .package-card:hover {
-            transform: scale(1.05);
-        }
-
-        .package-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 8px 8px 0 0;
-        }
-
-        .package-card h3 {
-            margin: 20px;
-            font-size: 1.5em;
-            color: #003366;
-        }
-
-        .package-card p {
-            margin: 0 20px;
-            font-size: 1.1em;
-            color: #555;
-        }
-
-        .contact-form {
-            background: #fff;
-            padding: 40px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            margin-top: 30px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
+        .package {
+            border: 1px solid #ddd;
+            border-radius: 5px;
             padding: 15px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .package img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .testimonial {
+            background-color: #f9f9f9;
+            padding: 30px;
+            text-align: center;
+        }
+        .testimonial h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+        .contact-form {
+            background-color: #fff;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
             margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1.1em;
-        }
-
-        .contact-form button {
-            background-color: #003366;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            border: none;
-            cursor: pointer;
+            border: 1px solid #ddd;
             border-radius: 5px;
         }
-
-        .contact-form button:hover {
-            background-color: #0057A0;
-        }
-
         footer {
-            background-color: #003366;
+            background: #003366;
             color: white;
             text-align: center;
-            padding: 30px 20px;
+            padding: 10px 0;
         }
-
-        footer p {
-            font-size: 1.2em;
-        }
-
         footer a {
-            color: #00cc99;
+            color: #80c1ff;
             text-decoration: none;
         }
-
-        footer a:hover {
-            text-decoration: underline;
+        @media (max-width: 768px) {
+            .packages {
+                flex-direction: column;
+            }
+            .package {
+                width: 100%;
+            }
+        }
+        .about-section {
+            background-color: #e6f7ff;
+            padding: 40px 20px;
+        }
+        .about-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #003366;
+        }
+        .about-section p {
+            font-size: 1.2em;
+            text-align: center;
+            color: #555;
+        }
+        .service-section {
+            background-color: #f0f0f0;
+            padding: 40px 20px;
+        }
+        .service-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #003366;
+        }
+        .service-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            text-align: center;
+        }
+        .service-item {
+            width: 30%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .service-item h3 {
+            font-size: 1.8em;
+            color: #003366;
+        }
+        .service-item p {
+            color: #555;
+            font-size: 1.1em;
+        }
+        .team-section {
+            padding: 40px 20px;
+        }
+        .team-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #003366;
+        }
+        .team-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .team-member {
+            text-align: center;
+            width: 200px;
+        }
+        .team-member img {
+            width: 100%;
+            border-radius: 50%;
+        }
+        .team-member h3 {
+            color: #003366;
+            margin-top: 10px;
+        }
+        .team-member p {
+            color: #555;
+        }
+        .faq-section {
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+        }
+        .faq-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #003366;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h3 {
+            font-size: 1.8em;
+            color: #003366;
+        }
+        .faq-item p {
+            color: #555;
+        }
+        .testimonials-slider {
+            background-color: #e6f9ff;
+            padding: 50px 20px;
+        }
+        .testimonials-slider h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #003366;
+        }
+        .testimonials-slider .slider {
+            display: flex;
+            overflow-x: scroll;
+            gap: 20px;
+        }
+        .testimonial-card {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial-card p {
+            font-style: italic;
+            color: #555;
+        }
+        .testimonial-card h3 {
+            text-align: center;
+            font-size: 1.2em;
+            color: #003366;
+        }
+        .blog-section {
+            padding: 50px 20px;
+        }
+        .blog-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #003366;
+        }
+        .blog-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .blog-item {
+            background-color: #fff;
+            padding: 20px;
+            width: 30%;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .blog-item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .blog-item h3 {
+            text-align: center;
+            color: #003366;
+            font-size: 1.8em;
+        }
+        .blog-item p {
+            color: #555;
+            font-size: 1.1em;
+        }
+        .blog-item a {
+            text-decoration: none;
+            color: #0073e6;
+            font-weight: bold;
+        }
+        .newsletter-section {
+            background-color: #e6f7ff;
+            padding: 50px 20px;
+        }
+        .newsletter-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #003366;
+        }
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .newsletter-form input[type="email"] {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .newsletter-form button {
+            padding: 10px 20px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to the Ultimate Travel Consultancy</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Our Services</a>
-                    <ul>
-                        <li><a href="#">Travel Planning</a></li>
-                        <li><a href="#">Visa Assistance</a></li>
-                        <li><a href="#">Ticketing</a></li>
-                    </ul>
-                </li>
-                <li><a href="#packages">Tour Packages</a>
-                    <ul>
-                        <li><a href="#">Beach Vacation</a></li>
-                        <li><a href="#">Mountain Trekking</a></li>
-                        <li><a href="#">City Cultural Tour</a></li>
-                    </ul>
-                </li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </nav>
+        <h1>Explore India</h1>
+        <p>Your gateway to India's beauty and culture</p>
     </header>
-
-    <section class="hero-section" id="home">
-        <h2>Explore the Best Destinations with Us</h2>
-        <p>Choose from a wide variety of travel experiences that will leave you mesmerized!</p>
+    <nav>
+        <ul>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#packages">Packages</a>
+                <ul>
+                    <li><a href="#mountains">Mountains</a></li>
+                    <li><a href="#wildlife">Wildlife</a></li>
+                    <li><a href="#rivers">Rivers</a></li>
+                    <li><a href="#cruise">Cruise</a></li>
+                </ul>
+            </li>
+            <li><a href="#consultancy">Consultancy</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section class="hero-section">
+        <h2>Welcome to Incredible India</h2>
+        <p>Start your journey with us and explore the unmatched beauty of this nation.</p>
     </section>
-
-    <section class="about-us" id="about">
-        <h2>About Us</h2>
-        <p>We are your travel companion dedicated to creating personalized travel experiences. Our team brings together years of industry knowledge to offer you the best travel services, from booking tours to planning every detail of your trip.</p>
-    </section>
-
-    <section class="services" id="services">
-        <h2>Our Services</h2>
-        <div class="services-section">
-            <div class="service-card">
-                <h3>Customized Travel Planning</h3>
-                <p>We design custom travel itineraries that suit your interests and travel goals.</p>
+    <section class="content-section" id="destinations">
+        <h2>Top Destinations</h2>
+        <div class="packages">
+            <div class="package">
+                <img src="https://via.placeholder.com/300x200?text=Goa" alt="Goa">
+                <h3>Goa</h3>
+                <p>Experience beaches, nightlife, and serenity.</p>
             </div>
-            <div class="service-card">
-                <h3>Expert Travel Consultancy</h3>
-                <p>Consult with our experts for the best travel advice and recommendations.</p>
+            <div class="package">
+                <img src="https://via.placeholder.com/300x200?text=Jaipur" alt="Jaipur">
+                <h3>Jaipur</h3>
+                <p>The Pink City awaits with its rich heritage.</p>
             </div>
-            <div class="service-card">
-                <h3>Visa Assistance</h3>
-                <p>Get help with the visa application process for your hassle-free journey.</p>
+            <div class="package">
+                <img src="https://via.placeholder.com/300x200?text=Kashmir" alt="Kashmir">
+                <h3>Kashmir</h3>
+                <p>Heaven on Earth - mountains, valleys, and rivers.</p>
             </div>
         </div>
     </section>
-
-    <section class="packages" id="packages">
-        <h2>Exclusive Tour Packages</h2>
-        <div class="packages-section">
-            <div class="package-card">
-                <img src="https://via.placeholder.com/400x250?text=Beach+Vacation" alt="Beach Vacation">
-                <h3>Beach Vacation</h3>
-                <p>Escape to the serene beaches for a perfect beach holiday.</p>
-                <p><strong>₹50,000 per person</strong></p>
-                <a href="#">Book Now</a>
+    <section class="content-section" id="packages">
+        <h2>Travel Packages</h2>
+        <div class="packages">
+            <div class="package">
+                <img src="https://via.placeholder.com/300x200?text=Mountains" alt="Mountains">
+                <h3>Mountain Packages</h3>
+                <p>Explore the great Himalayas and scenic hill stations.</p>
             </div>
-            <div class="package-card">
-                <img src="https://via.placeholder.com/400x250?text=Mountain+Trekking" alt="Mountain Trekking">
-                <h3>Mountain Trekking</h3>
-                <p>Embark on an exciting mountain trekking journey with breathtaking views.</p>
-                <p><strong>₹80,000 per person</strong></p>
-                <a href="#">Book Now</a>
+            <div class="package">
+                <img src="https://via.placeholder.com/300x200?text=Wildlife" alt="Wildlife">
+                <h3>Wildlife Packages</h3>
+                <p>Discover India's diverse flora and fauna.</p>
             </div>
-            <div class="package-card">
-                <img src="https://via.placeholder.com/400x250?text=City+Cultural+Tour" alt="City Cultural Tour">
-                <h3>City Cultural Tour</h3>
-                <p>Experience the rich culture and history of your favorite cities.</p>
-                <p><strong>₹45,000 per person</strong></p>
-                <a href="#">Book Now</a>
+            <div class="package">
+                <img src="https://via.placeholder.com/300x200?text=Rivers" alt="Rivers">
+                <h3>River Packages</h3>
+                <p>Enjoy river cruises and serene backwaters.</p>
+            </div>
+            <div class="package">
+                <img src="https://via.placeholder.com/300x200?text=Cruise" alt="Cruise">
+                <h3>Cruise Packages</h3>
+                <p>Luxury cruises to explore India's coastline.</p>
             </div>
         </div>
     </section>
-
-    <section class="contact-us" id="contact">
+    <section class="testimonial">
+        <h3>What Our Clients Say</h3>
+        <p>"Explore India made our trip unforgettable! The attention to detail was amazing." - Rahul Sharma</p>
+        <p>"A fantastic journey through the Himalayan mountains with the best guides and support!" - Priya Mehta</p>
+    </section>
+    <section class="content-section" id="consultancy">
+        <h2>Travel Consultancy</h2>
+        <p>Need help planning your trip? Our experts provide custom solutions for:</p>
+        <ul>
+            <li>Itinerary planning</li>
+            <li>Budget management</li>
+            <li>Accommodation selection</li>
+            <li>Travel insurance and more</li>
+        </ul>
+    </section>
+    <section class="contact-form" id="contact">
         <h2>Contact Us</h2>
-        <form class="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <form action="mailto:zaheerarshaddeobandi@gmail.com" method="POST" enctype="text/plain">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
-
     <footer>
-        <p>&copy; 2025 Ultimate Travel Consultancy. All rights reserved.</p>
-        <p>Contact us: <a href="tel:+917017283687">7017283687</a></p>
+        <p>Contact us: <a href="mailto:zaheerarshaddeobandi@gmail.com">zaheerarshaddeobandi@gmail.com</a> | Phone: 7017283687</p>
+        <p>&copy; 2025 Explore India. All rights reserved.</p>
     </footer>
 </body>
 </html>
