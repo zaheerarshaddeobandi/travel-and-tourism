@@ -3,205 +3,338 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaheer Arshad Travel Consultancy</title>
+    <title>Ultimate Travel Consultancy - Your Dream Vacation Awaits</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
         }
+
         header {
-            background-color: #004d99;
+            background-color: #003366;
             color: white;
             padding: 20px;
             text-align: center;
         }
-        nav {
-            background-color: #0066cc;
-            overflow: hidden;
-        }
-        nav ul {
+
+        header h1 {
+            font-size: 3em;
             margin: 0;
-            padding: 0;
+        }
+
+        nav ul {
             list-style: none;
-            display: flex;
-            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+            background-color: #003366;
+            text-align: center;
         }
+
         nav ul li {
+            display: inline-block;
             position: relative;
+            margin: 0 20px;
         }
+
         nav ul li a {
-            display: block;
-            padding: 15px 20px;
             color: white;
             text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            background-color: #0057A0;
+            border-radius: 5px;
         }
+
         nav ul li a:hover {
-            background-color: #004080;
+            background-color: #004A8C;
         }
+
+        /* Dropdown Menu Styles */
         nav ul li ul {
             display: none;
             position: absolute;
             top: 100%;
             left: 0;
-            background-color: #0080ff;
-            padding: 0;
-            min-width: 200px;
+            background-color: #0057A0;
+            border-radius: 5px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            min-width: 180px;
         }
+
         nav ul li:hover > ul {
             display: block;
         }
+
         nav ul li ul li {
-            width: 100%;
+            display: block;
         }
-        nav ul li ul ul {
-            left: 100%;
-            top: 0;
+
+        nav ul li ul li a {
+            padding: 10px;
+            background-color: #003366;
         }
-        section {
-            padding: 20px;
-            background-color: #f2f2f2;
-            margin: 10px;
-            border: 1px solid #ddd;
+
+        nav ul li ul li a:hover {
+            background-color: #004A8C;
         }
-        h2 {
-            color: #004d99;
-        }
-        footer {
-            background-color: #004d99;
+
+        .hero-section {
+            background: url('https://via.placeholder.com/1600x700?text=Scenic+View') no-repeat center center;
+            background-size: cover;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 150px 0;
         }
-        .contact-info {
-            background-color: #e6f7ff;
+
+        .hero-section h2 {
+            font-size: 3em;
+        }
+
+        .hero-section p {
+            font-size: 1.5em;
+        }
+
+        .about-us,
+        .services,
+        .packages,
+        .contact-us {
+            padding: 50px;
+            margin-top: 30px;
+            background-color: white;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .about-us h2,
+        .services h2,
+        .packages h2,
+        .contact-us h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #003366;
+        }
+
+        .about-us p,
+        .services p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .services-section {
+            display: flex;
+            gap: 40px;
+        }
+
+        .service-card {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            width: 30%;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card h3 {
+            font-size: 1.8em;
+            color: #003366;
+        }
+
+        .service-card p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .packages-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .package-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            transition: transform 0.3s ease;
+        }
+
+        .package-card:hover {
+            transform: scale(1.05);
+        }
+
+        .package-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .package-card h3 {
+            margin: 20px;
+            font-size: 1.5em;
+            color: #003366;
+        }
+
+        .package-card p {
+            margin: 0 20px;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .contact-form {
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
             padding: 15px;
             margin: 10px 0;
-            border-left: 5px solid #004d99;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1.1em;
         }
-        .menu-level {
-            margin-left: 20px;
+
+        .contact-form button {
+            background-color: #003366;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .contact-form button:hover {
+            background-color: #0057A0;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            font-size: 1.2em;
+        }
+
+        footer a {
+            color: #00cc99;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Zaheer Arshad Travel Consultancy</h1>
-    <p>Mobile: 7017283687 | Email: zaheerarshaddeobandi@gmail.com</p>
-</header>
-
-<nav>
-    <ul>
-        <li><a href="#introduction">Home</a></li>
-        <li><a href="#packages">Packages</a>
+    <header>
+        <h1>Welcome to the Ultimate Travel Consultancy</h1>
+        <nav>
             <ul>
-                <li><a href="#beaches">Beaches</a>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Our Services</a>
                     <ul>
-                        <li><a href="#goa">Goa</a></li>
-                        <li><a href="#andaman">Andaman</a></li>
+                        <li><a href="#">Travel Planning</a></li>
+                        <li><a href="#">Visa Assistance</a></li>
+                        <li><a href="#">Ticketing</a></li>
                     </ul>
                 </li>
-                <li><a href="#mountains">Mountains</a>
+                <li><a href="#packages">Tour Packages</a>
                     <ul>
-                        <li><a href="#himalayas">Himalayas</a>
-                            <ul>
-                                <li><a href="#leh">Leh-Ladakh</a></li>
-                                <li><a href="#manali">Manali</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#alps">Alps</a></li>
+                        <li><a href="#">Beach Vacation</a></li>
+                        <li><a href="#">Mountain Trekking</a></li>
+                        <li><a href="#">City Cultural Tour</a></li>
                     </ul>
                 </li>
-                <li><a href="#cruises">Cruises</a>
-                    <ul>
-                        <li><a href="#caribbean">Caribbean</a></li>
-                        <li><a href="#alaskan">Alaskan</a></li>
-                    </ul>
-                </li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
-        </li>
-        <li><a href="#wildlife">Wildlife</a></li>
-        <li><a href="#rivers">Rivers</a></li>
-        <li><a href="#custom-packages">Custom Packages</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-    </ul>
-</nav>
+        </nav>
+    </header>
 
-<!-- Sections -->
-<section id="introduction">
-    <h2>Welcome to Zaheer Arshad Travel Consultancy</h2>
-    <p>Explore the best destinations around the world with us. From serene beaches to majestic mountains, luxurious cruises to thrilling wildlife adventures, we create personalized packages to suit your every need.</p>
-</section>
+    <section class="hero-section" id="home">
+        <h2>Explore the Best Destinations with Us</h2>
+        <p>Choose from a wide variety of travel experiences that will leave you mesmerized!</p>
+    </section>
 
-<section id="packages">
-    <h2>Our Travel Packages</h2>
-    <p>We offer a wide variety of travel packages tailored to your preferences. Choose from beaches, mountains, cruises, wildlife, and more!</p>
-</section>
+    <section class="about-us" id="about">
+        <h2>About Us</h2>
+        <p>We are your travel companion dedicated to creating personalized travel experiences. Our team brings together years of industry knowledge to offer you the best travel services, from booking tours to planning every detail of your trip.</p>
+    </section>
 
-<section id="beaches">
-    <h2>Beach Destinations</h2>
-    <div class="menu-level">
-        <h3 id="goa">Goa</h3>
-        <p>Experience vibrant nightlife, golden beaches, and Portuguese heritage in Goa.</p>
-        
-        <h3 id="andaman">Andaman</h3>
-        <p>Discover crystal-clear waters, coral reefs, and tropical vibes in the Andaman Islands.</p>
-    </div>
-</section>
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="services-section">
+            <div class="service-card">
+                <h3>Customized Travel Planning</h3>
+                <p>We design custom travel itineraries that suit your interests and travel goals.</p>
+            </div>
+            <div class="service-card">
+                <h3>Expert Travel Consultancy</h3>
+                <p>Consult with our experts for the best travel advice and recommendations.</p>
+            </div>
+            <div class="service-card">
+                <h3>Visa Assistance</h3>
+                <p>Get help with the visa application process for your hassle-free journey.</p>
+            </div>
+        </div>
+    </section>
 
-<section id="mountains">
-    <h2>Mountain Getaways</h2>
-    <div class="menu-level">
-        <h3 id="himalayas">Himalayas</h3>
-        <p>Embark on thrilling treks and enjoy serene landscapes in the mighty Himalayas.</p>
-        
-        <h4 id="leh">Leh-Ladakh</h4>
-        <p>Known for its rugged terrain, monasteries, and the mesmerizing Pangong Lake.</p>
-        
-        <h4 id="manali">Manali</h4>
-        <p>A picturesque hill station, perfect for skiing, paragliding, and honeymooners.</p>
-    </div>
-</section>
+    <section class="packages" id="packages">
+        <h2>Exclusive Tour Packages</h2>
+        <div class="packages-section">
+            <div class="package-card">
+                <img src="https://via.placeholder.com/400x250?text=Beach+Vacation" alt="Beach Vacation">
+                <h3>Beach Vacation</h3>
+                <p>Escape to the serene beaches for a perfect beach holiday.</p>
+                <p><strong>₹50,000 per person</strong></p>
+                <a href="#">Book Now</a>
+            </div>
+            <div class="package-card">
+                <img src="https://via.placeholder.com/400x250?text=Mountain+Trekking" alt="Mountain Trekking">
+                <h3>Mountain Trekking</h3>
+                <p>Embark on an exciting mountain trekking journey with breathtaking views.</p>
+                <p><strong>₹80,000 per person</strong></p>
+                <a href="#">Book Now</a>
+            </div>
+            <div class="package-card">
+                <img src="https://via.placeholder.com/400x250?text=City+Cultural+Tour" alt="City Cultural Tour">
+                <h3>City Cultural Tour</h3>
+                <p>Experience the rich culture and history of your favorite cities.</p>
+                <p><strong>₹45,000 per person</strong></p>
+                <a href="#">Book Now</a>
+            </div>
+        </div>
+    </section>
 
-<section id="cruises">
-    <h2>Luxurious Cruises</h2>
-    <div class="menu-level">
-        <h3 id="caribbean">Caribbean Cruise</h3>
-        <p>Enjoy sunny beaches, vibrant cultures, and world-class onboard experiences.</p>
-        
-        <h3 id="alaskan">Alaskan Cruise</h3>
-        <p>Witness glaciers, northern lights, and unparalleled wildlife views.</p>
-    </div>
-</section>
+    <section class="contact-us" id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
-<section id="wildlife">
-    <h2>Wildlife Safaris</h2>
-    <p>Explore rich biodiversity with safaris in India, Africa, and beyond.</p>
-</section>
-
-<section id="rivers">
-    <h2>River Adventures</h2>
-    <p>Discover breathtaking river destinations like the Nile, Ganges, and Amazon.</p>
-</section>
-
-<section id="custom-packages">
-    <h2>Custom Packages</h2>
-    <p>Create your dream vacation with our custom packages. No fixed itinerary, just your preferences!</p>
-</section>
-
-<section id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact-info">
-        <p><strong>Phone:</strong> 7017283687</p>
-        <p><strong>Email:</strong> zaheerarshaddeobandi@gmail.com</p>
-        <p><strong>Office:</strong> Delhi, India</p>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2025 Zaheer Arshad Travel Consultancy. All Rights Reserved.</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2025 Ultimate Travel Consultancy. All rights reserved.</p>
+        <p>Contact us: <a href="tel:+917017283687">7017283687</a></p>
+    </footer>
 </body>
 </html>
