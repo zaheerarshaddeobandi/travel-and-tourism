@@ -4,43 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tourism Consultancy</title>
+    <title>Explore Uttar Pradesh</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
         }
 
         header {
-            background: #35424a;
-            color: #ffffff;
+            background: #4CAF50;
+            color: white;
             padding: 10px 0;
             text-align: center;
         }
 
         nav {
-            margin: 20px 0;
+            background: #333;
+            color: white;
+            padding: 10px 0;
             display: flex;
             justify-content: center;
         }
 
-        nav a {
-            color: #ffffff;
-            margin: 0 15px;
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
             text-decoration: none;
-            font-weight: bold;
+            padding: 10px 15px;
+            display: block;
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        nav ul li a:hover {
+            background: #575757;
         }
 
-        .banner img {
-            width: 100%;
-            height: auto;
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background: #444;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li a {
+            padding: 10px;
         }
 
         .container {
@@ -49,329 +74,132 @@
             overflow: hidden;
         }
 
-        .services,
-        .about,
-        .menu,
-        .gallery,
-        .contact {
+        h1, h2 {
+            color: #333;
+        }
+
+        .hero {
+            background: url('https://source.unsplash.com/1600x400/?uttarpradesh') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .section {
             margin: 20px 0;
             padding: 20px;
-            background: #ffffff;
-            border: 1px solid #ccc;
+            background: white;
             border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        h2 {
-            border-bottom: 2px solid #35424a;
-            padding-bottom: 10px;
-        }
-
-        ul {
-            list-style-type: square;
-            padding-left: 20px;
-        }
-
-        .menu-item {
-            margin: 20px 0;
-        }
-
-        .menu-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
         }
 
         .gallery img {
-            width: 200px;
-            height: auto;
-            margin: 10px;
+            width: 300px;
             border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         footer {
+            background: #333;
+            color: white;
             text-align: center;
             padding: 20px;
-            background: #35424a;
-            color: #ffffff;
         }
 
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            max-width: 400px;
-            margin: 20px auto;
-        }
-
-        .contact-form label {
-            margin: 10px 0 5px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .contact-form button {
-            padding: 10px;
-            background: #35424a;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .contact-form button:hover {
-            background: #454d56;
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <div class="banner">
-            <img src="https://source.unsplash.com/1600x400/?travel,nature" alt="Beautiful Scenery">
-        </div>
-        <h1>Welcome to Our Tourism Consultancy</h1>
-        <nav>
-            <a href="#services">Services</a>
-            <a href="#about">About Us</a>
-            <a href="#menu">Menu</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <h1>Welcome to Uttar Pradesh</h1>
     </header>
 
+    <nav>
+        <ul>
+            <li><a href="#about">About Uttar Pradesh</a></li>
+            <li><a href="#attractions">Attractions</a>
+                <ul>
+                    <li><a href="#taj-mahal">Taj Mahal</a></li>
+                    <li><a href="#varanasi">Varanasi</a></li>
+                    <li><a href="#lucknow">Lucknow</a></li>
+                </ul>
+            </li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Discover the Heart of India</h1>
+    </div>
+
     <div class="container">
-        <section id="services" class="services">
-            <h2>Our Services</h2>
-            <p>We offer a variety of tourism consultancy services including:</p>
-            <ul>
-                <li>Travel Planning and Itineraries</li>
-                <li>Hotel and Accommodation Booking</li>
-                <li>Local Guide Services</li>
-                <li>Transportation Arrangement</li>
-                <li>Travel Insurance Assistance</li>
-                <li>Adventure Tourism Packages</li>
-                <li>Cultural and Historical Tours</li>
-                <li>Eco-friendly Travel Services</li>
-                <li>Corporate Travel Solutions</li>
-                <li>24/7 Customer Support</li>
-            </ul>
+        <section id="about" class="section">
+            <h2>About Uttar Pradesh</h2>
+            <p>Uttar Pradesh, a state in northern India, is a land of cultural and historical significance. Known for its rich heritage, vibrant festivals, and iconic landmarks, it offers a glimpse into India's diverse traditions. From the majestic Taj Mahal to the sacred ghats of Varanasi, Uttar Pradesh is a must-visit destination for travelers.</p>
         </section>
 
-        <section id="about" class="about">
-            <h2>About Us</h2>
-            <p>With over 10 years of experience in the tourism industry, we aim to provide you with the best travel experiences tailored to your needs. Our team of experts is dedicated to making your journey smooth and enjoyable.</p>
-            <p>We specialize in a wide range of travel services designed to meet the diverse needs of travelers, including group tours, solo travels, and luxury vacations. Our passion for travel drives us to find the best options for our clients.</p>
-            <p>Let us help you discover the world!</p>
+        <section id="attractions" class="section">
+            <h2>Top Attractions</h2>
+
+            <article id="taj-mahal">
+                <h3>Taj Mahal</h3>
+                <p>The Taj Mahal, located in Agra, is a UNESCO World Heritage Site and one of the Seven Wonders of the World. This marble mausoleum was built by Emperor Shah Jahan in memory of his beloved wife Mumtaz Mahal.</p>
+                <img src="https://source.unsplash.com/800x400/?tajmahal" alt="Taj Mahal">
+            </article>
+
+            <article id="varanasi">
+                <h3>Varanasi</h3>
+                <p>Varanasi, also known as Kashi, is one of the oldest cities in the world. It is famous for its ghats, temples, and vibrant spiritual atmosphere. A boat ride on the Ganges River during sunrise is a must-experience activity.</p>
+                <img src="https://source.unsplash.com/800x400/?varanasi" alt="Varanasi">
+            </article>
+
+            <article id="lucknow">
+                <h3>Lucknow</h3>
+                <p>Lucknow, the capital city of Uttar Pradesh, is renowned for its historical monuments, such as the Bara Imambara, and its delectable Awadhi cuisine. It is a city that seamlessly blends modernity with tradition.</p>
+                <img src="https://source.unsplash.com/800x400/?lucknow" alt="Lucknow">
+            </article>
         </section>
 
-        <section id="menu" class="menu">
-            <h2>Our Special Packages</h2>
-
-            <div class="menu-item">
-                <h3>Adventure Package</h3>
-                <img src="https://source.unsplash.com/800x400/?adventure,mountains" alt="Adventure Package">
-                <p>Description: Our Adventure Package includes thrilling activities such as mountain trekking, river rafting, and bungee jumping for those who seek an adrenaline rush!</p>
-                <p>Inclusions:</p>
-                <ul>
-                    <li>Guided tours with experienced adventure guides</li>
-                    <li>All necessary equipment for activities</li>
-                    <li>Safety gear and insurance</li>
-                    <li>Transportation to and from activity locations</li>
-                </ul>
-                <p>Pricing: Starts at $499 per person.</p>
-                <p>Special Features: Professional guides with certifications and photos included!</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/your_video_id_1" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p>This video showcases the thrilling experiences from our Adventure Package and gives you a taste of what to expect!</p>
-            </div>
-
-            <div class="menu-item">
-                <h3>Cultural Tour Package</h3>
-                <img src="https://source.unsplash.com/800x400/?culture,festival" alt="Cultural Tour Package">
-                <p>Description: Immerse yourself in local traditions with our Cultural Tour Package. Explore historical sites, enjoy local food, and take part in cultural festivals.</p>
-                <p>Inclusions:</p>
-                <ul>
-                    <li>All entrance fees to historical sites</li>
-                    <li>Guided tours that include local stories and traditions</li>
-                    <li>Cultural experiences such as cooking classes and artisan visits</li>
-                </ul>
-                <p>Pricing: Starts at $349 per person.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/your_video_id_2" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p>Watch this video for a glimpse of the cultural experiences that await you on our Cultural Tour Package!</p>
-            </div>
-
-            <div class="menu-item">
-                <h3>Family Vacation Package</h3>
-                <img src="https://source.unsplash.com/800x400/?family,holiday" alt="Family Vacation Package">
-                <p>Description: Designed specifically for families, this package offers accommodations and exciting activities that cater to children of all ages.</p>
-                <p>Inclusions:</p>
-                <ul>
-                    <li>Family-friendly accommodation options</li>
-                    <li>Meals (breakfast included) tailored for children</li>
-                    <li>Exciting activities such as theme parks and educational tours</li>
-                </ul>
-                <p>Pricing: Starts at $799 for a family of four.</p>
-                <p>Special Features: Kids-oriented itineraries and discounts for your little ones!</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/your_video_id_3" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p>This video highlights some fun activities included in the Family Vacation Package!</p>
-            </div>
-
-            <div class="menu-item">
-                <h3>Honeymoon Special</h3>
-                <img src="https://source.unsplash.com/800x400/?romance,honeymoon" alt="Honeymoon Special">
-                <p>Description: Celebrate your love with our Honeymoon Special—a romantic getaway to breathtaking destinations coupled with complimentary services.</p>
-                <p>Inclusions:</p>
-                <ul>
-                    <li>Luxury accommodation with spectacular views</li>
-                    <li>Romantic dinners arranged at special locations</li>
-                    <li>Exclusive experiences such as couples' spa sessions</li>
-                </ul>
-                <p>Pricing: Starts at $1,499 for two persons.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/your_video_id_4" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p>This video showcases romantic experiences designed specifically for newlyweds!</p>
-            </div>
-
-            <div class="menu-item">
-                <h3>Corporate Retreats</h3>
-                <img src="https://source.unsplash.com/800x400/?corporate,retreat" alt="Corporate Retreats">
-                <p>Description: Customize your corporate retreat focused on team-building and relaxation in beautiful settings.</p>
-                <p>Inclusions:</p>
-                <ul>
-                    <li>Accommodations suited for corporate groups</li>
-                    <li>Meeting rooms with necessary equipment</li>
-                    <li>Team-building activities led by professional facilitators</li>
-                </ul>
-                <p>Pricing: Starts at $1,999 for a group of 10.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/your_video_id_5" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p>Check out how our previous corporate retreats have positively impacted numerous teams!</p>
-            </div>
-
-            <div class="menu-item">
-                <h3>Eco Tour Package</h3>
-                <img src="https://source.unsplash.com/800x400/?eco,travel" alt="Eco Tour Package">
-                <p>Description: Join us in exploring nature while participating in conservation activities during our Eco Tour Package.</p>
-                <p>Inclusions:</p>
-                <ul>
-                    <li>Guided eco-tours with a focus on wildlife</li>
-                    <li>Sustainable meal options featuring local ingredients</li>
-                    <li>Volunteer opportunities in conservation projects</li>
-                </ul>
-                <p>Pricing: Starts at $399 per person.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/your_video_id_6" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p>This video highlights our commitment to preserving nature while enjoying its beauty!</p>
-            </div>
-
-            <div class="menu-item">
-                <h3>Luxury Travel Package</h3>
-                <img src="https://source.unsplash.com/800x400/?luxury,travel" alt="Luxury Travel Package">
-                <p>Description: Indulge in lavish trips with our Luxury Travel Package, where we provide premium accommodations and personalized services.</p>
-                <p>Inclusions:</p>
-                <ul>
-                    <li>5-star accommodations in prime locations</li>
-                    <li>Private guided tours tailored to your interests</li>
-                    <li>Transportation arranged for your convenience</li>
-                </ul>
-                <p>Pricing: Custom pricing based on your chosen destination.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/your_video_id_7" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p>Get a glimpse of exclusivity that our Luxury Travel Package offers!</p>
-            </div>
-
-            <div class="menu-item">
-                <h3>Weekend Getaways</h3>
-                <img src="https://source.unsplash.com/800x400/?weekend,getaway" alt="Weekend Getaways">
-                <p>Description: Escape the city hustle and enjoy short trips to nearby attractions with our Weekend Getaway Package at affordable prices.</p>
-                <p>Inclusions:</p>
-                <ul>
-                    <li>Accommodation in comfortable settings</li>
-                    <li>Meals to suit your taste</li>
-                    <li>Transport to a selection of popular destinations</li>
-                </ul>
-                <p>Pricing: Starts at $199 per person.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/your_video_id_8" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p>This video gives insight into how relaxing a weekend away can be with our packages!</p>
+        <section id="gallery" class="section">
+            <h2>Photo Gallery</h2>
+            <div class="gallery">
+                <img src="https://source.unsplash.com/300x200/?uttarpradesh,heritage" alt="Heritage">
+                <img src="https://source.unsplash.com/300x200/?uttarpradesh,festival" alt="Festival">
+                <img src="https://source.unsplash.com/300x200/?uttarpradesh,landscape" alt="Landscape">
+                <img src="https://source.unsplash.com/300x200/?uttarpradesh,temples" alt="Temples">
             </div>
         </section>
 
-        <section id="gallery" class="gallery">
-            <h2>Travel Gallery</h2>
-            <img src="https://source.unsplash.com/200x200/?travel,nature" alt="Beautiful Scenery 1">
-            <img src="https://source.unsplash.com/200x200/?travel,city" alt="Beautiful Scenery 2">
-            <img src="https://source.unsplash.com/200x200/?travel,mountains" alt="Beautiful Scenery 3">
-            <img src="https://source.unsplash.com/200x200/?travel,ocean" alt="Beautiful Scenery 4">
-            <img src="https://source.unsplash.com/200x200/?travel,lake" alt="Beautiful Scenery 5">
-            <img src="https://source.unsplash.com/200x200/?travel,forest" alt="Beautiful Scenery 6">
-            <img src="https://source.unsplash.com/200x200/?travel,architecture" alt="Beautiful Scenery 7">
-            <img src="https://source.unsplash.com/200x200/?travel,adventure" alt="Beautiful Scenery 8">
-            <img src="https://source.unsplash.com/200x200/?travel,food" alt="Beautiful Scenery 9">
-            <img src="https://source.unsplash.com/200x200/?travel,culture" alt="Beautiful Scenery 10">
-        </section>
-
-        <section id="contact">
+        <section id="contact" class="section">
             <h2>Contact Us</h2>
-            <p>If you have any questions or need further information, please contact us:</p>
             <p>Email: <a href="mailto:zaheerarshaddeobandi@gmail.com">zaheerarshaddeobandi@gmail.com</a></p>
             <p>Phone: <a href="tel:+917017283687">+91 7017283687</a></p>
-
-            <h3>Contact Form</h3>
-            <form class="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2023 Tourism Consultancy. All rights reserved.</p>
-        <p>Follow us on <a href="#" style="color: #ffffff;">Facebook</a>, <a href="#" style="color: #ffffff;">Twitter</a>, <a href="#" style="color: #ffffff;">Instagram</a>.</p>
+        <p>&copy; 2025 Explore Uttar Pradesh. All rights reserved.</p>
+        <p>Follow us on <a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">Twitter</a>.</p>
     </footer>
-
-    <script>
-        console.log("Tourism Consultancy Website Loaded");
-    </script>
 </body>
 
 </html>
