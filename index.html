@@ -1,306 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore India offers custom travel packages, consultancy services, and expert advice for your dream vacation in India.">
-    <title>Explore India - Travel & Consultancy</title>
+    <title>Tourism Consultancy</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f8ff;
+            background-color: #f4f4f4;
         }
+
         header {
-            background: linear-gradient(to right, #003366, #0073e6);
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            margin: 5px 0;
-        }
-        nav {
-            background-color: #005580;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            position: relative;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            padding: 10px 15px;
-            display: block;
-        }
-        nav ul li ul {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #004466;
-            padding: 0;
-        }
-        nav ul li:hover ul {
-            display: block;
-        }
-        .hero-section {
-            background: url('https://via.placeholder.com/1600x600?text=Explore+India') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 150px 20px;
-        }
-        .hero-section h2 {
-            margin: 0;
-            font-size: 3em;
-        }
-        .content-section {
-            padding: 20px;
-            background-color: #fff;
-            margin: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .content-section h2 {
-            font-size: 2em;
-        }
-        .service-list, .team-list, .blog-list, .testimonial-list {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .service-item, .team-member, .blog-item, .testimonial-card {
-            width: 30%;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .team-member img {
-            width: 100%;
-            border-radius: 50%;
-        }
-        .contact-form {
-            background-color: #fff;
-            padding: 30px;
-            margin: 20px 0;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        footer {
-            background: #003366;
-            color: white;
-            text-align: center;
+            background: #35424a;
+            color: #ffffff;
             padding: 10px 0;
-        }
-        footer a {
-            color: #80c1ff;
-            text-decoration: none;
-        }
-        .newsletter-section {
-            background-color: #e6f7ff;
-            padding: 50px 20px;
             text-align: center;
         }
-        .newsletter-form {
+
+        nav {
+            margin: 20px 0;
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
         }
-        .newsletter-form input[type="email"] {
-            padding: 10px;
-            width: 300px;
+
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .services,
+        .about,
+        .menu,
+        .gallery,
+        .contact {
+            margin: 20px 0;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            border: 1px solid #ddd;
         }
-        .newsletter-form button {
-            padding: 10px 20px;
-            background-color: #003366;
-            color: white;
+
+        h2 {
+            border-bottom: 2px solid #35424a;
+            padding-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        .menu-item {
+            margin: 20px 0;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #35424a;
+            color: #ffffff;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        .contact-form label {
+            margin: 10px 0 5px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            background: #35424a;
+            color: #ffffff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
-        @media (max-width: 768px) {
-            .service-item, .team-member, .blog-item, .testimonial-card {
-                width: 100%;
-            }
+
+        .contact-form button:hover {
+            background: #454d56;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
+
 <body>
     <header>
-        <h1>Explore India</h1>
-        <p>Your gateway to India's beauty and culture</p>
+        <div class="banner">
+            <img src="https://source.unsplash.com/1600x400/?travel,nature" alt="Beautiful Scenery">
+        </div>
+        <h1>Welcome to Our Tourism Consultancy</h1>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About Us</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#destinations">Destinations</a></li>
-            <li><a href="#packages">Packages</a>
-                <ul>
-                    <li><a href="#mountains">Mountains</a></li>
-                    <li><a href="#wildlife">Wildlife</a></li>
-                    <li><a href="#rivers">Rivers</a></li>
-                    <li><a href="#cruise">Cruise</a></li>
-                </ul>
-            </li>
-            <li><a href="#consultancy">Consultancy</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-    </nav>
-    <section class="hero-section">
-        <h2>Welcome to Incredible India</h2>
-        <p>Start your journey with us and explore the unmatched beauty of this nation.</p>
-    </section>
-    
-    <section class="content-section about-section">
-        <h2>About Us</h2>
-        <p>We are dedicated to offering the best travel packages and expert consultancy to make your dream vacation come true.</p>
-        <p>Our team consists of experienced travel enthusiasts who have explored every corner of India. We believe that travel is more than just seeing new places; it's about experiencing different cultures, meeting new people, and making unforgettable memories.</p>
-    </section>
-    
-    <section class="content-section service-section">
-        <h2>Our Services</h2>
-        <div class="service-list">
-            <div class="service-item">
-                <h3>Custom Travel Packages</h3>
-                <p>Tailored experiences that match your preferences and budget.</p>
-            </div>
-            <div class="service-item">
-                <h3>Travel Consultancy</h3>
-                <p>Expert advice to help you plan the perfect trip to India.</p>
-            </div>
-            <div class="service-item">
-                <h3>Group Tours</h3>
-                <p>Join guided group tours to explore India in a more organized way.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="content-section team-section">
-        <h2>Meet Our Team</h2>
-        <div class="team-list">
-            <div class="team-member">
-                <img src="https://via.placeholder.com/200" alt="John Doe">
-                <h3>John Doe</h3>
-                <p>Founder & CEO</p>
-                <p>With over 15 years in the travel industry, John leads the team with passion and vision.</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/200" alt="Jane Smith">
-                <h3>Jane Smith</h3>
-                <p>Travel Consultant</p>
-                <p>Jane specializes in adventure travel, ensuring your thrills are guaranteed.</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/200" alt="Emily Clark">
-                <h3>Emily Clark</h3>
-                <p>Tour Specialist</p>
-                <p>Emily curates unforgettable itineraries that highlight India's rich culture.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="content-section testimonial">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonial-list">
-            <div class="testimonial-card">
-                <p>"The best travel experience we've ever had, thanks to Explore India!"</p>
-                <p>- A Happy Customer</p>
-            </div>
-            <div class="testimonial-card">
-                <p>"Amazing service! Our trip was seamless and beautifully organized."</p>
-                <p>- Satisfied Traveler</p>
-            </div>
-            <div class="testimonial-card">
-                <p>"Explore India helped us create unforgettable memories. Highly recommended!"</p>
-                <p>- Another Happy Traveler</p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="content-section contact-form" id="contact">
-        <h2>Contact Us</h2>
-        <form action="#" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-    
-    <section class="newsletter-section">
-        <h2>Subscribe to Our Newsletter</h2>
-        <p>Stay updated with the latest travel packages and offers.</p>
-        <div class="newsletter-form">
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit">Subscribe</button>
-        </div>
-    </section>
 
-    <section class="content-section blog-section">
-        <h2>Latest Blog Posts</h2>
-        <div class="blog-list">
-            <div class="blog-item">
-                <img src="https://via.placeholder.com/300" alt="Blog Post 1">
-                <h3>10 Best Places to Visit in India</h3>
-                <p>Discover the top destinations that India has to offer. From mountains to beaches, find your next adventure.</p>
+    <div class="container">
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <p>We offer a variety of tourism consultancy services including:</p>
+            <ul>
+                <li>Travel Planning and Itineraries</li>
+                <li>Hotel and Accommodation Booking</li>
+                <li>Local Guide Services</li>
+                <li>Transportation Arrangement</li>
+                <li>Travel Insurance Assistance</li>
+                <li>Adventure Tourism Packages</li>
+                <li>Cultural and Historical Tours</li>
+                <li>Eco-friendly Travel Services</li>
+                <li>Corporate Travel Solutions</li>
+                <li>24/7 Customer Support</li>
+            </ul>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>With over 10 years of experience in the tourism industry, we aim to provide you with the best travel experiences tailored to your needs. Our team of experts is dedicated to making your journey smooth and enjoyable.</p>
+            <p>We specialize in a wide range of travel services designed to meet the diverse needs of travelers, including group tours, solo travels, and luxury vacations. Our passion for travel drives us to find the best options for our clients.</p>
+            <p>Let us help you discover the world!</p>
+        </section>
+
+        <section id="menu" class="menu">
+            <h2>Our Special Packages</h2>
+
+            <div class="menu-item">
+                <h3>Adventure Package</h3>
+                <img src="https://source.unsplash.com/800x400/?adventure,mountains" alt="Adventure Package">
+                <p>Description: Our Adventure Package includes thrilling activities such as mountain trekking, river rafting, and bungee jumping for those who seek an adrenaline rush!</p>
+                <p>Inclusions:</p>
+                <ul>
+                    <li>Guided tours with experienced adventure guides</li>
+                    <li>All necessary equipment for activities</li>
+                    <li>Safety gear and insurance</li>
+                    <li>Transportation to and from activity locations</li>
+                </ul>
+                <p>Pricing: Starts at $499 per person.</p>
+                <p>Special Features: Professional guides with certifications and photos included!</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/your_video_id_1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>This video showcases the thrilling experiences from our Adventure Package and gives you a taste of what to expect!</p>
             </div>
-            <div class="blog-item">
-                <img src="https://via.placeholder.com/300" alt="Blog Post 2">
-                <h3>Travel Tips for First-Time Visitors</h3>
-                <p>Planning your first trip to India? Here are some essential tips to ensure a smooth journey.</p>
+
+            <div class="menu-item">
+                <h3>Cultural Tour Package</h3>
+                <img src="https://source.unsplash.com/800x400/?culture,festival" alt="Cultural Tour Package">
+                <p>Description: Immerse yourself in local traditions with our Cultural Tour Package. Explore historical sites, enjoy local food, and take part in cultural festivals.</p>
+                <p>Inclusions:</p>
+                <ul>
+                    <li>All entrance fees to historical sites</li>
+                    <li>Guided tours that include local stories and traditions</li>
+                    <li>Cultural experiences such as cooking classes and artisan visits</li>
+                </ul>
+                <p>Pricing: Starts at $349 per person.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/your_video_id_2" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>Watch this video for a glimpse of the cultural experiences that await you on our Cultural Tour Package!</p>
             </div>
-            <div class="blog-item">
-                <img src="https://via.placeholder.com/300" alt="Blog Post 3">
-                <h3>Cultural Insights: Understanding India</h3>
-                <p>Learn about the diverse cultures of India and how to engage with local traditions respectfully.</p>
+
+            <div class="menu-item">
+                <h3>Family Vacation Package</h3>
+                <img src="https://source.unsplash.com/800x400/?family,holiday" alt="Family Vacation Package">
+                <p>Description: Designed specifically for families, this package offers accommodations and exciting activities that cater to children of all ages.</p>
+                <p>Inclusions:</p>
+                <ul>
+                    <li>Family-friendly accommodation options</li>
+                    <li>Meals (breakfast included) tailored for children</li>
+                    <li>Exciting activities such as theme parks and educational tours</li>
+                </ul>
+                <p>Pricing: Starts at $799 for a family of four.</p>
+                <p>Special Features: Kids-oriented itineraries and discounts for your little ones!</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/your_video_id_3" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>This video highlights some fun activities included in the Family Vacation Package!</p>
             </div>
-        </div>
-    </section>
-    
-    <section class="content-section faq-section">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <h3>What is the best time to visit India?</h3>
-            <p>The best time to visit is from October to March when the weather is most pleasant.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Do I need a visa to enter India?</h3>
-            <p>Yes, most travelers need a visa. Please check the visa requirements specific to your country.</p>
-        </div>
-        <div class="faq-item">
-            <h3>How can I book a tour package?</h3>
-            <p>You can reach out to us through our contact form and we will guide you through the booking process.</p>
-        </div>
-    </section>
-    
+
+            <div class="menu-item">
+                <h3>Honeymoon Special</h3>
+                <img src="https://source.unsplash.com/800x400/?romance,honeymoon" alt="Honeymoon Special">
+                <p>Description: Celebrate your love with our Honeymoon Special—a romantic getaway to breathtaking destinations coupled with complimentary services.</p>
+                <p>Inclusions:</p>
+                <ul>
+                    <li>Luxury accommodation with spectacular views</li>
+                    <li>Romantic dinners arranged at special locations</li>
+                    <li>Exclusive experiences such as couples' spa sessions</li>
+                </ul>
+                <p>Pricing: Starts at $1,499 for two persons.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/your_video_id_4" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>This video showcases romantic experiences designed specifically for newlyweds!</p>
+            </div>
+
+            <div class="menu-item">
+                <h3>Corporate Retreats</h3>
+                <img src="https://source.unsplash.com/800x400/?corporate,retreat" alt="Corporate Retreats">
+                <p>Description: Customize your corporate retreat focused on team-building and relaxation in beautiful settings.</p>
+                <p>Inclusions:</p>
+                <ul>
+                    <li>Accommodations suited for corporate groups</li>
+                    <li>Meeting rooms with necessary equipment</li>
+                    <li>Team-building activities led by professional facilitators</li>
+                </ul>
+                <p>Pricing: Starts at $1,999 for a group of 10.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/your_video_id_5" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>Check out how our previous corporate retreats have positively impacted numerous teams!</p>
+            </div>
+
+            <div class="menu-item">
+                <h3>Eco Tour Package</h3>
+                <img src="https://source.unsplash.com/800x400/?eco,travel" alt="Eco Tour Package">
+                <p>Description: Join us in exploring nature while participating in conservation activities during our Eco Tour Package.</p>
+                <p>Inclusions:</p>
+                <ul>
+                    <li>Guided eco-tours with a focus on wildlife</li>
+                    <li>Sustainable meal options featuring local ingredients</li>
+                    <li>Volunteer opportunities in conservation projects</li>
+                </ul>
+                <p>Pricing: Starts at $399 per person.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/your_video_id_6" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>This video highlights our commitment to preserving nature while enjoying its beauty!</p>
+            </div>
+
+            <div class="menu-item">
+                <h3>Luxury Travel Package</h3>
+                <img src="https://source.unsplash.com/800x400/?luxury,travel" alt="Luxury Travel Package">
+                <p>Description: Indulge in lavish trips with our Luxury Travel Package, where we provide premium accommodations and personalized services.</p>
+                <p>Inclusions:</p>
+                <ul>
+                    <li>5-star accommodations in prime locations</li>
+                    <li>Private guided tours tailored to your interests</li>
+                    <li>Transportation arranged for your convenience</li>
+                </ul>
+                <p>Pricing: Custom pricing based on your chosen destination.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/your_video_id_7" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>Get a glimpse of exclusivity that our Luxury Travel Package offers!</p>
+            </div>
+
+            <div class="menu-item">
+                <h3>Weekend Getaways</h3>
+                <img src="https://source.unsplash.com/800x400/?weekend,getaway" alt="Weekend Getaways">
+                <p>Description: Escape the city hustle and enjoy short trips to nearby attractions with our Weekend Getaway Package at affordable prices.</p>
+                <p>Inclusions:</p>
+                <ul>
+                    <li>Accommodation in comfortable settings</li>
+                    <li>Meals to suit your taste</li>
+                    <li>Transport to a selection of popular destinations</li>
+                </ul>
+                <p>Pricing: Starts at $199 per person.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/your_video_id_8" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>This video gives insight into how relaxing a weekend away can be with our packages!</p>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <h2>Travel Gallery</h2>
+            <img src="https://source.unsplash.com/200x200/?travel,nature" alt="Beautiful Scenery 1">
+            <img src="https://source.unsplash.com/200x200/?travel,city" alt="Beautiful Scenery 2">
+            <img src="https://source.unsplash.com/200x200/?travel,mountains" alt="Beautiful Scenery 3">
+            <img src="https://source.unsplash.com/200x200/?travel,ocean" alt="Beautiful Scenery 4">
+            <img src="https://source.unsplash.com/200x200/?travel,lake" alt="Beautiful Scenery 5">
+            <img src="https://source.unsplash.com/200x200/?travel,forest" alt="Beautiful Scenery 6">
+            <img src="https://source.unsplash.com/200x200/?travel,architecture" alt="Beautiful Scenery 7">
+            <img src="https://source.unsplash.com/200x200/?travel,adventure" alt="Beautiful Scenery 8">
+            <img src="https://source.unsplash.com/200x200/?travel,food" alt="Beautiful Scenery 9">
+            <img src="https://source.unsplash.com/200x200/?travel,culture" alt="Beautiful Scenery 10">
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need further information, please contact us:</p>
+            <p>Email: <a href="mailto:zaheerarshaddeobandi@gmail.com">zaheerarshaddeobandi@gmail.com</a></p>
+            <p>Phone: <a href="tel:+917017283687">+91 7017283687</a></p>
+
+            <h3>Contact Form</h3>
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
     <footer>
-        <p>&copy; 2023 Explore India. All rights reserved.</p>
-        <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+        <p>&copy; 2023 Tourism Consultancy. All rights reserved.</p>
+        <p>Follow us on <a href="#" style="color: #ffffff;">Facebook</a>, <a href="#" style="color: #ffffff;">Twitter</a>, <a href="#" style="color: #ffffff;">Instagram</a>.</p>
     </footer>
+
+    <script>
+        console.log("Tourism Consultancy Website Loaded");
+    </script>
 </body>
+
 </html>
