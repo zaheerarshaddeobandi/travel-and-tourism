@@ -440,13 +440,43 @@ There are regular bus services from Agra to a number of important cities. The ma
 </body>
 </html>
 <head>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-XXXXXXX-X');  <!-- Replace UA-XXXXXXX-X with your actual tracking ID -->
-  </script>
-  <!-- End Google Analytics -->
+<?php
+// Visitor Tracking Script - track_visitor.php
+
+// Get visitor's IP address, browser info, and the current URL
+$ip_address = $_SERVER['REMOTE_ADDR'];  // Visitor's IP address
+$user_agent = $_SERVER['HTTP_USER_AGENT'];  // Visitor's browser info
+$page_url = $_SERVER['REQUEST_URI'];  // Current page URL
+$timestamp = date('Y-m-d H:i:s');  // Current timestamp
+
+// Open or create a log file to store the data
+$file = 'visitor_logs.txt';  // Log file to store visitor data
+$log = "IP: $ip_address | Browser: $user_agent | URL: $page_url | Time: $timestamp\n";
+
+// Append the log entry to the file
+file_put_contents($file, $log, FILE_APPEND);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Tracking Example</title>
 </head>
+<body>
+    <h1>Welcome to My Website!</h1>
+    <p>This is a simple example of advanced visitor tracking.</p>
+
+    <!-- Optional: Display the visitor log data -->
+    <h2>Visitor Log:</h2>
+    <pre>
+        <?php
+        // Read and display the visitor logs
+        $log_content = file_get_contents('visitor_logs.txt');
+        echo nl2br($log_content);
+        ?>
+    </pre>
+</body>
+</html>
+  
