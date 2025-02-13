@@ -465,4 +465,92 @@ file_put_contents($file, $log, FILE_APPEND);
     <title>Visitor Tracking Example</title>
 </head>
 <body>
-    
+    <?php
+// Visitor Tracking Script
+
+// Get visitor's IP address, browser info, and the current URL
+$ip_address = $_SERVER['REMOTE_ADDR'];  // Visitor's IP address
+$user_agent = $_SERVER['HTTP_USER_AGENT'];  // Visitor's browser info
+$page_url = $_SERVER['REQUEST_URI'];  // Current page URL
+$timestamp = date('Y-m-d H:i:s');  // Current timestamp
+
+// Open or create a log file to store the data
+$file = 'visitor_logs.txt';  // Log file to store visitor data
+$log = "IP: $ip_address | Browser: $user_agent | URL: $page_url | Time: $timestamp\n";
+
+// Append the log entry to the file
+file_put_contents($file, $log, FILE_APPEND);
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Uttar Pradesh</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Uttar Pradesh Tourism</h1>
+        <p>Explore the rich heritage and culture of Uttar Pradesh!</p>
+    </header>
+
+    <section id="intro">
+        <h2>Discover Uttar Pradesh</h2>
+        <p>Uttar Pradesh is a state in northern India, home to some of the most famous landmarks in the world, such as the Taj Mahal and Varanasi's ghats. It is a land full of history, spirituality, and vibrant culture.</p>
+    </section>
+
+    <section id="places">
+        <article id="tajmahal">
+            <h3>Taj Mahal</h3>
+            <p>The Taj Mahal is one of the most famous landmarks in the world and a symbol of love. Located in Agra, it attracts millions of tourists every year.</p>
+            <img src="https://source.unsplash.com/800x400/?tajmahal" alt="Taj Mahal">
+        </article>
+
+        <article id="varanasi">
+            <h3>Varanasi</h3>
+            <p>Varanasi, also known as Kashi, is one of the oldest cities in the world. It is famous for its ghats, temples, and vibrant spiritual atmosphere. A boat ride on the Ganges River during sunrise is a must-experience activity.</p>
+            <img src="https://source.unsplash.com/800x400/?varanasi" alt="Varanasi">
+        </article>
+
+        <article id="lucknow">
+            <h3>Lucknow</h3>
+            <p>Lucknow, the capital city of Uttar Pradesh, is renowned for its historical monuments, such as the Bara Imambara, and its delectable Awadhi cuisine. It is a city that seamlessly blends modernity with tradition.</p>
+            <img src="https://source.unsplash.com/800x400/?lucknow" alt="Lucknow">
+        </article>
+    </section>
+
+    <section id="gallery" class="section">
+        <h2>Photo Gallery</h2>
+        <div class="gallery">
+            <img src="https://source.unsplash.com/300x200/?uttarpradesh,heritage" alt="Heritage">
+            <img src="https://source.unsplash.com/300x200/?uttarpradesh,festival" alt="Festival">
+            <img src="https://source.unsplash.com/300x200/?uttarpradesh,landscape" alt="Landscape">
+            <img src="https://source.unsplash.com/300x200/?uttarpradesh,temples" alt="Temples">
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:zaheerarshaddeobandi@gmail.com">zaheerarshaddeobandi@gmail.com</a></p>
+        <p>Phone: <a href="tel:+917017283687">+91 7017283687</a></p>
+    </section>
+
+    <section id="visitor-info" class="section">
+        <h2>Visitor Information</h2>
+        <p>IP Address: <?php echo $ip_address; ?></p>
+        <p>Browser: <?php echo $user_agent; ?></p>
+        <p>Current Page URL: <?php echo $page_url; ?></p>
+        <p>Timestamp: <?php echo $timestamp; ?></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Explore Uttar Pradesh. All rights reserved.</p>
+        <p>Follow us on <a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">Twitter</a>.</p>
+    </footer>
+</body>
+
+</html>
+
