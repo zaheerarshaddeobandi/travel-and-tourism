@@ -479,4 +479,15 @@ file_put_contents($file, $log, FILE_APPEND);
     </pre>
 </body>
 </html>
+<?php
+// विज़िटर का IP प्राप्त करें
+$visitor_ip = $_SERVER['REMOTE_ADDR'];
+
+// वर्तमान तारीख और समय प्राप्त करें
+$timestamp = date('Y-m-d H:i:s');
+
+// लॉग डेटा को फ़ाइल में लिखें
+$log_entry = "Visitor IP: " . $visitor_ip . " | Date: " . $timestamp . "\n";
+file_put_contents('visitor_logs.txt', $log_entry, FILE_APPEND);
+?>
   
