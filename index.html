@@ -1730,5 +1730,142 @@ There are regular bus services from Agra to a number of important cities. The ma
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Travel and Tourism - Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #chatbox {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+        }
+        #chatbox-header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        #chatbox-body {
+            padding: 10px;
+            height: 80%;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        #chatbox-footer {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #chat-input {
+            width: 80%;
+            padding: 5px;
+        }
+        #chat-send {
+            background-color: #007BFF;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+        #chat-send:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            margin: 10px 0;
+        }
+        .user-message {
+            text-align: right;
+            background-color: #e1f7d5;
+            padding: 5px;
+            border-radius: 10px;
+            max-width: 70%;
+            margin-left: auto;
+        }
+        .bot-message {
+            text-align: left;
+            background-color: #f1f1f1;
+            padding: 5px;
+            border-radius: 10px;
+            max-width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="toggleChat()" id="chat-btn">Chat with Us</button>
+
+    <div id="chatbox">
+        <div id="chatbox-header">
+            Ahmad Travel & Tourism
+        </div>
+        <div id="chatbox-body">
+            <div id="messages"></div>
+        </div>
+        <div id="chatbox-footer">
+            <input type="text" id="chat-input" placeholder="Type your message..." />
+            <button id="chat-send" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleChat() {
+            var chatbox = document.getElementById('chatbox');
+            chatbox.style.display = chatbox.style.display === 'none' ? 'flex' : 'none';
+            if (chatbox.style.display === 'flex') {
+                displayMessage('bot', 'Hello! I am your booking assistant. How can I help you plan your trip today?');
+            }
+        }
+
+        function sendMessage() {
+            var userInput = document.getElementById('chat-input').value;
+            if (userInput.trim() !== '') {
+                displayMessage('user', userInput);
+                document.getElementById('chat-input').value = '';
+                generateBotResponse(userInput);
+            }
+        }
+
+        function displayMessage(sender, message) {
+            var messageContainer = document.getElementById('messages');
+            var messageElement = document.createElement('div');
+            messageElement.classList.add('message');
+            messageElement.classList.add(sender + '-message');
+            messageElement.innerText = message;
+            messageContainer.appendChild(messageElement);
+            messageContainer.scrollTop = messageContainer.scrollHeight;
+        }
+
+        function generateBotResponse(userMessage) {
+            var response = '';
+            if (userMessage.toLowerCase().includes('book') || userMessage.toLowerCase().includes('package')) {
+                response = 'Great! What destination are you interested in?';
+            } else if (userMessage.toLowerCase().includes('dubai')) {
+                response = 'Dubai is a fantastic destination! When are you planning your trip?';
+            } else {
+                response = 'I didn\'t quite get that. Could you please provide more details?';
+            }
+            setTimeout(function() {
+                displayMessage('bot', response);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
 
 
