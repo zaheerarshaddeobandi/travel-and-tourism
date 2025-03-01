@@ -1988,5 +1988,82 @@ There are regular bus services from Agra to a number of important cities. The ma
     <p>Tourism businesses create service offerings designed to enhance the traveler’s experience, whether through comfort, adventure, cultural exploration, or relaxation. These services cater to diverse traveler needs, ensuring a memorable and enjoyable journey.</p>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Service Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Tourism Service Booking Form</h2>
+    <form action="#" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="service">Select Service</label>
+        <select id="service" name="service" required>
+            <option value="hotel">Hotel Booking</option>
+            <option value="tour">Tour Package</option>
+            <option value="transport">Transportation</option>
+        </select>
+
+        <label for="travel_dates">Travel Dates</label>
+        <input type="text" id="travel_dates" name="travel_dates" placeholder="e.g., 2025-03-01 to 2025-03-10" required>
+
+        <label for="special_requests">Special Requests</label>
+        <textarea id="special_requests" name="special_requests" rows="4" placeholder="Any specific preferences or requirements"></textarea>
+
+        <input type="submit" value="Submit Booking">
+    </form>
+</div>
+
+</body>
+</html>
 
 
