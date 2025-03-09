@@ -2893,4 +2893,29 @@ window.__PLUGIN_STATE__ = JSON.parse("{\"context\":{\"context\":{\"locale\":\"en
     </footer>
 </body>
 </html>
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['image'])) {
+    // Get file details
+    $fileName = $_FILES['image']['name'];
+    $fileTmpName = $_FILES['image']['tmp_name'];
+    $fileSize = $_FILES['image']['size'];
+    $fileError = $_FILES['image']['error'];
+    
+    // Check for upload errors
+    if ($fileError === 0) {
+        // Set the target directory to upload images
+        $uploadDir = 'uploads/';
+        $fileDestination = $uploadDir . basename($fileName);
+        
+        // Move the uploaded file to the target directory
+        if (move_uploaded_file($fileTmpName, $fileDestination)) {
+            echo "Image successfully uploaded!";
+        } else {
+            echo "Failed to upload the image.";
+        }
+    } else {
+        echo "There was an error uploading the file.";
+    }
+}
+?>
 
