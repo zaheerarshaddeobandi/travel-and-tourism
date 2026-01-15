@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glocal Tourism | Deoband Tech-Hub</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; background: #f0f2f5; }
+        .container { max-width: 900px; margin: auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1, h2 { color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 10px; }
+        .control-panel { background: #e8f4fd; padding: 20px; border-radius: 8px; margin-top: 20px; border: 1px solid #3498db; }
+        input { padding: 8px; margin: 5px; width: 150px; }
+        button { padding: 10px 20px; background: #2c3e50; color: white; border: none; cursor: pointer; border-radius: 5px; }
+        .result { margin-top: 15px; font-weight: bold; color: #d35400; }
+        footer { margin-top: 40px; text-align: center; font-size: 0.9em; color: #7f8c8d; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Glocal Tourism: Deoband Hub</h1>
+        <p><i>UNWTO Standards | Global Reach | Local Expertise</i></p>
+    </header>
+
+    <section>
+        <h2>Page-155: Sales Control Dashboard</h2>
+        <p>यह सिस्टम आपकी कंपनी की बिक्री और खर्चों के बीच के अंतर (Variance) को मापता है।</p>
+        
+        <div class="control-panel">
+            <h3>Sales Analysis & Control Logic</h3>
+            <label>Budgeted Sales Target (₹): </label>
+            <input type="number" id="target" value="1000000"><br>
+            
+            <label>Actual Sales Achieved (₹): </label>
+            <input type="number" id="actual" placeholder="यहाँ असल बिक्री डालें"><br>
+            
+            <button onclick="calculateControl()">Run Analysis (Step 4 & 5)</button>
+            
+            <div id="output" class="result"></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Glocal Vision & Strategy</h2>
+        <p>हमारा देओबंद ऑफिस एक 'Information System' के रूप में काम करता है जो यूरोप और चीन की मार्केट इंटेलिजेंस को ट्रैक करता है।</p>
+        <ul>
+            <li><b>Step 1:</b> Setting Ethical Objectives (UNWTO Guidelines).</li>
+            <li><b>Step 2:</b> Global Performance Standards.</li>
+            <li><b>Step 3:</b> Daily Activity & Journey Tracking.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2026 Zaheer Arshad - Glocal Tourism Deoband | Powered by Page-155 Sales Logic</p>
+    </footer>
+</div>
+
+<script>
+    function calculateControl() {
+        let target = document.getElementById('target').value;
+        let actual = document.getElementById('actual').value;
+        let variance = target - actual;
+        
+        let report = "";
+        if (actual == "") {
+            report = "कृपया वास्तविक बिक्री की राशि दर्ज करें।";
+        } else if (variance > 0) {
+            report = "<b>विचलन (Variance):</b> ₹" + variance + " कम। <br><b>Remedial Action:</b> Page-155 के अनुसार सुधारात्मक कदम उठाएं!";
+        } else {
+            report = "<b>बधाई हो!</b> लक्ष्य प्राप्त हुआ। उत्पादकता (Productivity) उच्च स्तर पर है।";
+        }
+        
+        document.getElementById('output').innerHTML = report;
+    }
+</script>
+
+</body>
+</html>
