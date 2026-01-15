@@ -2,101 +2,134 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <title>Glocal Tourism Master Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glocal Tourism & Trade | Management Hub</title>
     <style>
-        :root { --primary: #1a2a6c; --secondary: #b21f1f; --accent: #fdbb2d; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f4f4; }
+        :root { --primary: #1a2a6c; --secondary: #b21f1f; --accent: #fdbb2d; --light: #f4f4f4; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: var(--light); color: #333; }
+
+        /* --- NAVIGATION SYSTEM (The Hierarchy) --- */
+        .navbar { background: var(--primary); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        .navbar ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
+        .navbar li { position: relative; }
+        .navbar a { display: block; padding: 15px 20px; color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
+        .navbar a:hover { background: var(--secondary); }
+
+        /* Sub-menu (Level 1) */
+        .navbar ul ul { display: none; position: absolute; top: 100%; left: 0; background: #2c3e50; min-width: 220px; flex-direction: column; }
+        .navbar li:hover > ul { display: flex; }
+
+        /* Sub-sub menu (Level 2) */
+        .navbar ul ul ul { top: 0; left: 100%; background: #34495e; }
+
+        /* --- HERO SECTION --- */
+        .hero { background: linear-gradient(rgba(26, 42, 108, 0.8), rgba(178, 31, 31, 0.8)), url('https://images.unsplash.com/photo-1454165833767-027ffea9e778?auto=format&fit=crop&w=1200&q=80');
+                height: 300px; background-size: cover; background-position: center; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+
+        /* --- CONTENT AREA --- */
+        .container { max-width: 1100px; margin: 30px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .management-box { border-left: 5px solid var(--secondary); padding: 15px; background: #fff5f5; margin-bottom: 30px; }
         
-        /* Navbar & Dropdown CSS */
-        .navbar { background: var(--primary); overflow: visible; display: flex; justify-content: center; position: sticky; top: 0; z-index: 1000; }
-        .navbar a, .dropbtn { display: inline-block; color: white; text-align: center; padding: 14px 20px; text-decoration: none; }
-        .dropdown { float: left; overflow: visible; position: relative; }
-        .dropdown-content { display: none; position: absolute; background-color: #f9f9f9; min-width: 200px; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1; }
-        .dropdown-content a { color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left; }
-        .dropdown:hover .dropdown-content { display: block; }
-        .dropdown-content a:hover { background-color: #ddd; }
+        /* --- TABLES (Page-156 Data) --- */
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em; }
+        th { background: var(--primary); color: white; padding: 12px; }
+        td { padding: 12px; border: 1px solid #ddd; text-align: center; }
+        .status-low { color: var(--secondary); font-weight: bold; }
+        .status-high { color: #27ae60; font-weight: bold; }
 
-        /* Sub-sub menu */
-        .sub-dropdown { position: relative; }
-        .sub-dropdown-content { display: none; position: absolute; left: 200px; top: 0; background-color: #f1f1f1; min-width: 180px; box-shadow: 8px 0px 16px rgba(0,0,0,0.1); }
-        .sub-dropdown:hover .sub-dropdown-content { display: block; }
-
-        .container { max-width: 1000px; margin: 50px auto; background: white; padding: 30px; border-radius: 10px; }
-        h1, h2 { color: var(--primary); text-align: center; }
-        .admin-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        .admin-table th, .admin-table td { border: 1px solid #ddd; padding: 10px; text-align: center; }
-        th { background: #eee; }
+        .footer { text-align: center; padding: 20px; background: #222; color: white; margin-top: 50px; }
     </style>
 </head>
 <body>
 
-<div class="navbar">
-    <a href="#">Home</a>
-    <div class="dropdown">
-        <a href="#" class="dropbtn">International Markets ▼</a>
-        <div class="dropdown-content">
-            <div class="sub-dropdown">
-                <a href="#">China Desk ❯</a>
-                <div class="sub-dropdown-content">
-                    <a href="#">Trade Fairs</a>
-                    <a href="#">Industrial Tours</a>
-                </div>
-            </div>
-            <div class="sub-dropdown">
-                <a href="#">Europe Desk ❯</a>
-                <div class="sub-dropdown-content">
-                    <a href="#">Cultural Heritage</a>
-                    <a href="#">Business Summits</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="dropdown">
-        <a href="#" class="dropbtn">Management (Page-155) ▼</a>
-        <div class="dropdown-content">
-            <a href="#analysis">Territory Analysis</a>
-            <a href="#salesperson">Salesforce Tracker</a>
-        </div>
-    </div>
-    <a href="#">UNWTO Ethics</a>
+<nav class="navbar">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li>
+            <a href="#">Territories (8.6.1a) ▼</a>
+            <ul>
+                <li>
+                    <a href="#">China Desk ❯</a>
+                    <ul>
+                        <li><a href="#">Trade Fair Packages</a></li>
+                        <li><a href="#">Shenzhen Tech Hub</a></li>
+                        <li><a href="#">Canton Special</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Europe Desk ❯</a>
+                    <ul>
+                        <li><a href="#">Heritage Tours</a></li>
+                        <li><a href="#">Business Visa Help</a></li>
+                        <li><a href="#">Alps Adventure</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Domestic (India)</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Sales Control (Page-155) ▼</a>
+            <ul>
+                <li><a href="#analysis">Territory Performance</a></li>
+                <li><a href="#salesforce">Salesperson Analysis</a></li>
+                <li><a href="#">80-20 Profit Logic</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</nav>
+
+<div class="hero">
+    <h1>Zaheer Arshad Glocal Management System</h1>
+    <p>Using Data to Reveal the Market Reality (Page-156)</p>
 </div>
 
 <div class="container">
-    <h1>Zaheer Arshad Glocal Hub</h1>
-    <p style="text-align: center;">देओबंद से वैश्विक बाज़ारों तक - एक मज़बूत सूचना प्रणाली (SIS) के साथ।</p>
+    <div class="management-box">
+        <h3>Iceberg Principle Alert</h3>
+        <p><b>Page-156 Reality:</b> "कुल बिक्री बाज़ार की हकीकत को छिपा सकती है।" हम गहराई में जाकर विश्लेषण करते हैं ताकि 90% छिपी हुई जानकारी हमें मिल सके।</p>
+    </div>
 
-    <h2 id="analysis">Territory Analysis (Table-4: Page-156)</h2>
-    <table class="admin-table">
+    <h2 id="analysis">Territory Sales Analysis (Table-4)</h2>
+    <table>
         <thead>
             <tr>
-                <th>Territory</th>
-                <th>Quota (₹)</th>
-                <th>Actual (₹)</th>
-                <th>Performance (%)</th>
+                <th>Region</th>
+                <th>Quota (Standard)</th>
+                <th>Actual Result</th>
+                <th>Performance %</th>
+                <th>Remedial Action</th>
             </tr>
         </thead>
         <tbody>
-            <tr><td>China</td><td>8,25,000</td><td>8,50,000</td><td>103%</td></tr>
-            <tr><td>Europe</td><td>8,90,000</td><td>8,70,000</td><td style="color:red">98%</td></tr>
+            <tr><td>East</td><td>8,25,000</td><td>8,50,000</td><td class="status-high">103%</td><td>None</td></tr>
+            <tr><td>West</td><td>7,50,000</td><td>7,50,000</td><td>100%</td><td>None</td></tr>
+            <tr><td>North (Local)</td><td>8,90,000</td><td>8,70,000</td><td class="status-low">98%</td><td>Investigate Low Vol.</td></tr>
+            <tr><td>South</td><td>8,50,000</td><td>9,20,000</td><td class="status-high">108%</td><td>Review High Pot.</td></tr>
         </tbody>
     </table>
 
-    <h2 id="salesperson">Salesperson Performance (Table-5)</h2>
-    <p>यहाँ आप "Gulani Factor" (Iceberg Principle) की पहचान कर सकते हैं।</p>
-    <table class="admin-table">
+    <h2 id="salesforce">Salesperson Performance Analysis (Table-5)</h2>
+    <p>North Territory का शॉर्टफॉल क्यों हुआ? यहाँ देखिए:</p>
+    <table>
         <thead>
             <tr>
                 <th>Salesperson</th>
                 <th>Quota</th>
                 <th>Actual</th>
-                <th>Status</th>
+                <th>Performance %</th>
             </tr>
         </thead>
         <tbody>
-            <tr><td>Mukherjee</td><td>110</td><td>115</td><td>Target Met</td></tr>
-            <tr><td>Gulani</td><td>130</td><td>106</td><td style="color:red">Remedial Action</td></tr>
+            <tr><td>Singh</td><td>115</td><td>117</td><td class="status-high">102%</td></tr>
+            <tr><td>Gulani</td><td>130</td><td>106</td><td class="status-low">82%</td></tr>
+            <tr><td>Reddy</td><td>116</td><td>116</td><td>100%</td></tr>
         </tbody>
     </table>
+</div>
+
+<div class="footer">
+    <p>© 2026 Zaheer Arshad | Glocal Tourism Deoband | Powered by Page 155-156 Principles</p>
 </div>
 
 </body>
