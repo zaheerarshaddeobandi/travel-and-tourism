@@ -2,122 +2,58 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaheer Arshad | Glocal Strategic Hub</title>
+    <title>Zaheer Arshad | Glocal Audit-Ready Hub</title>
     <style>
-        :root { --primary: #1a2a6c; --secondary: #b21f1f; --gold: #fdbb2d; --success: #27ae60; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f0f2f5; }
-
-        /* Navigation & Hierarchy (8.6.1) */
-        nav { background: var(--primary); position: sticky; top: 0; z-index: 1000; padding: 10px 0; }
-        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
-        nav li { position: relative; margin: 0 15px; }
-        nav a { color: white; text-decoration: none; font-weight: bold; font-size: 16px; }
-        nav ul ul { display: none; position: absolute; background: #2c3e50; min-width: 180px; top: 100%; }
-        nav li:hover > ul { display: block; }
-
-        /* Hero & Direct Call (The Conversion Tool) */
-        .hero { background: var(--primary); color: white; padding: 60px 20px; text-align: center; }
-        .call-action { background: var(--secondary); color: white; padding: 18px 35px; border-radius: 50px; 
-                       display: inline-block; text-decoration: none; font-size: 24px; font-weight: bold; 
-                       margin-top: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-
-        /* Multimedia & Packages */
-        .container { max-width: 1100px; margin: 30px auto; padding: 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        video { width: 100%; height: 200px; object-fit: cover; background: #000; }
-        .card-body { padding: 20px; text-align: center; }
-
-        /* STRATEGIC AUDIT TABLE (Page-158) */
-        .audit-section { background: white; padding: 30px; border-radius: 12px; margin-top: 50px; border-top: 5px solid var(--gold); }
-        .audit-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        .audit-table th, .audit-table td { border: 1px solid #ddd; padding: 12px; text-align: center; }
-        .audit-table th { background: #f8f9fa; color: var(--primary); }
+        :root { --primary: #1a2a6c; --secondary: #b21f1f; --bg: #f4f4f4; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); }
+        nav { background: var(--primary); padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white; margin: 0 20px; text-decoration: none; font-weight: bold; }
+        .hero { background: var(--primary); color: white; padding: 50px 20px; text-align: center; }
+        .call-btn { background: var(--secondary); color: white; padding: 15px 30px; display: inline-block; text-decoration: none; border-radius: 50px; font-size: 22px; margin-top: 15px; }
+        .container { max-width: 1100px; margin: auto; padding: 30px; }
+        .audit-card { background: white; border-radius: 10px; padding: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-left: 6px solid #27ae60; }
+        .footer { background: #222; color: white; padding: 20px; text-align: center; margin-top: 50px; }
     </style>
 </head>
 <body>
 
 <nav>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Territories ▼</a>
-            <ul>
-                <li><a href="#china">China Business</a></li>
-                <li><a href="#europe">Europe Heritage</a></li>
-            </ul>
-        </li>
-        <li><a href="tel:+917017283687">📞 Direct Support</a></li>
-    </ul>
+    <a href="#">Home</a>
+    <a href="#audit">System Audit</a>
+    <a href="tel:+917017283687">📞 Direct Contact</a>
 </nav>
 
 <div class="hero">
-    <h1>Zaheer Arshad Glocal Management</h1>
-    <p>Market Reality & Profitability Analysis (Section 8.6)</p>
-    <a href="tel:+917017283687" class="call-action">📞 Call Now: 7017283687</a>
-    <p style="margin-top:15px; font-size: 0.9em; opacity: 0.8;">(मोबाइल से क्लिक करें और सीधा बात करें)</p>
+    <h1>Zaheer Arshad | Glocal Strategic Control</h1>
+    <p>देओबंद से वैश्विक बाज़ारों का सफल प्रबंधन (Section 8.7)</p>
+    <a href="tel:+917017283687" class="call-btn">7017283687: अभी कॉल करें</a>
 </div>
 
 <div class="container">
-    <h2 style="text-align:center;">Our Dynamic Product Lines</h2>
-    <div class="grid">
-        <div class="card" id="china">
-            <video controls poster="https://images.unsplash.com/photo-1547984609-444492007c3e?w=500">
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            </video>
-            <div class="card-body">
-                <h3>China Trade Gateway</h3>
-                <p>Canton Fair और इंडस्ट्रियल विजिट।</p>
-                <a href="https://wa.me/917017283687" style="color:var(--success); font-weight:bold; text-decoration:none;">WhatsApp Inquiry</a>
-            </div>
-        </div>
-
-        <div class="card" id="europe">
-            <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=500" style="width:100%; height:200px; object-fit:cover;">
-            <div class="card-body">
-                <h3>Europe Dream Tour</h3>
-                <p>पेरिस और रोम की ऐतिहासिक यात्रा।</p>
-                <a href="tel:+917017283687" style="color:var(--secondary); font-weight:bold; text-decoration:none;">Call for Price</a>
-            </div>
-        </div>
+    <div class="audit-card">
+        <h2>Sales Management Audit (Page-159)</h2>
+        <p><b>Purpose:</b> हमारी सेल्स पॉलिसी और स्ट्रेटेजी का मूल्यांकन करना ताकि हम भविष्य के बाज़ार के लिए तैयार रहें।</p>
+        <ul>
+            <li>Productivity Analysis: क्या हमारा हर टूर मुनाफे में है?</li>
+            <li>Training & Quality: क्या हमारी टीम ग्लोबल स्टैंडर्ड्स को पूरा करती है?</li>
+            <li>Market Suitability: क्या हमारे पैकेजेस बाज़ार की ज़रूरत के हिसाब से हैं?</li>
+        </ul>
     </div>
 
-    <div class="audit-section">
-        <h2>Marketing Cost & Strategic Audit (8.6.2 & 8.6.3)</h2>
-        <p>सिर्फ सेल नहीं, बल्कि **Profit per Rupee** का हिसाब रखें।</p>
-        
-        
+    <h2 style="margin-top:40px;">Our Forecast Accuracy</h2>
+    <p><b>MIS (Marketing Information System):</b> हम डेटा के आधार पर भविष्य की बिक्री का अनुमान लगाते हैं (8.7)।</p>
+    
+    
 
-        <table class="audit-table">
-            <thead>
-                <tr>
-                    <th>Product Line</th>
-                    <th>Conversion Ratio</th>
-                    <th>Cost per Inquiry</th>
-                    <th>Profit Strategy</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>China Trade</td>
-                    <td>15%</td>
-                    <td>₹1,200</td>
-                    <td style="color:var(--success)">High Margin</td>
-                </tr>
-                <tr>
-                    <td>Europe Tour</td>
-                    <td>8%</td>
-                    <td>₹2,500</td>
-                    <td style="color:var(--gold)">Premium Segment</td>
-                </tr>
-            </tbody>
-        </table>
+    <div style="background: white; padding: 20px; border-radius: 10px; margin-top: 20px;">
+        <h3>📞 संपर्क सूत्र:</h3>
+        <p>यदि आप किसी भी पैकेज (China/Europe/India) के बारे में विस्तार से जानना चाहते हैं, तो सीधा उस्ताद से जुड़ें:</p>
+        <a href="https://wa.me/917017283687" style="color: #25D366; font-size: 20px; font-weight: bold; text-decoration: none;">💬 WhatsApp: 7017283687</a>
     </div>
 </div>
 
-<footer style="text-align:center; padding:40px; background:#222; color:white; margin-top:50px;">
-    <p>Direct Connection: +91 7017283687 | Deoband Global Hub</p>
-    <p>© 2026 Zaheer Arshad | Management Control System</p>
+<footer class="footer">
+    <p>© 2026 Zaheer Arshad | Management Excellence | Principles of Page 155-159</p>
 </footer>
 
 </body>
