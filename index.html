@@ -2,114 +2,80 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glocal Tourism | Zaheer Arshad Master Portal</title>
+    <title>Glocal Tourism | Video & Photo Gallery</title>
     <style>
-        :root { --primary: #1a2a6c; --secondary: #b21f1f; --accent: #fdbb2d; --light: #f4f4f4; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: var(--light); color: #333; }
+        :root { --primary: #1a2a6c; --secondary: #b21f1f; }
+        body { font-family: sans-serif; margin: 0; background: #f0f2f5; }
+        
+        /* Navigation */
+        nav { background: var(--primary); padding: 15px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
 
-        /* --- NAVIGATION SYSTEM (Hierarchy as per Page 156) --- */
-        .navbar { background: var(--primary); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
-        .navbar ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
-        .navbar li { position: relative; }
-        .navbar a { display: block; padding: 15px 20px; color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
-        .navbar a:hover { background: var(--secondary); }
+        .container { max-width: 1100px; margin: auto; padding: 20px; }
+        
+        /* VIDEO SECTION */
+        .video-box { background: #000; border-radius: 15px; overflow: hidden; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        video { width: 100%; display: block; }
+        .video-info { padding: 20px; background: white; border-top: 4px solid var(--secondary); }
 
-        /* Sub-menu Level 1 */
-        .navbar ul ul { display: none; position: absolute; top: 100%; left: 0; background: #2c3e50; min-width: 220px; flex-direction: column; }
-        .navbar li:hover > ul { display: flex; }
+        /* PHOTO GALLERY */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .gallery-item { position: relative; overflow: hidden; border-radius: 10px; height: 200px; cursor: pointer; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.4s; }
+        .gallery-item:hover img { transform: scale(1.1); }
+        .overlay-text { position: absolute; bottom: 0; background: rgba(0,0,0,0.6); color: white; width: 100%; padding: 10px; text-align: center; }
 
-        /* Sub-sub menu Level 2 */
-        .navbar ul ul ul { top: 0; left: 100%; background: #34495e; }
-
-        /* --- PACKAGES GRID --- */
-        .container { max-width: 1100px; margin: 30px auto; padding: 20px; }
-        .package-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
-        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); }
-        .card-img-box { position: relative; height: 200px; background: #000; }
-        .card-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; }
-        .play-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; background: rgba(0,0,0,0.5); padding: 10px 20px; border-radius: 50px; cursor: pointer; border: 2px solid white; }
-
-        .card-body { padding: 20px; text-align: center; }
-        .price-tag { color: var(--secondary); font-size: 22px; font-weight: bold; margin-bottom: 15px; }
-        .wa-btn { background: #25D366; color: white; padding: 10px; display: block; text-decoration: none; border-radius: 5px; font-weight: bold; }
-
-        /* --- ADMIN SECTION (Page-155 Control) --- */
-        .admin-panel { background: #fff; border: 2px solid var(--primary); padding: 20px; border-radius: 10px; margin-top: 50px; }
+        /* Admin Info (Page-157) */
+        .stat-card { background: white; padding: 20px; border-radius: 10px; border-left: 5px solid gold; margin-top: 30px; }
     </style>
 </head>
 <body>
 
-<nav class="navbar">
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li>
-            <a href="#">Territories ▼</a>
-            <ul>
-                <li>
-                    <a href="#">China Desk ❯</a>
-                    <ul>
-                        <li><a href="#">Trade Fairs</a></li>
-                        <li><a href="#">Tech Tours</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Europe Desk ❯</a>
-                    <ul>
-                        <li><a href="#">Heritage</a></li>
-                        <li><a href="#">Business Visa</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li><a href="#admin">Admin Control (Page-155)</a></li>
-    </ul>
+<nav>
+    <a href="#">Home</a>
+    <a href="#gallery">Photo Gallery</a>
+    <a href="#admin">Sales Control (8.6.1)</a>
 </nav>
 
 <div class="container">
-    <h1 style="text-align: center; color: var(--primary);">Explore Global Opportunities</h1>
+    <h1 style="text-align:center;">Featured Tour: Europe Heritage</h1>
     
-    <div class="package-grid">
-        <div class="card">
-            <div class="card-img-box">
-                <img src="https://images.unsplash.com/photo-1547984609-444492007c3e?auto=format&fit=crop&w=500&q=80" class="card-img">
-                <div class="play-overlay" onclick="handleVideo('China')">▶ Watch Tour Video</div>
-            </div>
-            <div class="card-body">
-                <h3>China Business Gateway</h3>
-                <p>Canton Fair और इंडस्ट्रियल हब की पूरी जानकारी।</p>
-                <div class="price-tag">₹1,50,000/-</div>
-                <a href="https://wa.me/YOUR_NUMBER" class="wa-btn">Book on WhatsApp</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-img-box">
-                <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=500&q=80" class="card-img">
-                <div class="play-overlay" onclick="handleVideo('Europe')">▶ Watch Tour Video</div>
-            </div>
-            <div class="card-body">
-                <h3>European Dream Heritage</h3>
-                <p>पेरिस, रोम और लंदन का 10 दिनों का टूर।</p>
-                <div class="price-tag">₹2,85,000/-</div>
-                <a href="https://wa.me/YOUR_NUMBER" class="wa-btn">Book on WhatsApp</a>
-            </div>
+    <div class="video-box">
+        <video controls poster="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            आपका ब्राउज़र वीडियो सपोर्ट नहीं करता।
+        </video>
+        <div class="video-info">
+            <h3>Explore Paris & Swiss Alps</h3>
+            <p>देखिये हमारे पिछले ग्रुप का शानदार अनुभव। (Glocal Quality Standard)</p>
         </div>
     </div>
 
-    <div id="admin" class="admin-panel">
-        <h2>Sales Information System (Page-155)</h2>
-        <p><b>Manager's Note:</b> यदि कोई वीडियो नहीं चलती है, तो सिस्टम तुरंत कस्टमर को WhatsApp पर भेजने का विकल्प देता है। इसे **Corrective Action** कहते हैं।</p>
+    <h2 id="gallery">Destination Gallery</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1547984609-444492007c3e?w=400" alt="China">
+            <div class="overlay-text">China Trade Hub</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400" alt="France">
+            <div class="overlay-text">Paris Heritage</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=400" alt="London">
+            <div class="overlay-text">London Business</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1524492707947-2f85a64b67ad?w=400" alt="India">
+            <div class="overlay-text">Deoband Spiritual</div>
+        </div>
+    </div>
+
+    <div id="admin" class="stat-card">
+        <h3>Managerial Insight (Page-157)</h3>
+        <p>गुलानी की तरह ग्राहक को 'Taken for Granted' न लें। जब ग्राहक वीडियो और गैलरी देखता है, तो उसका भरोसा बढ़ता है और कन्वर्शन रेट 80% तक सुधर सकता है।</p>
     </div>
 </div>
-
-<script>
-    function handleVideo(tour) {
-        // अगर वीडियो लिंक नहीं है तो यह मैसेज आएगा (Page-155 Quality Check)
-        alert("शुक्रिया! " + tour + " टूर की वीडियो लोड हो रही है। यदि नेटवर्क धीमा है, तो कृपया सीधा WhatsApp पर क्लिक करें।");
-    }
-</script>
 
 </body>
 </html>
