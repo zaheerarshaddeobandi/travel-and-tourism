@@ -3,45 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaheer Arshad | Glocal Tourism & Trade Hub</title>
+    <title>Zaheer Arshad | Glocal Strategic Hub</title>
     <style>
-        :root { --primary: #1a2a6c; --secondary: #b21f1f; --wa: #25D366; --bg: #f8f9fa; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: var(--bg); color: #333; }
+        :root { --primary: #1a2a6c; --secondary: #b21f1f; --gold: #fdbb2d; --success: #27ae60; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f0f2f5; }
 
-        /* --- NAVIGATION (Page 156-157 Hierarchy) --- */
-        nav { background: var(--primary); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        /* Navigation & Hierarchy (8.6.1) */
+        nav { background: var(--primary); position: sticky; top: 0; z-index: 1000; padding: 10px 0; }
         nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
-        nav li { position: relative; }
-        nav a { color: white; padding: 18px 25px; display: block; text-decoration: none; font-weight: bold; }
-        nav a:hover { background: var(--secondary); }
-        
-        /* Dropdowns */
-        nav ul ul { display: none; position: absolute; top: 100%; left: 0; background: #2c3e50; min-width: 200px; }
+        nav li { position: relative; margin: 0 15px; }
+        nav a { color: white; text-decoration: none; font-weight: bold; font-size: 16px; }
+        nav ul ul { display: none; position: absolute; background: #2c3e50; min-width: 180px; top: 100%; }
         nav li:hover > ul { display: block; }
-        nav ul ul ul { top: 0; left: 100%; background: #34495e; }
 
-        /* --- HERO SECTION --- */
-        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200');
-                height: 400px; background-size: cover; background-position: center; color: white; 
-                display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; }
+        /* Hero & Direct Call (The Conversion Tool) */
+        .hero { background: var(--primary); color: white; padding: 60px 20px; text-align: center; }
+        .call-action { background: var(--secondary); color: white; padding: 18px 35px; border-radius: 50px; 
+                       display: inline-block; text-decoration: none; font-size: 24px; font-weight: bold; 
+                       margin-top: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
 
-        .call-now-btn { background: var(--secondary); color: white; padding: 15px 35px; border-radius: 50px; 
-                       text-decoration: none; font-size: 22px; font-weight: bold; margin-top: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.3s; }
-        .call-now-btn:hover { transform: scale(1.05); }
+        /* Multimedia & Packages */
+        .container { max-width: 1100px; margin: 30px auto; padding: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        video { width: 100%; height: 200px; object-fit: cover; background: #000; }
+        .card-body { padding: 20px; text-align: center; }
 
-        /* --- CONTENT & GALLERY --- */
-        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-        .section-title { text-align: center; border-bottom: 3px solid var(--secondary); display: inline-block; width: 100%; padding-bottom: 10px; margin-bottom: 40px; }
-        
-        .package-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        video, .card-img { width: 100%; height: 220px; object-fit: cover; background: #000; }
-        .card-body { padding: 25px; text-align: center; }
-        
-        .whatsapp-link { background: var(--wa); color: white; padding: 12px; display: block; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 15px; }
-
-        /* --- ADMIN DASHBOARD (Page 158) --- */
-        .admin-box { background: #fff; border: 2px dashed var(--primary); padding: 30px; border-radius: 15px; margin-top: 60px; }
+        /* STRATEGIC AUDIT TABLE (Page-158) */
+        .audit-section { background: white; padding: 30px; border-radius: 12px; margin-top: 50px; border-top: 5px solid var(--gold); }
+        .audit-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .audit-table th, .audit-table td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+        .audit-table th { background: #f8f9fa; color: var(--primary); }
     </style>
 </head>
 <body>
@@ -49,74 +41,83 @@
 <nav>
     <ul>
         <li><a href="#">Home</a></li>
-        <li>
-            <a href="#">Destinations ▼</a>
+        <li><a href="#">Territories ▼</a>
             <ul>
-                <li><a href="#">China Desk ❯</a>
-                    <ul>
-                        <li><a href="#">Trade Fairs</a></li>
-                        <li><a href="#">Tech Hubs</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Europe Desk ❯</a>
-                    <ul>
-                        <li><a href="#">Heritage Tours</a></li>
-                        <li><a href="#">Business Visas</a></li>
-                    </ul>
-                </li>
+                <li><a href="#china">China Business</a></li>
+                <li><a href="#europe">Europe Heritage</a></li>
             </ul>
         </li>
-        <li><a href="tel:+917017283687">📞 Call Expert</a></li>
+        <li><a href="tel:+917017283687">📞 Direct Support</a></li>
     </ul>
 </nav>
 
 <div class="hero">
     <h1>Zaheer Arshad Glocal Management</h1>
-    <p>Professional Sales & Tourism Hub | Deoband to the World</p>
-    <a href="tel:+917017283687" class="call-now-btn">📞 Call: 7017283687</a>
-    <p style="margin-top:10px; font-size: 0.9em;">(मोबाइल पर क्लिक करें, कॉल अपने आप लग जाएगी)</p>
+    <p>Market Reality & Profitability Analysis (Section 8.6)</p>
+    <a href="tel:+917017283687" class="call-action">📞 Call Now: 7017283687</a>
+    <p style="margin-top:15px; font-size: 0.9em; opacity: 0.8;">(मोबाइल से क्लिक करें और सीधा बात करें)</p>
 </div>
 
 <div class="container">
-    <h2 class="section-title">Featured Product Lines (8.6.1 c)</h2>
-    
-    <div class="package-grid">
-        <div class="card">
+    <h2 style="text-align:center;">Our Dynamic Product Lines</h2>
+    <div class="grid">
+        <div class="card" id="china">
             <video controls poster="https://images.unsplash.com/photo-1547984609-444492007c3e?w=500">
                 <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
             </video>
             <div class="card-body">
                 <h3>China Trade Gateway</h3>
-                <p>Canton Fair और इंडस्ट्रियल विजिट का सबसे सफल पैकेज।</p>
-                <div style="font-size: 20px; font-weight: bold; color: var(--secondary);">₹1,55,000/-</div>
-                <a href="https://wa.me/917017283687" class="whatsapp-link">WhatsApp for Details</a>
+                <p>Canton Fair और इंडस्ट्रियल विजिट।</p>
+                <a href="https://wa.me/917017283687" style="color:var(--success); font-weight:bold; text-decoration:none;">WhatsApp Inquiry</a>
             </div>
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=500" class="card-img">
+        <div class="card" id="europe">
+            <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=500" style="width:100%; height:200px; object-fit:cover;">
             <div class="card-body">
-                <h3>Europe Heritage Group</h3>
-                <p>पेरिस और रोम की ऐतिहासिक धरोहरों का अनुभव करें।</p>
-                <div style="font-size: 20px; font-weight: bold; color: var(--secondary);">₹2,95,000/-</div>
-                <a href="https://wa.me/917017283687" class="whatsapp-link">WhatsApp for Details</a>
+                <h3>Europe Dream Tour</h3>
+                <p>पेरिस और रोम की ऐतिहासिक यात्रा।</p>
+                <a href="tel:+917017283687" style="color:var(--secondary); font-weight:bold; text-decoration:none;">Call for Price</a>
             </div>
         </div>
     </div>
 
-    <div class="admin-box">
-        <h2>Sales Management Audit (Section 8.6.3)</h2>
-        <p><b>Managerial Intelligence:</b> यह वेबसाइट आपके <b>Inquiry-to-Order conversion</b> को ट्रैक करती है। यदि ग्राहक वीडियो देखकर कॉल बटन दबाता है, तो आपकी सेल्स प्रोडक्टिविटी बढ़ती है।</p>
-        <div style="display: flex; justify-content: space-around; text-align: center;">
-            <div><h3>80%</h3><p>Profits from Top 20% Clients</p></div>
-            <div><h3>90%</h3><p>Hidden Market Reality (Iceberg)</p></div>
-        </div>
+    <div class="audit-section">
+        <h2>Marketing Cost & Strategic Audit (8.6.2 & 8.6.3)</h2>
+        <p>सिर्फ सेल नहीं, बल्कि **Profit per Rupee** का हिसाब रखें।</p>
+        
+        
+
+        <table class="audit-table">
+            <thead>
+                <tr>
+                    <th>Product Line</th>
+                    <th>Conversion Ratio</th>
+                    <th>Cost per Inquiry</th>
+                    <th>Profit Strategy</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>China Trade</td>
+                    <td>15%</td>
+                    <td>₹1,200</td>
+                    <td style="color:var(--success)">High Margin</td>
+                </tr>
+                <tr>
+                    <td>Europe Tour</td>
+                    <td>8%</td>
+                    <td>₹2,500</td>
+                    <td style="color:var(--gold)">Premium Segment</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 
-<footer style="background:#222; color:white; padding: 40px; text-align:center; margin-top:50px;">
-    <p>Contact: +91 7017283687 | Deoband Global Hub</p>
-    <p>© 2026 Zaheer Arshad | Built on Management Principles (Page 155-158)</p>
+<footer style="text-align:center; padding:40px; background:#222; color:white; margin-top:50px;">
+    <p>Direct Connection: +91 7017283687 | Deoband Global Hub</p>
+    <p>© 2026 Zaheer Arshad | Management Control System</p>
 </footer>
 
 </body>
