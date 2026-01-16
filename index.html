@@ -3,41 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glocal Tourism | Explore the World</title>
+    <title>Glocal Tourism | Zaheer Arshad Master Portal</title>
     <style>
-        :root { --primary: #1a2a6c; --secondary: #b21f1f; --accent: #fdbb2d; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f9f9f9; }
+        :root { --primary: #1a2a6c; --secondary: #b21f1f; --accent: #fdbb2d; --light: #f4f4f4; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: var(--light); color: #333; }
 
-        /* Navigation */
-        .navbar { background: var(--primary); display: flex; justify-content: center; position: sticky; top: 0; z-index: 1000; }
-        .navbar ul { list-style: none; margin: 0; padding: 0; display: flex; }
+        /* --- NAVIGATION SYSTEM (Hierarchy as per Page 156) --- */
+        .navbar { background: var(--primary); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        .navbar ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
         .navbar li { position: relative; }
-        .navbar a { display: block; padding: 15px 20px; color: white; text-decoration: none; font-weight: bold; }
-        .navbar li:hover > ul { display: block; }
-        .navbar ul ul { display: none; position: absolute; background: #333; min-width: 200px; }
-        .navbar ul ul li { border-bottom: 1px solid #444; }
+        .navbar a { display: block; padding: 15px 20px; color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
+        .navbar a:hover { background: var(--secondary); }
 
-        /* Package Section */
-        .container { max-width: 1200px; margin: 30px auto; padding: 20px; }
-        .section-title { text-align: center; color: var(--primary); margin-bottom: 40px; border-bottom: 3px solid var(--secondary); display: inline-block; width: 100%; }
-        
-        .package-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-        .package-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.3s; }
-        .package-card:hover { transform: translateY(-10px); }
-        
-        .pkg-media { position: relative; width: 100%; height: 200px; background: #000; }
-        .pkg-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; }
-        
-        /* Video Icon Overlay */
-        .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 40px; cursor: pointer; opacity: 0.7; }
-        .play-btn:hover { opacity: 1; }
+        /* Sub-menu Level 1 */
+        .navbar ul ul { display: none; position: absolute; top: 100%; left: 0; background: #2c3e50; min-width: 220px; flex-direction: column; }
+        .navbar li:hover > ul { display: flex; }
 
-        .pkg-content { padding: 20px; }
-        .pkg-price { color: var(--secondary); font-size: 22px; font-weight: bold; margin: 10px 0; }
-        .btn-book { background: var(--primary); color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; width: 100%; font-size: 16px; }
+        /* Sub-sub menu Level 2 */
+        .navbar ul ul ul { top: 0; left: 100%; background: #34495e; }
 
-        /* Management Dashboard (Page 155-156) - Hidden for Normal Visitors */
-        .admin-section { background: #eee; padding: 40px; margin-top: 50px; border-radius: 10px; border: 2px dashed #999; }
+        /* --- PACKAGES GRID --- */
+        .container { max-width: 1100px; margin: 30px auto; padding: 20px; }
+        .package-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .card-img-box { position: relative; height: 200px; background: #000; }
+        .card-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; }
+        .play-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; background: rgba(0,0,0,0.5); padding: 10px 20px; border-radius: 50px; cursor: pointer; border: 2px solid white; }
+
+        .card-body { padding: 20px; text-align: center; }
+        .price-tag { color: var(--secondary); font-size: 22px; font-weight: bold; margin-bottom: 15px; }
+        .wa-btn { background: #25D366; color: white; padding: 10px; display: block; text-decoration: none; border-radius: 5px; font-weight: bold; }
+
+        /* --- ADMIN SECTION (Page-155 Control) --- */
+        .admin-panel { background: #fff; border: 2px solid var(--primary); padding: 20px; border-radius: 10px; margin-top: 50px; }
     </style>
 </head>
 <body>
@@ -45,67 +44,72 @@
 <nav class="navbar">
     <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Destinations ▼</a>
+        <li>
+            <a href="#">Territories ▼</a>
             <ul>
-                <li><a href="#">China - Business & Tech</a></li>
-                <li><a href="#">Europe - Culture & Arts</a></li>
-                <li><a href="#">India - Spiritual Roots</a></li>
+                <li>
+                    <a href="#">China Desk ❯</a>
+                    <ul>
+                        <li><a href="#">Trade Fairs</a></li>
+                        <li><a href="#">Tech Tours</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Europe Desk ❯</a>
+                    <ul>
+                        <li><a href="#">Heritage</a></li>
+                        <li><a href="#">Business Visa</a></li>
+                    </ul>
+                </li>
             </ul>
         </li>
-        <li><a href="#">Management Hub (Admin)</a></li>
+        <li><a href="#admin">Admin Control (Page-155)</a></li>
     </ul>
 </nav>
 
 <div class="container">
-    <h1 class="section-title">हमारे प्रीमियम ट्रेवल पैकेजेज़ (Featured Packages)</h1>
-
+    <h1 style="text-align: center; color: var(--primary);">Explore Global Opportunities</h1>
+    
     <div class="package-grid">
-        <div class="package-card">
-            <div class="pkg-media">
-                <img src="https://images.unsplash.com/photo-1547984609-444492007c3e?auto=format&fit=crop&w=500&q=80" class="pkg-img" alt="China">
-                <div class="play-btn">▶ Video</div>
+        <div class="card">
+            <div class="card-img-box">
+                <img src="https://images.unsplash.com/photo-1547984609-444492007c3e?auto=format&fit=crop&w=500&q=80" class="card-img">
+                <div class="play-overlay" onclick="handleVideo('China')">▶ Watch Tour Video</div>
             </div>
-            <div class="pkg-content">
+            <div class="card-body">
                 <h3>China Business Gateway</h3>
-                <p>Canton Fair और इंडस्ट्रियल विज़िट का सबसे बेहतरीन पैकेज। देओबंद से बीजिंग तक पूरी सुविधा।</p>
-                <div class="pkg-price">₹1,49,000/-</div>
-                <button class="btn-book">Book My Slot</button>
+                <p>Canton Fair और इंडस्ट्रियल हब की पूरी जानकारी।</p>
+                <div class="price-tag">₹1,50,000/-</div>
+                <a href="https://wa.me/YOUR_NUMBER" class="wa-btn">Book on WhatsApp</a>
             </div>
         </div>
 
-        <div class="package-card">
-            <div class="pkg-media">
-                <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=500&q=80" class="pkg-img" alt="Europe">
-                <div class="play-btn">▶ Video</div>
+        <div class="card">
+            <div class="card-img-box">
+                <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=500&q=80" class="card-img">
+                <div class="play-overlay" onclick="handleVideo('Europe')">▶ Watch Tour Video</div>
             </div>
-            <div class="pkg-content">
+            <div class="card-body">
                 <h3>European Dream Heritage</h3>
-                <p>पेरिस, रोम और स्विट्ज़रलैंड की वादियों में 10 दिन। UNWTO एथिक्स के साथ सस्टेनेबल टूर।</p>
-                <div class="pkg-price">₹2,85,000/-</div>
-                <button class="btn-book">Explore Europe</button>
-            </div>
-        </div>
-
-        <div class="package-card">
-            <div class="pkg-media">
-                <img src="https://images.unsplash.com/photo-1524492707947-2f85a64b67ad?auto=format&fit=crop&w=500&q=80" class="pkg-img" alt="India">
-                <div class="play-btn">▶ Video</div>
-            </div>
-            <div class="pkg-content">
-                <h3>Vibrant India: Deoband Hub</h3>
-                <p>अपने इलाके की रूहानियत और गौरवशाली इतिहास को दुनिया को दिखाएं।</p>
-                <div class="pkg-price">₹35,000/-</div>
-                <button class="btn-book">Local Experience</button>
+                <p>पेरिस, रोम और लंदन का 10 दिनों का टूर।</p>
+                <div class="price-tag">₹2,85,000/-</div>
+                <a href="https://wa.me/YOUR_NUMBER" class="wa-btn">Book on WhatsApp</a>
             </div>
         </div>
     </div>
 
-    <div class="admin-section">
-        <h2>Sales Control Dashboard (Page 155-156)</h2>
-        <p>यहाँ आप पीछे से मैनेज करेंगे कि कौन सा पैकेज (20% Products) 80% प्रॉफिट दे रहा है।</p>
-        <button onclick="alert('80-20 Analysis: Your China Package is the Top Earner!')">Check 80/20 Rule</button>
+    <div id="admin" class="admin-panel">
+        <h2>Sales Information System (Page-155)</h2>
+        <p><b>Manager's Note:</b> यदि कोई वीडियो नहीं चलती है, तो सिस्टम तुरंत कस्टमर को WhatsApp पर भेजने का विकल्प देता है। इसे **Corrective Action** कहते हैं।</p>
     </div>
 </div>
+
+<script>
+    function handleVideo(tour) {
+        // अगर वीडियो लिंक नहीं है तो यह मैसेज आएगा (Page-155 Quality Check)
+        alert("शुक्रिया! " + tour + " टूर की वीडियो लोड हो रही है। यदि नेटवर्क धीमा है, तो कृपया सीधा WhatsApp पर क्लिक करें।");
+    }
+</script>
 
 </body>
 </html>
