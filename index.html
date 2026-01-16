@@ -3,41 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glocal Tourism & Trade | Management Hub</title>
+    <title>Glocal Tourism | Explore the World</title>
     <style>
-        :root { --primary: #1a2a6c; --secondary: #b21f1f; --accent: #fdbb2d; --light: #f4f4f4; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: var(--light); color: #333; }
+        :root { --primary: #1a2a6c; --secondary: #b21f1f; --accent: #fdbb2d; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f9f9f9; }
 
-        /* --- NAVIGATION SYSTEM (The Hierarchy) --- */
-        .navbar { background: var(--primary); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
-        .navbar ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
+        /* Navigation */
+        .navbar { background: var(--primary); display: flex; justify-content: center; position: sticky; top: 0; z-index: 1000; }
+        .navbar ul { list-style: none; margin: 0; padding: 0; display: flex; }
         .navbar li { position: relative; }
-        .navbar a { display: block; padding: 15px 20px; color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
-        .navbar a:hover { background: var(--secondary); }
+        .navbar a { display: block; padding: 15px 20px; color: white; text-decoration: none; font-weight: bold; }
+        .navbar li:hover > ul { display: block; }
+        .navbar ul ul { display: none; position: absolute; background: #333; min-width: 200px; }
+        .navbar ul ul li { border-bottom: 1px solid #444; }
 
-        /* Sub-menu (Level 1) */
-        .navbar ul ul { display: none; position: absolute; top: 100%; left: 0; background: #2c3e50; min-width: 220px; flex-direction: column; }
-        .navbar li:hover > ul { display: flex; }
-
-        /* Sub-sub menu (Level 2) */
-        .navbar ul ul ul { top: 0; left: 100%; background: #34495e; }
-
-        /* --- HERO SECTION --- */
-        .hero { background: linear-gradient(rgba(26, 42, 108, 0.8), rgba(178, 31, 31, 0.8)), url('https://images.unsplash.com/photo-1454165833767-027ffea9e778?auto=format&fit=crop&w=1200&q=80');
-                height: 300px; background-size: cover; background-position: center; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-
-        /* --- CONTENT AREA --- */
-        .container { max-width: 1100px; margin: 30px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
-        .management-box { border-left: 5px solid var(--secondary); padding: 15px; background: #fff5f5; margin-bottom: 30px; }
+        /* Package Section */
+        .container { max-width: 1200px; margin: 30px auto; padding: 20px; }
+        .section-title { text-align: center; color: var(--primary); margin-bottom: 40px; border-bottom: 3px solid var(--secondary); display: inline-block; width: 100%; }
         
-        /* --- TABLES (Page-156 Data) --- */
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em; }
-        th { background: var(--primary); color: white; padding: 12px; }
-        td { padding: 12px; border: 1px solid #ddd; text-align: center; }
-        .status-low { color: var(--secondary); font-weight: bold; }
-        .status-high { color: #27ae60; font-weight: bold; }
+        .package-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        .package-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.3s; }
+        .package-card:hover { transform: translateY(-10px); }
+        
+        .pkg-media { position: relative; width: 100%; height: 200px; background: #000; }
+        .pkg-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; }
+        
+        /* Video Icon Overlay */
+        .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 40px; cursor: pointer; opacity: 0.7; }
+        .play-btn:hover { opacity: 1; }
 
-        .footer { text-align: center; padding: 20px; background: #222; color: white; margin-top: 50px; }
+        .pkg-content { padding: 20px; }
+        .pkg-price { color: var(--secondary); font-size: 22px; font-weight: bold; margin: 10px 0; }
+        .btn-book { background: var(--primary); color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; width: 100%; font-size: 16px; }
+
+        /* Management Dashboard (Page 155-156) - Hidden for Normal Visitors */
+        .admin-section { background: #eee; padding: 40px; margin-top: 50px; border-radius: 10px; border: 2px dashed #999; }
     </style>
 </head>
 <body>
@@ -45,91 +45,66 @@
 <nav class="navbar">
     <ul>
         <li><a href="#">Home</a></li>
-        <li>
-            <a href="#">Territories (8.6.1a) ▼</a>
+        <li><a href="#">Destinations ▼</a>
             <ul>
-                <li>
-                    <a href="#">China Desk ❯</a>
-                    <ul>
-                        <li><a href="#">Trade Fair Packages</a></li>
-                        <li><a href="#">Shenzhen Tech Hub</a></li>
-                        <li><a href="#">Canton Special</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Europe Desk ❯</a>
-                    <ul>
-                        <li><a href="#">Heritage Tours</a></li>
-                        <li><a href="#">Business Visa Help</a></li>
-                        <li><a href="#">Alps Adventure</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Domestic (India)</a></li>
+                <li><a href="#">China - Business & Tech</a></li>
+                <li><a href="#">Europe - Culture & Arts</a></li>
+                <li><a href="#">India - Spiritual Roots</a></li>
             </ul>
         </li>
-        <li>
-            <a href="#">Sales Control (Page-155) ▼</a>
-            <ul>
-                <li><a href="#analysis">Territory Performance</a></li>
-                <li><a href="#salesforce">Salesperson Analysis</a></li>
-                <li><a href="#">80-20 Profit Logic</a></li>
-            </ul>
-        </li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Management Hub (Admin)</a></li>
     </ul>
 </nav>
 
-<div class="hero">
-    <h1>Zaheer Arshad Glocal Management System</h1>
-    <p>Using Data to Reveal the Market Reality (Page-156)</p>
-</div>
-
 <div class="container">
-    <div class="management-box">
-        <h3>Iceberg Principle Alert</h3>
-        <p><b>Page-156 Reality:</b> "कुल बिक्री बाज़ार की हकीकत को छिपा सकती है।" हम गहराई में जाकर विश्लेषण करते हैं ताकि 90% छिपी हुई जानकारी हमें मिल सके।</p>
+    <h1 class="section-title">हमारे प्रीमियम ट्रेवल पैकेजेज़ (Featured Packages)</h1>
+
+    <div class="package-grid">
+        <div class="package-card">
+            <div class="pkg-media">
+                <img src="https://images.unsplash.com/photo-1547984609-444492007c3e?auto=format&fit=crop&w=500&q=80" class="pkg-img" alt="China">
+                <div class="play-btn">▶ Video</div>
+            </div>
+            <div class="pkg-content">
+                <h3>China Business Gateway</h3>
+                <p>Canton Fair और इंडस्ट्रियल विज़िट का सबसे बेहतरीन पैकेज। देओबंद से बीजिंग तक पूरी सुविधा।</p>
+                <div class="pkg-price">₹1,49,000/-</div>
+                <button class="btn-book">Book My Slot</button>
+            </div>
+        </div>
+
+        <div class="package-card">
+            <div class="pkg-media">
+                <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=500&q=80" class="pkg-img" alt="Europe">
+                <div class="play-btn">▶ Video</div>
+            </div>
+            <div class="pkg-content">
+                <h3>European Dream Heritage</h3>
+                <p>पेरिस, रोम और स्विट्ज़रलैंड की वादियों में 10 दिन। UNWTO एथिक्स के साथ सस्टेनेबल टूर।</p>
+                <div class="pkg-price">₹2,85,000/-</div>
+                <button class="btn-book">Explore Europe</button>
+            </div>
+        </div>
+
+        <div class="package-card">
+            <div class="pkg-media">
+                <img src="https://images.unsplash.com/photo-1524492707947-2f85a64b67ad?auto=format&fit=crop&w=500&q=80" class="pkg-img" alt="India">
+                <div class="play-btn">▶ Video</div>
+            </div>
+            <div class="pkg-content">
+                <h3>Vibrant India: Deoband Hub</h3>
+                <p>अपने इलाके की रूहानियत और गौरवशाली इतिहास को दुनिया को दिखाएं।</p>
+                <div class="pkg-price">₹35,000/-</div>
+                <button class="btn-book">Local Experience</button>
+            </div>
+        </div>
     </div>
 
-    <h2 id="analysis">Territory Sales Analysis (Table-4)</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Region</th>
-                <th>Quota (Standard)</th>
-                <th>Actual Result</th>
-                <th>Performance %</th>
-                <th>Remedial Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>East</td><td>8,25,000</td><td>8,50,000</td><td class="status-high">103%</td><td>None</td></tr>
-            <tr><td>West</td><td>7,50,000</td><td>7,50,000</td><td>100%</td><td>None</td></tr>
-            <tr><td>North (Local)</td><td>8,90,000</td><td>8,70,000</td><td class="status-low">98%</td><td>Investigate Low Vol.</td></tr>
-            <tr><td>South</td><td>8,50,000</td><td>9,20,000</td><td class="status-high">108%</td><td>Review High Pot.</td></tr>
-        </tbody>
-    </table>
-
-    <h2 id="salesforce">Salesperson Performance Analysis (Table-5)</h2>
-    <p>North Territory का शॉर्टफॉल क्यों हुआ? यहाँ देखिए:</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Salesperson</th>
-                <th>Quota</th>
-                <th>Actual</th>
-                <th>Performance %</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>Singh</td><td>115</td><td>117</td><td class="status-high">102%</td></tr>
-            <tr><td>Gulani</td><td>130</td><td>106</td><td class="status-low">82%</td></tr>
-            <tr><td>Reddy</td><td>116</td><td>116</td><td>100%</td></tr>
-        </tbody>
-    </table>
-</div>
-
-<div class="footer">
-    <p>© 2026 Zaheer Arshad | Glocal Tourism Deoband | Powered by Page 155-156 Principles</p>
+    <div class="admin-section">
+        <h2>Sales Control Dashboard (Page 155-156)</h2>
+        <p>यहाँ आप पीछे से मैनेज करेंगे कि कौन सा पैकेज (20% Products) 80% प्रॉफिट दे रहा है।</p>
+        <button onclick="alert('80-20 Analysis: Your China Package is the Top Earner!')">Check 80/20 Rule</button>
+    </div>
 </div>
 
 </body>
