@@ -3,79 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaheer Arshad | Glocal Strategic Excellence</title>
+    <title>Zaheer Arshad | The Organized Glocal Library</title>
     <style>
-        :root { --unwto: #0072bc; --gold: #d4af37; --deep-blue: #1e3a8a; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f7f6; line-height: 1.6; }
-
-        .header-top { background: var(--unwto); color: white; padding: 10px; text-align: center; font-weight: bold; }
-        nav { background: #000; padding: 1rem; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; margin: 0 20px; text-decoration: none; font-weight: 600; }
-
-        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200');
-                height: 500px; background-size: cover; color: white; display: flex; flex-direction: column; 
-                justify-content: center; align-items: center; text-align: center; border-bottom: 8px solid var(--gold); }
-
-        .section { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        :root { --primary: #0f172a; --accent: #d4af37; --china: #ee1c25; --europe: #003399; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f4f4; }
         
-        /* Table-1 Style Cards */
-        .value-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 5px solid var(--gold); }
-        .value-card h3 { color: var(--deep-blue); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        nav { background: var(--primary); padding: 1rem; position: sticky; top: 0; z-index: 1000; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
 
-        .dyad-box { background: var(--deep-blue); color: white; padding: 40px; border-radius: 20px; text-align: center; margin-top: 40px; }
-        .call-btn { background: var(--gold); color: black; padding: 18px 45px; border-radius: 50px; text-decoration: none; font-size: 1.5rem; font-weight: 800; display: inline-block; }
+        .container { max-width: 1200px; margin: 2rem auto; padding: 20px; }
+        .category-block { background: white; border-radius: 15px; padding: 25px; margin-bottom: 40px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        
+        /* Category Titles with Page-163 Logic */
+        .cat-title { border-left: 6px solid var(--accent); padding-left: 15px; margin-bottom: 20px; color: var(--primary); }
+        
+        .gallery-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+            gap: 15px; 
+        }
+        
+        .img-card { 
+            aspect-ratio: 1/1; 
+            overflow: hidden; 
+            border-radius: 10px; 
+            background: #eee;
+            transition: 0.3s;
+        }
+        .img-card:hover { transform: scale(1.05); }
+        .img-card img { width: 100%; height: 100%; object-fit: cover; }
+
+        .call-banner { background: var(--accent); color: black; padding: 30px; text-align: center; border-radius: 15px; margin-top: 50px; }
+        .btn-wa { background: #25D366; color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; }
     </style>
 </head>
 <body>
 
-<div class="header-top">UNWTO Global Standard Compliance | Professional Marketing Communication</div>
-
 <nav>
-    <a href="#">Home</a>
-    <a href="#strategy">Strategy (Table-1)</a>
-    <a href="#dyad">Shared Meaning (Fig-1)</a>
-    <a href="tel:+917017283687">📞 Expert: 7017283687</a>
+    <a href="#china">CHINA TRADE</a>
+    <a href="#europe">EUROPE HERITAGE</a>
+    <a href="#india">INDIA VIBRANT</a>
+    <a href="tel:+917017283687">📞 7017283687</a>
 </nav>
 
-<div class="hero">
-    <h1>Strategic Value Exchange</h1>
-    <p>Establishing "Shared Meaning" between Deoband and the Global Market</p>
-    <a href="tel:+917017283687" class="call-btn">Contact Zaheer Arshad</a>
-</div>
+<div class="container">
+    <h1 style="text-align:center; color: var(--primary);">Strategic Visual Library (100+ Assets)</h1>
+    <p style="text-align:center;">Establishing Shared Meaning through Categorized Communication (Unit 9.2)</p>
 
-<div class="section" id="strategy">
-    <h2 style="text-align:center; font-size: 2.5rem;">Role of Communication (Table-1 Analysis)</h2>
-    <div class="grid-3">
-        <div class="value-card">
-            <h3>Repositioning Image</h3>
-            <p>हम केवल टिकट नहीं बेचते, हम व्यापारिक सफलता का मार्ग (Trade Route) तैयार करते हैं। यह हमारे ब्रांड की नई पहचान है।</p>
+    <div class="category-block" id="china">
+        <h2 class="cat-title" style="border-color: var(--china);">China Industrial & Trade (Visible Clues)</h2>
+        <p>Industrial visits, Canton Fair highlights, and business networking.</p>
+        <div class="gallery-grid">
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1547984609-444492007c3e?w=300"></div>
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1509033330995-514462b3fd6b?w=300"></div>
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?w=300"></div>
+            </div>
+    </div>
+
+    <div class="category-block" id="europe">
+        <h2 class="cat-title" style="border-color: var(--europe);">Europe Heritage & Luxury (Prestige Image)</h2>
+        <p>Paris, Rome, Zurich - Experience the gold standard of tourism.</p>
+        <div class="gallery-grid">
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=300"></div>
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=300"></div>
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=300"></div>
         </div>
-        <div class="value-card">
-            <h3>Justifying Excellence</h3>
-            <p>Our premium pricing is a reflection of the uncompromised quality and after-sale support we provide globally.</p>
+    </div>
+
+    <div class="category-block" id="india">
+        <h2 class="cat-title">Our People & Operations (Credibility)</h2>
+        <p>Deoband operations, transport fleet, and team meetings.</p>
+        <div class="gallery-grid">
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=300"></div>
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=300"></div>
         </div>
-        <div class="value-card">
-            <h3>Generating Enthusiasm</h3>
-            <p>हमारा संचार नेटवर्क हमारे पार्टनर्स और क्लाइंट्स के बीच एक नया जोश (Enthusiasm) पैदा करता है।</p>
-        </div>
+    </div>
+
+    <div class="call-banner">
+        <h2>Want to see the Unfiltered 100+ Image Archive?</h2>
+        <p>Answering all your questions through visual transparency.</p>
+        <a href="https://wa.me/917017283687" class="btn-wa">💬 WhatsApp Zaheer Arshad</a>
     </div>
 </div>
 
-<div class="section" id="dyad">
-    <div class="dyad-box">
-        <h2>Figure-1: The Marketer-Buyer Dyad</h2>
-        <p>जब आपके लक्ष्य (बेहतर अनुभव) और हमारे लक्ष्य (बेहतरीन सर्विस) एक 'साझा अर्थ' पर मिलते हैं, तभी एक सफल यात्रा शुरू होती है।</p>
-        <p style="font-style: italic; opacity: 0.8;">"Shared meaning is the foundation of trust in Glocal Tourism."</p>
-        <div style="margin-top: 30px;">
-            <a href="https://wa.me/917017283687" style="color: #25D366; font-size: 1.8rem; font-weight: bold; text-decoration: none;">💬 WhatsApp Direct: 7017283687</a>
-        </div>
-    </div>
-</div>
-
-<footer style="background:#000; color:white; padding:60px 20px; text-align:center;">
-    <p>Integrated Marketing Communication Program | Unit 9 | Page 163</p>
-    <p>© 2026 Zaheer Arshad Glocal Hub | Deoband, UP, India</p>
+<footer style="text-align:center; padding: 40px; background: #000; color: white;">
+    <p>© 2026 Zaheer Arshad | Glocal Strategic Communication System</p>
 </footer>
 
 </body>
