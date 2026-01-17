@@ -3,92 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaheer Arshad | The Organized Glocal Library</title>
+    <title>Zaheer Arshad | UNWTO Global Tourism Leader</title>
     <style>
-        :root { --primary: #0f172a; --accent: #d4af37; --china: #ee1c25; --europe: #003399; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f4f4; }
+        :root { 
+            --unwto-blue: #0072bc; 
+            --gold: #c5a021; 
+            --dark-blue: #0f172a; 
+            --light-bg: #f8f9fa; 
+            --text-color: #343a40;
+            --section-padding: 60px 20px;
+        }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            color: var(--text-color); 
+            background: var(--light-bg); 
+            line-height: 1.7; 
+            scroll-behavior: smooth;
+        }
         
-        nav { background: var(--primary); padding: 1rem; position: sticky; top: 0; z-index: 1000; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        /* UNWTO Header Strip */
+        .top-strip { 
+            background: var(--unwto-blue); 
+            color: white; 
+            padding: 10px; 
+            text-align: center; 
+            font-size: 14px; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+        }
+        
+        /* Navigation Bar */
+        nav { 
+            background: var(--dark-blue); 
+            padding: 15px 20px; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            text-align: center; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        nav a { 
+            color: white; 
+            margin: 0 15px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            transition: color 0.3s;
+        }
+        nav a:hover { color: var(--gold); }
 
-        .container { max-width: 1200px; margin: 2rem auto; padding: 20px; }
-        .category-block { background: white; border-radius: 15px; padding: 25px; margin-bottom: 40px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        
-        /* Category Titles with Page-163 Logic */
-        .cat-title { border-left: 6px solid var(--accent); padding-left: 15px; margin-bottom: 20px; color: var(--primary); }
-        
+        /* Hero Section (Page 162-163 Vision) */
+        .hero { 
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1520281200922-b5b84c66cc93?w=1400');
+            height: 500px; 
+            background-size: cover; 
+            background-position: center; 
+            color: white; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            border-bottom: 8px solid var(--gold);
+        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 15px; }
+        .hero p { font-size: 1.3rem; max-width: 800px; margin-bottom: 30px; }
+        .btn-primary { 
+            background: var(--gold); 
+            color: var(--dark-blue); 
+            padding: 15px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 1.1rem; 
+            transition: background 0.3s;
+        }
+        .btn-primary:hover { background: #e0b435; }
+
+        /* Section Styling */
+        .section-container { max-width: 1200px; margin: auto; padding: var(--section-padding); }
+        .section-title { 
+            text-align: center; 
+            color: var(--dark-blue); 
+            font-size: 2.5rem; 
+            margin-bottom: 40px; 
+            position: relative;
+        }
+        .section-title::after { 
+            content: ''; 
+            width: 80px; 
+            height: 4px; 
+            background: var(--gold); 
+            position: absolute; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            bottom: -10px; 
+        }
+
+        /* Marketing Goals (Inform, Remind, Persuade - Page 164) */
+        .goals-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px;
+        }
+        .goal-card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08); 
+            text-align: center; 
+            border-top: 5px solid var(--unwto-blue);
+        }
+        .goal-card h3 { color: var(--dark-blue); font-size: 1.8rem; margin-bottom: 15px; }
+        .goal-card p { color: #555; }
+
+        /* UNWTO Gallery (100+ Images) */
         .gallery-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
-            gap: 15px; 
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+            gap: 10px; 
+            margin-top: 40px;
         }
-        
-        .img-card { 
-            aspect-ratio: 1/1; 
+        .img-thumb { 
+            aspect-ratio: 1; 
             overflow: hidden; 
-            border-radius: 10px; 
-            background: #eee;
-            transition: 0.3s;
+            border-radius: 8px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+            background: #e9ecef;
         }
-        .img-card:hover { transform: scale(1.05); }
-        .img-card img { width: 100%; height: 100%; object-fit: cover; }
+        .img-thumb img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            transition: transform 0.3s ease-in-out;
+            filter: grayscale(30%);
+        }
+        .img-thumb img:hover { 
+            transform: scale(1.1); 
+            filter: grayscale(0%);
+        }
 
-        .call-banner { background: var(--accent); color: black; padding: 30px; text-align: center; border-radius: 15px; margin-top: 50px; }
-        .btn-wa { background: #25D366; color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; }
+        /* Communication Process (Figure 2 - Page 165) */
+        .process-flow { 
+            display: flex; 
+            justify-content: space-around; 
+            align-items: center; 
+            flex-wrap: wrap; 
+            margin-top: 50px;
+            background: var(--dark-blue);
+            padding: 40px 20px;
+            border-radius: 15px;
+            color: white;
+        }
+        .process-step { 
+            text-align: center; 
+            flex: 1 1 120px; 
+            margin: 10px;
+        }
+        .process-icon { 
+            font-size: 3rem; 
+            color: var(--gold); 
+            margin-bottom: 10px;
+        }
+        .process-text { font-weight: bold; }
+        .arrow { 
+            font-size: 2rem; 
+            color: var(--gold); 
+            margin: 0 10px; 
+            transform: scaleX(1.5);
+        }
+
+        /* Dialogue & Feedback (Page 164-165) */
+        .dialogue-box { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08); 
+            margin-top: 60px;
+            border-left: 8px solid var(--gold);
+        }
+        .dialogue-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px;
+        }
+        .feedback-form input, .feedback-form textarea { 
+            width: calc(100% - 20px); 
+            padding: 10px; 
+            margin-bottom: 15px; 
+            border: 1px solid #ced4da; 
+            border-radius: 5px;
+        }
+        .feedback-form button { 
+            background: var(--unwto-blue); 
+            color: white; 
+            border: none; 
+            padding: 12px 25px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .feedback-form button:hover { background: #0056a0; }
+        .b2b-info ul { list-style: none; padding: 0; }
+        .b2b-info li { margin-bottom: 10px; color: #555; }
+        .btn-whatsapp { 
+            background: #25D366; 
+            color: white; 
+            padding: 12px 25px; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            display: inline-block; 
+            margin-top: 15px;
+        }
+
+        /* Footer */
+        footer { 
+            background: var(--dark-blue); 
+            color: #adb5bd; 
+            padding: 60px 20px; 
+            text-align: center; 
+            font-size: 0.9rem; 
+            margin-top: 80px;
+        }
+        footer p { margin: 5px 0; }
+        footer strong { color: white; }
     </style>
 </head>
 <body>
 
+<div class="top-strip">UNWTO Global Code of Ethics for Tourism: Responsible & Transparent Communication</div>
+
 <nav>
-    <a href="#china">CHINA TRADE</a>
-    <a href="#europe">EUROPE HERITAGE</a>
-    <a href="#india">INDIA VIBRANT</a>
+    <a href="#hero">होम</a>
+    <a href="#goals">हमारे लक्ष्य</a>
+    <a href="#gallery">गैलरी</a>
+    <a href="#process">संचार प्रक्रिया</a>
+    <a href="#dialogue">संवाद</a>
     <a href="tel:+917017283687">📞 7017283687</a>
 </nav>
 
-<div class="container">
-    <h1 style="text-align:center; color: var(--primary);">Strategic Visual Library (100+ Assets)</h1>
-    <p style="text-align:center;">Establishing Shared Meaning through Categorized Communication (Unit 9.2)</p>
+<div class="hero" id="hero">
+    <h1>ज़हीर अरशद: UNWTO वैश्विक पर्यटन अग्रणी</h1>
+    <p>हमारा एकीकृत मार्केटिंग संचार 'साझा अर्थ' स्थापित करता है और जिम्मेदार पर्यटन को बढ़ावा देता है। (पेज 162-163)</p>
+    <a href="tel:+917017283687" class="btn-primary">विशेषज्ञ से परामर्श करें: 7017283687</a>
+</div>
 
-    <div class="category-block" id="china">
-        <h2 class="cat-title" style="border-color: var(--china);">China Industrial & Trade (Visible Clues)</h2>
-        <p>Industrial visits, Canton Fair highlights, and business networking.</p>
-        <div class="gallery-grid">
-            <div class="img-card"><img src="https://images.unsplash.com/photo-1547984609-444492007c3e?w=300"></div>
-            <div class="img-card"><img src="https://images.unsplash.com/photo-1509033330995-514462b3fd6b?w=300"></div>
-            <div class="img-card"><img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?w=300"></div>
-            </div>
-    </div>
-
-    <div class="category-block" id="europe">
-        <h2 class="cat-title" style="border-color: var(--europe);">Europe Heritage & Luxury (Prestige Image)</h2>
-        <p>Paris, Rome, Zurich - Experience the gold standard of tourism.</p>
-        <div class="gallery-grid">
-            <div class="img-card"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=300"></div>
-            <div class="img-card"><img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=300"></div>
-            <div class="img-card"><img src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=300"></div>
+<div class="section-container" id="goals">
+    <h2 class="section-title">UNWTO-संरेखित संचार लक्ष्य (पेज 164)</h2>
+    <div class="goals-grid">
+        <div class="goal-card">
+            <h3>सूचित करें (Inform)</h3>
+            <p>हम पर्यटन स्थलों और व्यापारिक अवसरों के बारे में सत्य और वस्तुनिष्ठ जानकारी प्रदान करते हैं, ताकि यात्री सशक्त निर्णय ले सकें।</p>
         </div>
-    </div>
-
-    <div class="category-block" id="india">
-        <h2 class="cat-title">Our People & Operations (Credibility)</h2>
-        <p>Deoband operations, transport fleet, and team meetings.</p>
-        <div class="gallery-grid">
-            <div class="img-card"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=300"></div>
-            <div class="img-card"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=300"></div>
+        <div class="goal-card">
+            <h3>याद दिलाएं (Remind)</h3>
+            <p>हम अपने ग्राहकों को स्थायी और नैतिक पर्यटन के लाभों की लगातार याद दिलाते हैं, और उन्हें नई खोजों के लिए प्रेरित करते हैं।</p>
         </div>
-    </div>
-
-    <div class="call-banner">
-        <h2>Want to see the Unfiltered 100+ Image Archive?</h2>
-        <p>Answering all your questions through visual transparency.</p>
-        <a href="https://wa.me/917017283687" class="btn-wa">💬 WhatsApp Zaheer Arshad</a>
+        <div class="goal-card">
+            <h3>राजी करें (Persuade)</h3>
+            <p>हम अपनी सेवाओं के माध्यम से सांस्कृतिक समझ और वैश्विक शांति के मूल्यों को बढ़ावा देने के लिए जिम्मेदार ढंग से राजी करते हैं।</p>
+        </div>
     </div>
 </div>
 
-<footer style="text-align:center; padding: 40px; background: #000; color: white;">
-    <p>© 2026 Zaheer Arshad | Glocal Strategic Communication System</p>
-</footer>
-
-</body>
-</html>
+<div class="section-container" id="gallery">
+    <h2 class="section-title">UNWTO पारदर्शिता गैलरी (100+ दृश्य सुराग)</h2>
+    <p style="text-align: center; color: #555;">(पेज 162-163: ग्राहक के "पूर्ण उत्पाद प्रस्ताव" की धारणा को पुष्ट करना।)</p>
+    <div class="gallery-grid">
+        <div class="img-thumb"><img src="https://images.unsplash.com/photo-1547984609-444492007c3e?w=300" alt="China Trade"></div>
+        <div class="img-thumb"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=300" alt="Europe Heritage"></div>
+        <div class="img-thumb"><img src="https://images.unsplash.com/photo-1524492707947-2f85a64b67ad?w=300" alt="India Spiritual"></div>
+        <div class="img-thumb"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=300" alt="Team Meeting"></div>
+        <div class="img-thumb"><img src="https://images.unsplash.com/photo-1509033330995-514462b3fd6b?w=300" alt="China Cityscape"></div>
+        <div class="img-thumb"><img src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=300" alt="Eiffel Tower"></div>
+        <div class="img-thumb"><img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=300" alt="Swiss Alps"></div>
+        <div class="img-thumb"><img src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=300" alt="Global Conference"></div>
+        <div class="img-thumb"><img src="https://images.unsplash.com/photo-1547984609-444492007c3e?w=300" alt="China Trade 2"></div>
+        <div class="img-thumb"><img src
