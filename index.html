@@ -3,40 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaheer Arshad | Glocal Multimedia Hub</title>
+    <title>Zaheer Arshad | Unit 9 Integrated Gallery</title>
     <style>
-        :root { --primary: #0f172a; --secondary: #e11d48; --wa: #25D366; }
-        body { font-family: 'Inter', sans-serif; margin: 0; background: #f1f5f9; color: #1e293b; scroll-behavior: smooth; }
+        :root { --primary: #1e3a8a; --accent: #f59e0b; --dark: #0f172a; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f8fafc; }
 
         /* Navigation */
-        nav { background: var(--primary); padding: 1rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-        nav ul { list-style: none; display: flex; justify-content: center; margin: 0; padding: 0; gap: 2rem; }
-        nav a { color: white; text-decoration: none; font-weight: 600; font-size: 1rem; }
+        nav { background: var(--dark); padding: 15px; position: sticky; top: 0; z-index: 1000; }
+        nav ul { list-style: none; display: flex; justify-content: center; margin: 0; padding: 0; gap: 20px; }
+        nav a { color: white; text-decoration: none; font-weight: bold; }
 
-        /* Hero Section */
-        .hero { background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200');
-                height: 350px; background-size: cover; background-position: center; color: white; 
-                display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        /* Hero & Communication Box (Unit 9.2) */
+        .hero { background: var(--primary); color: white; padding: 60px 20px; text-align: center; }
+        .call-btn { background: var(--accent); color: var(--dark); padding: 15px 30px; border-radius: 50px; 
+                    text-decoration: none; font-size: 22px; font-weight: 800; display: inline-block; margin-top: 20px; }
+
+        .container { max-width: 1200px; margin: auto; padding: 20px; }
+
+        /* NEW INTEGRATED GALLERY */
+        .gallery-title { text-align: center; margin: 40px 0; border-bottom: 3px solid var(--accent); display: inline-block; width: 100%; padding-bottom: 10px; }
         
-        .call-now { background: var(--secondary); color: white; padding: 1rem 2rem; border-radius: 50px; 
-                    text-decoration: none; font-size: 1.5rem; font-weight: 800; margin-top: 1rem; animation: pulse 2s infinite; }
-
-        /* GALLERY SECTION (The Heart of Customer Engagement) */
-        .gallery-container { max-width: 1200px; margin: 3rem auto; padding: 0 1rem; }
-        .filter-buttons { margin-bottom: 2rem; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
-        .filter-btn { padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background: white; font-weight: bold; transition: 0.3s; }
-        .filter-btn.active { background: var(--primary); color: white; }
-
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .gallery-item { border-radius: 12px; overflow: hidden; background: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s; position: relative; }
-        .gallery-item:hover { transform: scale(1.03); }
-        .gallery-item img { width: 100%; height: 200px; object-fit: cover; }
-        .item-label { padding: 15px; text-align: center; font-weight: bold; background: white; }
-
-        /* Admin/Budget Dashboard (Page 160) */
-        .dashboard { background: white; border-radius: 1rem; padding: 2rem; margin-top: 3rem; border-top: 6px solid var(--accent); }
-
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .gallery-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.3s; }
+        .gallery-card:hover { transform: translateY(-10px); }
+        
+        /* Video Support */
+        video, img { width: 100%; height: 230px; object-fit: cover; background: #000; }
+        
+        .card-info { padding: 20px; text-align: center; }
+        .card-info h3 { margin: 0; color: var(--primary); }
+        .wa-small { display: inline-block; margin-top: 10px; color: #25D366; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -44,65 +40,57 @@
 <nav>
     <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#gallery">Tour Gallery</a></li>
-        <li><a href="tel:+917017283687">📞 Call Expert</a></li>
+        <li><a href="#gallery">Visual Tours</a></li>
+        <li><a href="tel:+917017283687">📞 Call Now</a></li>
     </ul>
 </nav>
 
 <div class="hero">
-    <h1>Zaheer Arshad Glocal Tourism</h1>
-    <p>देओबंद से दुनिया तक - आपका सफ़र, हमारा भरोसा</p>
-    <a href="tel:+917017283687" class="call-now">📞 Call: 7017283687</a>
+    <h1>Zaheer Arshad Glocal Communication Hub</h1>
+    <p>Unit-9: Creating Value through Shared Meaning</p>
+    <a href="tel:+917017283687" class="call-btn">📞 Call: 7017283687</a>
 </div>
 
-<div class="gallery-container" id="gallery">
-    <h2 style="text-align:center; font-size: 2.5rem; color: var(--primary);">Exclusive Tour Gallery</h2>
-    <p style="text-align:center; color: #64748b; margin-bottom: 2rem;">हमारे पिछले सफल ग्रुप्स की एक झलक (Quality Standards - Page 155)</p>
-
-    <div class="filter-buttons">
-        <button class="filter-btn active">All Collections</button>
-        <button class="filter-btn">China Trade</button>
-        <button class="filter-btn">Europe Heritage</button>
-        <button class="filter-btn">India Local</button>
-    </div>
+<div class="container" id="gallery">
+    <h2 class="gallery-title">Our Visual Portfolio (Communication Bridge)</h2>
+    
+    
 
     <div class="gallery-grid">
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1547984609-444492007c3e?w=400" alt="China Trade Fair">
-            <div class="item-label">Canton Trade Fair 🇨🇳</div>
+        <div class="gallery-card">
+            <video controls poster="https://images.unsplash.com/photo-1547984609-444492007c3e?w=500">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            </video>
+            <div class="card-info">
+                <h3>China Business Desk</h3>
+                <p>Industrial visits & Trade fairs communication.</p>
+                <a href="https://wa.me/917017283687" class="wa-small">WhatsApp for Video</a>
+            </div>
         </div>
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400" alt="Paris Tour">
-            <div class="item-label">Paris Eiffel Tower 🇫🇷</div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=500" alt="Europe Tour">
+            <div class="card-info">
+                <h3>European Heritage</h3>
+                <p>Cultural exchange & luxury travel.</p>
+                <a href="tel:+917017283687" class="wa-small" style="color:var(--primary)">Call for Booking</a>
+            </div>
         </div>
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1524492707947-2f85a64b67ad?w=400" alt="Taj Mahal">
-            <div class="item-label">India Heritage 🇮🇳</div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=400" alt="London Business">
-            <div class="item-label">London Business Meet 🇬🇧</div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1524492707947-2f85a64b67ad?w=500" alt="India Tour">
+            <div class="card-info">
+                <h3>Vibrant India Tours</h3>
+                <p>Deoband spiritual & heritage connect.</p>
+                <a href="https://wa.me/917017283687" class="wa-small">View Full Gallery</a>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="gallery-container">
-    <div style="background: var(--wa); padding: 2rem; border-radius: 1rem; text-align: center; color: white;">
-        <h3>किसी भी पैकेज की पूरी वीडियो और फोटो देखने के लिए WhatsApp करें</h3>
-        <a href="https://wa.me/917017283687" style="color: white; font-size: 1.5rem; font-weight: bold; text-decoration: none; border: 2px solid white; padding: 10px 20px; border-radius: 10px; display: inline-block; margin-top: 10px;">
-            💬 7017283687 पर मैसेज भेजें
-        </a>
-    </div>
-
-    <div class="dashboard">
-        <h3>Sales Control Dashboard (Page 160 Summary)</h3>
-        <p><b>Managerial Insight:</b> गैलरी देखने वाले ग्राहकों की **Conversion Ratio** बिना गैलरी देखने वालों से 40% ज़्यादा है।</p>
-    </div>
-</div>
-
-<footer style="text-align:center; padding: 3rem; background: #0f172a; color: white; margin-top: 5rem;">
-    <p>Direct Inquiry: +91 7017283687 | Deoband Hub</p>
-    <p>© 2026 Zaheer Arshad | Strategic Multimedia Sales System</p>
+<footer style="text-align:center; padding: 40px; background: var(--dark); color: white; margin-top: 50px;">
+    <p>Contact: +91 7017283687 | Strategic Glocal Hub</p>
+    <p>© 2026 Zaheer Arshad | Unit 9 Implementation Complete</p>
 </footer>
 
 </body>
