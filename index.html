@@ -3,97 +3,425 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaheer Arshad | Media Excellence & Glocal Strategy</title>
+    <title>Glocal Tourism & Hotels | Deoband to Australia</title>
     <style>
-        :root { --dark-blue: #001f3f; --gold: #d4af37; --light-blue: #0074d9; --bg: #ffffff; }
-        body { font-family: 'Inter', sans-serif; margin: 0; color: #333; line-height: 1.6; }
-        
-        .header-strip { background: var(--light-blue); color: white; padding: 10px; text-align: center; font-size: 14px; font-weight: bold; }
-        nav { background: var(--dark-blue); padding: 20px; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; margin: 0 20px; text-decoration: none; font-weight: bold; transition: 0.3s; }
-        nav a:hover { color: var(--gold); }
-
-        .hero-unit { 
-            background: linear-gradient(45deg, rgba(0,31,63,0.9), rgba(0,116,217,0.8)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200');
-            height: 450px; background-size: cover; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;
+        /* CSS Styling - लगभग 150-200 लाइनें यहीं कवर होंगी */
+        :root {
+            --primary-color: #d35400; /* उस्ताद का थीम कलर: संतरी/भूरा */
+            --secondary-color: #2c3e50;
+            --white: #ffffff;
+            --light-grey: #f4f4f4;
+            --dark-grey: #333;
         }
 
-        .container { max-width: 1200px; margin: auto; padding: 60px 20px; }
-        
-        /* Media Selection Checklist (Table-1) */
-        .checklist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 40px 0; }
-        .check-card { background: #f8f9fa; padding: 30px; border-radius: 12px; border-bottom: 5px solid var(--gold); }
-        .check-card h3 { color: var(--dark-blue); margin-top: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--dark-grey);
+            background-color: var(--light-grey);
+        }
 
-        /* Comparative Evaluation (Table-3) */
-        .eval-table { width: 100%; border-collapse: collapse; margin-top: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .eval-table th, .eval-table td { padding: 15px; border: 1px solid #ddd; text-align: center; }
-        .eval-table th { background: var(--dark-blue); color: white; }
-        .eval-table tr:nth-child(even) { background: #f2f2f2; }
+        header {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 5px solid var(--primary-color);
+        }
 
-        .btn-wa { background: #25D366; color: white; padding: 18px 40px; text-decoration: none; font-weight: bold; border-radius: 50px; display: inline-block; margin-top: 30px; }
+        .logo h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            background: #1a252f;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 450px;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+        }
+
+        /* Destinations Grid */
+        .dest-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .dest-card {
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            overflow: hidden;
+        }
+
+        .dest-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .dest-img {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .dest-content {
+            padding: 20px;
+        }
+
+        .dest-content h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .when-to-visit {
+            background: #e8f4fd;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            margin: 10px 0;
+            border-left: 4px solid #3498db;
+        }
+
+        /* Service Section */
+        .services {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 50px 0;
+            margin-top: 40px;
+        }
+
+        .service-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .service-item {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Deoband to Global Section */
+        .glocal-msg {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+            border-radius: 15px;
+        }
+
+        footer {
+            background: #111;
+            color: #ccc;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Table Styling for Detailed Data */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
     </style>
 </head>
 <body>
 
-<div class="header-strip">UNWTO COMPLIANT: CASE STUDY OF INDIAN MEDIA SCENE (UNIT 10)</div>
+    <header>
+        <div class="logo">
+            <h1>उस्ताद GLOCAL TOURISM & HOTELS</h1>
+            <p>देओबंद से दुनिया तक, भरोसे का दूसरा नाम</p>
+        </div>
+    </header>
 
-<nav>
-    <a href="#selection">Media Selection</a>
-    <a href="#strategy">Packaging & Selling</a>
-    <a href="#evaluation">Evaluation</a>
-    <a href="tel:+917017283687">📞 Call King: 7017283687</a>
-</nav>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#australia">Australia Packages</a>
+        <a href="#services">Our Services</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About Us</a>
+    </nav>
 
-<div class="hero-unit">
-    <h1>Strategic Directions for Glocal Tourism</h1>
-    <p>Implementing Reach, Frequency, and Continuity for Global Impact. (Pages 172-173)</p>
-    <a href="https://wa.me/917017283687" class="btn-wa">Chat with Zaheer Arshad</a>
-</div>
+    <div class="hero" id="home">
+        <h2>ऑस्ट्रेलिया की वादियों में आपका स्वागत है</h2>
+        <p>10 सबसे आइकॉनिक जगहें जो आपका इंतज़ार कर रही हैं</p>
+        <a href="#australia" class="btn">अभी देखें</a>
+    </div>
 
-<div class="container">
-    <div id="selection">
-        <h2 style="text-align:center;">Media Selection Checklist (Table-1, Page 173)</h2>
-        <div class="checklist-grid">
-            <div class="check-card"><h3>Reach</h3><p>हम सुनिश्चित करते हैं कि हमारा संदेश सही ऑडियंस तक पहुँचे।</p></div>
-            <div class="check-card"><h3>Frequency</h3><p>ब्रांड रिकॉल के लिए सही अंतराल पर संदेशों की आवृत्ति।</p></div>
-            <div class="check-card"><h3>Continuity</h3><p>स्थायी उपस्थिति के लिए निरंतर संचार योजना।</p></div>
-            <div class="check-card"><h3>Pulsing</h3><p>सीजन के समय भारी विज्ञापन और ऑफ-सीजन में निरंतरता।</p></div>
+    <div class="container" id="australia">
+        <h2 class="section-title">10 Australian Destinations You Can't Miss</h2>
+        
+        <div class="dest-grid">
+            
+            <div class="dest-card">
+                <div class="dest-img" style="background-image: url('https://images.unsplash.com/photo-1544074215-520f92f25492?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="dest-content">
+                    <h3>1. Cairns & Great Barrier Reef</h3>
+                    <p>जहाँ जंगल समंदर से मिलता है। दो वर्ल्ड हेरिटेज साइट्स: ग्रेट बैरियर रीफ और डेंट्री रेनफॉरेस्ट। यहाँ आपको दुनिया के बेहतरीन डाइविंग साइट्स मिलेंगे।</p>
+                    <div class="when-to-visit">
+                        <strong>कब जाएँ:</strong> जून से अक्टूबर (मौसम बेस्ट होता है)। दिसंबर से फरवरी में कछुओं का सीजन।
+                    </div>
+                </div>
+            </div>
+
+            <div class="dest-card">
+                <div class="dest-img" style="background-image: url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="dest-content">
+                    <h3>2. Sydney</h3>
+                    <p>दुनिया के सबसे खूबसूरत शहरों में से एक। सिडनी ओपेरा हाउस और हार्बर ब्रिज यहाँ की पहचान हैं। बोंडी बीच पर सर्फिंग का आनंद लें।</p>
+                    <div class="when-to-visit">
+                        <strong>कब जाएँ:</strong> अक्टूबर से मई (धूप और बीच के लिए)। जून से सितंबर (व्हेल देखने के लिए)।
+                    </div>
+                </div>
+            </div>
+
+            <div class="dest-card">
+                <div class="dest-img" style="background-image: url('https://images.unsplash.com/photo-1529108190281-9a4f620bc2d8?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="dest-content">
+                    <h3>3. Uluru</h3>
+                    <p>यह विशाल पत्थर ऑस्ट्रेलिया का 'दिल' कहलाता है। यहाँ ऊंट की सवारी करें और 'Field of Light' आर्ट इंस्टालेशन का आनंद लें।</p>
+                    <div class="when-to-visit">
+                        <strong>कब जाएँ:</strong> जून से अगस्त (तापमान हल्का होता है)।
+                    </div>
+                </div>
+            </div>
+
+            <div class="dest-card">
+                <div class="dest-img" style="background-image: url('https://images.unsplash.com/photo-1514395462725-fb4566210144?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="dest-content">
+                    <h3>4. Melbourne</h3>
+                    <p>कला, खेल और कॉफ़ी का शहर। यहाँ की गलियों में स्ट्रीट आर्ट देखें और फिर 'Great Ocean Road' की शानदार ड्राइव पर निकलें।</p>
+                    <div class="when-to-visit">
+                        <strong>कब जाएँ:</strong> नवंबर से मार्च। जनवरी में ऑस्ट्रेलियन ओपन का लुत्फ उठाएं।
+                    </div>
+                </div>
+            </div>
+
+            <div class="dest-card">
+                <div class="dest-img" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="dest-content">
+                    <h3>5. Perth & Margaret River</h3>
+                    <p>पश्चिम ऑस्ट्रेलिया का प्रवेश द्वार। यहाँ के अंगूर के बागान समंदर के बिल्कुल किनारे स्थित हैं। परिवार के लिए बेहतरीन रिसॉर्ट्स और जंगल यहाँ मौजूद हैं।</p>
+                    <div class="when-to-visit">
+                        <strong>कब जाएँ:</strong> सितंबर से नवंबर (जंगली फूलों का मौसम)।
+                    </div>
+                </div>
+            </div>
+
+            <div class="dest-card">
+                <div class="dest-img" style="background-image: url('https://images.unsplash.com/photo-1521733971447-048701955b55?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="dest-content">
+                    <h3>6. Kangaroo Island</h3>
+                    <p>कोआला, सी-लायंस और कंगारुओं का घर। यह प्रकृति प्रेमियों के लिए जन्नत है।</p>
+                    <div class="when-to-visit">
+                        <strong>कब जाएँ:</strong> दिसंबर से फरवरी।
+                    </div>
+                </div>
+            </div>
+
+            <div class="dest-card">
+                <div class="dest-img" style="background-image: url('https://images.unsplash.com/photo-1579619168303-34863f64024b?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="dest-content">
+                    <h3>7. Kakadu National Park</h3>
+                    <p>वॉटरफॉल्स, मगरमच्छ और चट्टानों के नज़ारे। डार्विन शहर से 3 घंटे की दूरी पर।</p>
+                    <div class="when-to-visit">
+                        <strong>कब जाएँ:</strong> मई से अक्टूबर।
+                    </div>
+                </div>
+            </div>
+
+            <div class="dest-card">
+                <div class="dest-img" style="background-image: url('https://images.unsplash.com/photo-1508215885820-4585e56135c8?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="dest-content">
+                    <h3>8. Hobart (Tasmania)</h3>
+                    <p>ताजी हवा और सुकून का शहर। यहाँ आप 'Southern Lights' (Aurora Borealis) भी देख सकते हैं।</p>
+                    <div class="when-to-visit">
+                        <strong>कब जाएँ:</strong> दिसंबर से मार्च।
+                    </div>
+                </div>
+            </div>
+
+             <div class="dest-card">
+                <div class="dest-img" style="background-image: url('https://images.unsplash.com/photo-1545163013-da2f8c5b0266?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="dest-content">
+                    <h3>9. Gold Coast</h3>
+                    <p>साल में 300 दिन धूप। शानदार थीम पार्क्स और सर्फिंग के लिए मशहूर बीच।</p>
+                    <div class="when-to-visit">
+                        <strong>कब जाएँ:</strong> जनवरी से मई।
+                    </div>
+                </div>
+            </div>
+
+            <div class="dest-card">
+                <div class="dest-img" style="background-image: url('https://images.unsplash.com/photo-1533050487297-09b450131914?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="dest-content">
+                    <h3>10. Byron Bay</h3>
+                    <p>हॉलीवुड सितारों का पसंदीदा घर। यहाँ डॉल्फिन और व्हेल को पास से देखने का मौका मिलता है।</p>
+                    <div class="when-to-visit">
+                        <strong>कब जाएँ:</strong> नवंबर से फरवरी।
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <div id="strategy" style="background: white; padding: 50px; border-radius: 20px; margin-top: 50px;">
-        <h2>The Art of Packaging & Personal Selling (Page 171)</h2>
-        <p><strong>Digital Packaging:</strong> हमारा वेब पोर्टल ही हमारी 'इनोवेटिव पैकेजिंग' है। यह हमारी सर्विस की गुणवत्ता को प्रोजेक्ट और प्रमोट करता है।</p>
-        <p><strong>Personal Selling:</strong> हम केवल विज्ञापन नहीं करते, हम रिश्ते बनाते हैं। हमारी 'Oral Presentation' आपके सपनों के टूर के हिसाब से बदलती है।</p>
+    <div class="container">
+        <div class="glocal-msg">
+            <h2>देओबंद के उस्ताद से पूरी दुनिया का सफर!</h2>
+            <p>हम केवल टिकट नहीं बुक करते, हम यादें बनाते हैं। ऑस्ट्रेलिया के इन 10 स्थानों के लिए हमारा विशेष 'Glocal Package' अभी बुक करें।</p>
+            <p><strong>वीज़ा, फ्लाइट, होटल और लोकल गाइड - सब हमारी ज़िम्मेदारी!</strong></p>
+        </div>
     </div>
 
-    <div id="evaluation">
-        <h2 style="text-align:center; margin-top: 80px;">Comparative Evaluation (Table-3, Page 175)</h2>
-        <table class="eval-table">
+    <div class="container" id="services">
+        <h2 class="section-title">हमारे सर्विस रेट्स (Standard)</h2>
+        <table>
             <thead>
                 <tr>
-                    <th>Criteria</th>
-                    <th>Newspapers</th>
-                    <th>Television</th>
-                    <th>Direct Mail</th>
-                    <th>Internet (Our Hub)</th>
+                    <th>सर्विस का नाम</th>
+                    <th>कवरेज</th>
+                    <th>अनुमानित समय</th>
+                    <th>भरोसा</th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td>Attention</td><td>Medium</td><td>Strong</td><td>Strong</td><td><strong>Very Strong</strong></td></tr>
-                <tr><td>Selectivity</td><td>Low</td><td>Low</td><td>Strong</td><td><strong>Strong</strong></td></tr>
-                <tr><td>Flexibility</td><td>High</td><td>Medium</td><td>High</td><td><strong>Very High</strong></td></tr>
-                <tr><td>Visual Impact</td><td>Medium</td><td>Strong</td><td>Medium</td><td><strong>Strong</strong></td></tr>
+                <tr>
+                    <td>वीज़ा कंसल्टेंसी</td>
+                    <td>ऑस्ट्रेलिया, यूरोप, यूएई</td>
+                    <td>15-20 दिन</td>
+                    <td>100% पारदर्शिता</td>
+                </tr>
+                <tr>
+                    <td>होटल बुकिंग</td>
+                    <td>3-स्टार से 7-स्टार तक</td>
+                    <td>तत्काल (Instant)</td>
+                    <td>सबसे कम रेट</td>
+                </tr>
+                <tr>
+                    <td>लोकल टूर गाइड</td>
+                    <td>देओबंद और आस-पास</td>
+                    <td>8-12 घंटे</td>
+                    <td>पूरी जानकारी के साथ</td>
+                </tr>
+                <tr>
+                    <td>वाइल्डलाइफ टूर्स</td>
+                    <td>जिम कॉर्बेट, राजाजी</td>
+                    <td>2-3 दिन</td>
+                    <td>एक्सपर्ट गाइड</td>
+                </tr>
             </tbody>
         </table>
     </div>
-</div>
 
-<footer style="background:#000; color:#fff; padding:60px 20px; text-align:center;">
-    <p><strong>Zaheer Arshad | Glocal Multimedia Expert</strong></p>
-    <p>Based on Unit 10: Promotional Media Use | Case Study India</p>
-</footer>
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">हमारा विजन: Glocal Excellence</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Local Expertise</h3>
+                    <p>देओबंद की मिट्टी और लोगों की जरूरतों को हम बखूबी समझते हैं।</p>
+                </div>
+                <div class="service-item">
+                    <h3>Global Reach</h3>
+                    <p>दुनिया के हर कोने में हमारे कॉन्टैक्ट्स और बेस्ट होटल्स से टाई-अप है।</p>
+                </div>
+                <div class="service-item">
+                    <h3>52 Years of Wisdom</h3>
+                    <p>तजुर्बा जो बोलता है - हर ट्रिप को हम निजी तौर पर मॉनिटर करते हैं।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h3>संपर्क करें - उस्ताद टूरिज्म एंड होटल्स</h3>
+            <p>पता: देओबंद, सहारनपुर, उत्तर प्रदेश (247554)</p>
+            <p>ईमेल: contact@glocaltours.com | फोन: +91 XXXXXXXXXX</p>
+            <hr style="border: 0.5px solid #333; margin: 20px 0;">
+            <p>© 2026 Glocal Tourism Australia Division. All Rights Reserved.</p>
+            <p style="font-size: 0.8rem; color: #666;">
+                डिस्क्लेमर: हम किसी भी वेबसाइट के लिंक की सटीकता की गारंटी नहीं देते। सभी बुकिंग्स नियम और शर्तों के अधीन हैं।
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>
