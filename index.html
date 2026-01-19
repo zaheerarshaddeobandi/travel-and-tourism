@@ -1,131 +1,27 @@
-<!DOCTYPE html>
-<html lang="hi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ustad Glocal | Tourism, Hotels & Science Hub</title>
-    <style>
-        :root {
-            --primary: #d35400; /* उस्ताद का सिग्नेचर ऑरेंज */
-            --dark: #1a1a1a;
-            --light: #f4f4f4;
-            --success: #25d366; /* व्हाट्सएप ग्रीन */
-        }
-
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: var(--light); color: var(--dark); line-height: 1.6; }
-
-        /* Header & Navigation */
-        header { background: var(--dark); color: white; padding: 20px; text-align: center; border-bottom: 4px solid var(--primary); }
-        .nav-links { background: #333; padding: 10px; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        .nav-links a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-
-        /* Hero Section */
-        .hero { 
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');
-            height: 400px; background-size: cover; background-position: center;
-            display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center;
-        }
-
-        .container { width: 90%; max-width: 1100px; margin: auto; padding: 20px; }
-
-        /* WhatsApp Floating Button */
-        .whatsapp-float {
-            position: fixed; bottom: 20px; right: 20px; background: var(--success); color: white;
-            width: 60px; height: 60px; border-radius: 50%; text-align: center; font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 1000; display: flex; justify-content: center; align-items: center;
-            text-decoration: none;
-        }
-
-        /* Affiliate Cards */
-        .affiliate-section { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 40px 0; }
-        .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid var(--primary); }
-        .card-content { padding: 20px; }
-        .btn-booking { 
-            display: block; background: var(--primary); color: white; text-align: center; 
-            padding: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px;
-        }
-
-        /* About Ustad Section */
-        .profile-box { background: white; padding: 30px; border-radius: 10px; margin: 40px 0; border-left: 10px solid var(--primary); }
-        .special-badge { background: #ffeb3b; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; color: #000; }
-
-        footer { background: var(--dark); color: #888; text-align: center; padding: 30px; margin-top: 50px; }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>USTAD GLOCAL™</h1>
-        <p>देओबंद से ऑस्ट्रेलिया तक - आपका भरोसेमंद हमसफर</p>
-    </header>
-
-    <div class="nav-links">
-        <a href="#home">होम</a>
-        <a href="#booking">होटल बुकिंग</a>
-        <a href="#expertise">विशेषज्ञता</a>
-        <a href="#contact">संपर्क</a>
+<div class="affiliate-section">
+    
+    <div class="card">
+        <div class="card-content">
+            <h3>होटल एवं रिसॉर्ट्स</h3>
+            <p>जिम कॉर्बेट, राजाजी और ऋषिकेश के बेहतरीन होटल्स की बुकिंग के लिए सलाह लें।</p>
+            <a href="https://wa.me/91XXXXXXXXXX?text=Ustad, mujhe hotel booking ki jankari chahiye" class="btn-booking">रेट पूछें (WhatsApp)</a>
+        </div>
     </div>
 
-    <div class="hero" id="home">
-        <h2>सफर ऐसा जो याद रहे...</h2>
-        <p>MTTM और माइक्रोबायोलॉजी के मेल से बनी एक सुरक्षित ट्रेवल गाइड</p>
-        <a href="#booking" class="btn-booking" style="width: 200px;">आज की डील्स देखें</a>
+    <div class="card">
+        <div class="card-content">
+            <h3>सुरक्षित यात्रा (Hygienic Travel)</h3>
+            <p>माइक्रोबायोलॉजी की समझ के साथ, हम सुनिश्चित करते हैं कि आपका सफर संक्रमण मुक्त और सुरक्षित हो।</p>
+            <a href="https://wa.me/91XXXXXXXXXX?text=Ustad, safe travel plan banwana hai" class="btn-booking">प्लान बनवाएं</a>
+        </div>
     </div>
 
-    <a href="https://wa.me/YOUR_PHONE_NUMBER?text=Salam%20Ustad,%20mujhe%20trip%20ke%20bare%20me%20puchna%20hai" class="whatsapp-float" target="_blank">
-        <span>💬</span>
-    </a>
-
-    <div class="container">
-        
-        <div class="profile-box" id="expertise">
-            <span class="special-badge">MTTM Scholar & Microbiologist</span>
-            <h3>उस्ताद के बारे में</h3>
-            <p>52 साल का तजुर्बा और आधुनिक शिक्षा का संगम। मैं केवल होटल बुक नहीं करता, बल्कि आपकी यात्रा को सुरक्षित (Hygienic) और यादगार बनाने की वैज्ञानिक समझ भी रखता हूँ। </p>
-            <p><strong>मेरी विशेषज्ञता:</strong> वाइल्डलाइफ टूर्स, हाइजीनिक स्टे, और बजट ट्रेवल मैनेजमेंट।</p>
+    <div class="card">
+        <div class="card-content">
+            <h3>MTTM एक्सपर्ट गाइड</h3>
+            <p>टूरिज्म में मास्टर डिग्री की विशेषज्ञता के साथ मुकम्मल टूर गाइड सर्विस।</p>
+            <a href="https://wa.me/91XXXXXXXXXX?text=Ustad, guide ki zaroorat hai" class="btn-booking">बुकिंग करें</a>
         </div>
-
-        <h2 style="text-align: center; color: var(--primary);" id="booking">बेहतरीन डील्स (Affiliate Partners)</h2>
-        <div class="affiliate-section">
-            
-            <div class="card">
-                <div class="card-content">
-                    <h3>MakeMyTrip स्पेशल</h3>
-                    <p>भारत के टॉप होटल्स पर पाएं 30% तक की छूट। मेरे लिंक से बुक करें और एक्स्ट्रा डिस्काउंट पाएं।</p>
-                    <a href="YOUR_MMT_AFFILIATE_LINK" class="btn-booking" target="_blank">होटल चेक करें</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <h3>Yatra फ्लाइट डील्स</h3>
-                    <p>देश और विदेश की उड़ानों पर सबसे कम दाम। अभी अपनी सीट बुक करें।</p>
-                    <a href="YOUR_YATRA_AFFILIATE_LINK" class="btn-booking" target="_blank">फ्लाइट बुक करें</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <h3>Direct Booking (Ustad Special)</h3>
-                    <p>क्या आप एक कस्टमाइज्ड ट्रिप चाहते हैं? मुझसे सीधे बात करें और कमीशन बचाएं।</p>
-                    <a href="https://wa.me/YOUR_PHONE_NUMBER" class="btn-booking" style="background: var(--success);">WhatsApp पर बात करें</a>
-                </div>
-            </div>
-
-        </div>
-
-        <div style="background: #2c3e50; color: white; padding: 40px; border-radius: 10px; text-align: center;">
-            <h2>WildLife Documentary Tours</h2>
-            <p>जिम कॉर्बेट और राजाजी नेशनल पार्क के अनसुने रास्तों की सैर करें।</p>
-            <p><em>जल्द आ रहा है: मेरी वाइल्डलाइफ डॉक्यूमेंट्री सीरीज!</em></p>
-        </div>
-
     </div>
 
-    <footer>
-        <p>© 2026 Ustad Glocal | Deoband, UP | Built with Passion & Expertise</p>
-        <p style="font-size: 0.8rem;">Affiliate Disclaimer: कुछ लिंक्स से मुझे छोटा कमीशन मिल सकता है, जिससे मेरी पढ़ाई और इस वेबसाइट को चलाने में मदद मिलती है।</p>
-    </footer>
-
-</body>
-</html>
+</div>
