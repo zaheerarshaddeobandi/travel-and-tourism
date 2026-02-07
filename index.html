@@ -1,27 +1,199 @@
-<div class="affiliate-section">
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ustad | Master of Travel & Science</title>
     
-    <div class="card">
-        <div class="card-content">
-            <h3>होटल एवं रिसॉर्ट्स</h3>
-            <p>जिम कॉर्बेट, राजाजी और ऋषिकेश के बेहतरीन होटल्स की बुकिंग के लिए सलाह लें।</p>
-            <a href="https://wa.me/91XXXXXXXXXX?text=Ustad, mujhe hotel booking ki jankari chahiye" class="btn-booking">रेट पूछें (WhatsApp)</a>
-        </div>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #d74113; /* Thomas Cook Style Orange */
+            --dark: #1e1f25;
+            --light: #f4f7f8;
+            --safe-green: #2e7d32;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Source Sans Pro', sans-serif; background: var(--light); color: var(--dark); line-height: 1.6; }
+
+        /* --- Header & Navigation --- */
+        .tct-header {
+            background: #fff;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .tct-logo { font-size: 28px; font-weight: 900; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; }
+        .tct-logo span { color: var(--dark); }
+
+        .tct-nav ul { display: flex; list-style: none; gap: 30px; }
+        .tct-nav a { text-decoration: none; color: var(--dark); font-weight: 700; font-size: 16px; transition: 0.3s; }
+        .tct-nav a:hover { color: var(--primary); }
+
+        /* --- Hero Slider Style Section --- */
+        .hero-banner {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1588336142586-36aff13141fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .hero-banner h1 { font-size: 50px; font-weight: 900; margin-bottom: 10px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .hero-banner p { font-size: 20px; font-weight: 400; max-width: 800px; }
+
+        /* --- Global Standard Service Section --- */
+        .section-title { text-align: center; margin: 60px 0 40px; }
+        .section-title h2 { font-size: 36px; font-weight: 900; position: relative; display: inline-block; }
+        .section-title h2:after { content: ''; width: 60px; height: 4px; background: var(--primary); position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
+
+        .ustad-grid {
+            max-width: 1200px;
+            margin: 0 auto 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* --- The Big Card Style --- */
+        .card {
+            background: #fff;
+            border-radius: 20px 0 20px 0; /* Glocal Signature Design */
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.4s ease;
+            border: 1px solid #eee;
+        }
+
+        .card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+
+        .card-img { height: 230px; position: relative; overflow: hidden; }
+        .card-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .card:hover .card-img img { transform: scale(1.1); }
+
+        .badge {
+            position: absolute; top: 15px; left: 15px; background: var(--primary); color: #fff;
+            padding: 5px 15px; font-size: 12px; font-weight: 900; border-radius: 4px; text-transform: uppercase;
+        }
+
+        .card-body { padding: 30px; }
+        .card-body h3 { font-size: 24px; font-weight: 900; margin-bottom: 15px; color: var(--dark); }
+        .card-body p { font-size: 16px; color: #666; margin-bottom: 25px; height: 75px; overflow: hidden; }
+
+        .btn-wa {
+            display: inline-block; width: 100%; text-align: center; padding: 15px;
+            background: var(--primary); color: #fff; text-decoration: none;
+            font-weight: 900; border-radius: 0 0 19px 0; transition: 0.3s;
+        }
+        .btn-wa:hover { background: #000; }
+
+        /* --- Specialized Microbiology/Trust Section --- */
+        .trust-banner { background: var(--dark); color: #fff; padding: 60px 20px; text-align: center; margin-bottom: 80px; }
+        .trust-grid { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; max-width: 1000px; margin: 30px auto 0; }
+        .trust-item h4 { font-size: 28px; color: var(--primary); }
+
+        @media (max-width: 768px) {
+            .tct-header { padding: 15px 20px; flex-direction: column; gap: 10px; }
+            .hero-banner h1 { font-size: 32px; }
+            .hero-banner p { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="tct-header">
+        <div class="tct-logo">USTAD<span>TRAVELS</span></div>
+        <nav class="tct-nav">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">PACKAGES</a></li>
+                <li><a href="#">SAFE TRAVEL</a></li>
+                <li><a href="#">EXPERT GUIDE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-banner">
+        <h1>BEYOND JUST A JOURNEY</h1>
+        <p>Explore Jim Corbett, Rishikesh & Rajaji with the rare combination of <br><b>MTTM Expertise & Bio-Safety Science.</b></p>
+    </section>
+
+    <div class="section-title">
+        <h2>Our Professional Services</h2>
     </div>
 
-    <div class="card">
-        <div class="card-content">
-            <h3>सुरक्षित यात्रा (Hygienic Travel)</h3>
-            <p>माइक्रोबायोलॉजी की समझ के साथ, हम सुनिश्चित करते हैं कि आपका सफर संक्रमण मुक्त और सुरक्षित हो।</p>
-            <a href="https://wa.me/91XXXXXXXXXX?text=Ustad, safe travel plan banwana hai" class="btn-booking">प्लान बनवाएं</a>
+    <section class="ustad-grid">
+        
+        <div class="card">
+            <div class="card-img">
+                <span class="badge">Professional</span>
+                <img src="https://images.unsplash.com/photo-1551882547-ff43c63fedfe?auto=format&fit=crop&w=800&q=80" alt="Guide">
+            </div>
+            <div class="card-body">
+                <h3>MTTM एक्सपर्ट गाइड</h3>
+                <p>टूरिज्म में मास्टर डिग्री की विशेषज्ञता। हम आपको केवल रास्ता नहीं दिखाते, बल्कि विरासत की सच्ची रूह से रूबरू कराते हैं।</p>
+                <a href="https://wa.me/91XXXXXXXXXX?text=Hi Ustad, need MTTM expert guide service" class="btn-wa">बुकिंग शुरू करें</a>
+            </div>
         </div>
-    </div>
 
-    <div class="card">
-        <div class="card-content">
-            <h3>MTTM एक्सपर्ट गाइड</h3>
-            <p>टूरिज्म में मास्टर डिग्री की विशेषज्ञता के साथ मुकम्मल टूर गाइड सर्विस।</p>
-            <a href="https://wa.me/91XXXXXXXXXX?text=Ustad, guide ki zaroorat hai" class="btn-booking">बुकिंग करें</a>
+        <div class="card">
+            <div class="card-img">
+                <span class="badge" style="background: var(--safe-green);">Hygienic</span>
+                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Hygiene">
+            </div>
+            <div class="card-body">
+                <h3>माइक्रो-हाइजीनिक ट्रैवल</h3>
+                <p>माइक्रोबायोलॉजी की गहरी समझ के साथ एक संक्रमण-मुक्त अनुभव। आपका स्वास्थ्य हमारी प्राथमिकता है, हर कदम पर सुरक्षित प्रोटोकॉल।</p>
+                <a href="https://wa.me/91XXXXXXXXXX?text=Hi Ustad, plan a bio-safe trip for me" class="btn-wa">सेफ प्लान बनवाएं</a>
+            </div>
         </div>
-    </div>
 
-</div>
+        <div class="card">
+            <div class="card-img">
+                <span class="badge" style="background: #ffd700; color: #000;">Premium</span>
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Hotels">
+            </div>
+            <div class="card-body">
+                <h3>प्रीमियम होटल कंसल्टेंसी</h3>
+                <p>जिम कॉर्बेट और ऋषिकेश के चुनिंदा होटल्स। हम 'Mass' नहीं 'Value' पर यकीन रखते हैं। बेहतरीन रेट्स और एक्सक्लूसिव एक्सेस।</p>
+                <a href="https://wa.me/91XXXXXXXXXX?text=Hi Ustad, need rates for luxury resorts" class="btn-wa">बेस्ट रेट्स पाएं</a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="trust-banner">
+        <h2>Why Choose Ustad Travels?</h2>
+        <div class="trust-grid">
+            <div class="trust-item">
+                <h4>Master's</h4>
+                <p>In Tourism Management</p>
+            </div>
+            <div class="trust-item">
+                <h4>Scientist</h4>
+                <p>Microbiology Expertise</p>
+            </div>
+            <div class="trust-item">
+                <h4>100%</h4>
+                <p>Hygienic Protocols</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
