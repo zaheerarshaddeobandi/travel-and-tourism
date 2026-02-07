@@ -1,199 +1,395 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="hi" data-label="ustad-travels">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ustad | Master of Travel & Science</title>
+    <title>Thomas Cook Style | Zaheer Arshad Expert Portal</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700;900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
+        /* [LINE 51-450: THE THOMAS COOK CSS ENGINE] */
         :root {
-            --primary: #d74113; /* Thomas Cook Style Orange */
-            --dark: #1e1f25;
-            --light: #f4f7f8;
-            --safe-green: #2e7d32;
+            --tc-orange: #d74113; /* Signature Thomas Cook Orange */
+            --tc-black: #262626;
+            --tc-gray: #e7e7e7;
+            --tc-light: #f5f5f5;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Source Sans Pro', sans-serif; background: var(--light); color: var(--dark); line-height: 1.6; }
+        body { font-family: 'Source Sans Pro', sans-serif; color: var(--tc-black); background: #fff; line-height: 1.5; }
 
-        /* --- Header & Navigation --- */
-        .tct-header {
-            background: #fff;
-            padding: 15px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        /* Header Architecture */
+        .tct-header { background: #fff; border-bottom: 1px solid var(--tc-gray); position: sticky; top: 0; z-index: 10000; }
+        .tct-top-bar { background: var(--tc-black); color: #fff; padding: 10px 10%; display: flex; justify-content: space-between; font-size: 13px; font-weight: 600; }
+        
+        .tct-main-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 10%; max-width: 1400px; margin: 0 auto; }
+        .tct-logo { font-size: 28px; font-weight: 900; color: var(--tc-orange); text-decoration: none; text-transform: uppercase; }
+        .tct-logo span { color: var(--tc-black); }
+
+        /* Mega Menu (The Real Power) */
+        .tct-menu { display: flex; list-style: none; gap: 30px; }
+        .tct-menu-item { position: relative; padding-bottom: 10px; }
+        .tct-menu-item > a { text-decoration: none; color: var(--tc-black); font-weight: 700; font-size: 16px; }
+        
+        .tct-mega-dropdown {
+            position: absolute; top: 40px; left: -200px; width: 900px; background: #fff;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1); display: none; padding: 40px;
+            grid-template-columns: repeat(4, 1fr); gap: 25px; border-bottom: 4px solid var(--tc-orange);
+            border-radius: 0 0 15px 15px;
         }
+        .tct-menu-item:hover .tct-mega-dropdown { display: grid; }
+        .tct-mega-col h4 { border-bottom: 2px solid var(--tc-orange); padding-bottom: 8px; margin-bottom: 15px; font-size: 14px; }
+        .tct-mega-col ul { list-style: none; }
+        .tct-mega-col li a { text-decoration: none; color: #555; font-size: 14px; display: block; padding: 5px 0; }
 
-        .tct-logo { font-size: 28px; font-weight: 900; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; }
-        .tct-logo span { color: var(--dark); }
-
-        .tct-nav ul { display: flex; list-style: none; gap: 30px; }
-        .tct-nav a { text-decoration: none; color: var(--dark); font-weight: 700; font-size: 16px; transition: 0.3s; }
-        .tct-nav a:hover { color: var(--primary); }
-
-        /* --- Hero Slider Style Section --- */
-        .hero-banner {
-            height: 70vh;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1588336142586-36aff13141fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #fff;
-            padding: 0 20px;
+        /* Industrial Hero Section */
+        .tct-hero { 
+            height: 75vh; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://zaheerarshaddeoband.github.io/travel-and-tourism/hero.jpg');
+            background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff;
         }
+        .tct-hero-content h1 { font-size: 65px; font-weight: 900; line-height: 1; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .tct-hero-content p { font-size: 24px; margin-top: 20px; font-weight: 600; }
 
-        .hero-banner h1 { font-size: 50px; font-weight: 900; margin-bottom: 10px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-        .hero-banner p { font-size: 20px; font-weight: 400; max-width: 800px; }
+        /* Service Grid (MTTM & Microbiology) */
+        .tct-services { padding: 100px 10%; background: var(--tc-light); display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .tct-card { background: #fff; padding: 40px; border-radius: 16px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; }
+        .tct-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-bottom: 5px solid var(--tc-orange); }
+        .tct-card i { font-size: 40px; color: var(--tc-orange); margin-bottom: 20px; }
 
-        /* --- Global Standard Service Section --- */
-        .section-title { text-align: center; margin: 60px 0 40px; }
-        .section-title h2 { font-size: 36px; font-weight: 900; position: relative; display: inline-block; }
-        .section-title h2:after { content: ''; width: 60px; height: 4px; background: var(--primary); position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
+        /* Industrial Footer */
+        .tct-footer { background: var(--tc-black); color: #fff; padding: 80px 10% 40px; }
+        .tct-footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 50px; }
+        .tct-footer-addr h3 { color: var(--tc-orange); margin-bottom: 20px; font-size: 22px; }
+        .tct-footer-addr p { color: #ccc; line-height: 1.8; font-size: 14px; }
 
-        .ustad-grid {
-            max-width: 1200px;
-            margin: 0 auto 80px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            padding: 0 20px;
-        }
-
-        /* --- The Big Card Style --- */
-        .card {
-            background: #fff;
-            border-radius: 20px 0 20px 0; /* Glocal Signature Design */
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: 0.4s ease;
-            border: 1px solid #eee;
-        }
-
-        .card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
-
-        .card-img { height: 230px; position: relative; overflow: hidden; }
-        .card-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-        .card:hover .card-img img { transform: scale(1.1); }
-
-        .badge {
-            position: absolute; top: 15px; left: 15px; background: var(--primary); color: #fff;
-            padding: 5px 15px; font-size: 12px; font-weight: 900; border-radius: 4px; text-transform: uppercase;
-        }
-
-        .card-body { padding: 30px; }
-        .card-body h3 { font-size: 24px; font-weight: 900; margin-bottom: 15px; color: var(--dark); }
-        .card-body p { font-size: 16px; color: #666; margin-bottom: 25px; height: 75px; overflow: hidden; }
-
-        .btn-wa {
-            display: inline-block; width: 100%; text-align: center; padding: 15px;
-            background: var(--primary); color: #fff; text-decoration: none;
-            font-weight: 900; border-radius: 0 0 19px 0; transition: 0.3s;
-        }
-        .btn-wa:hover { background: #000; }
-
-        /* --- Specialized Microbiology/Trust Section --- */
-        .trust-banner { background: var(--dark); color: #fff; padding: 60px 20px; text-align: center; margin-bottom: 80px; }
-        .trust-grid { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; max-width: 1000px; margin: 30px auto 0; }
-        .trust-item h4 { font-size: 28px; color: var(--primary); }
-
-        @media (max-width: 768px) {
-            .tct-header { padding: 15px 20px; flex-direction: column; gap: 10px; }
-            .hero-banner h1 { font-size: 32px; }
-            .hero-banner p { font-size: 16px; }
+        @media (max-width: 960px) {
+            .tct-menu { display: none; }
+            .tct-services { grid-template-columns: 1fr; }
+            .tct-hero-content h1 { font-size: 40px; }
         }
     </style>
 </head>
 <body>
 
-    <header class="tct-header">
-        <div class="tct-logo">USTAD<span>TRAVELS</span></div>
-        <nav class="tct-nav">
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">PACKAGES</a></li>
-                <li><a href="#">SAFE TRAVEL</a></li>
-                <li><a href="#">EXPERT GUIDE</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero-banner">
-        <h1>BEYOND JUST A JOURNEY</h1>
-        <p>Explore Jim Corbett, Rishikesh & Rajaji with the rare combination of <br><b>MTTM Expertise & Bio-Safety Science.</b></p>
-    </section>
-
-    <div class="section-title">
-        <h2>Our Professional Services</h2>
+    <div class="tct-top-bar">
+        <span><i class="fas fa-map-marker-alt"></i> देवबंद, सहारनपुर, उत्तर प्रदेश (247554)</span>
+        <span>Contact: +91-XXXXXXXXXX | Master of Tourism (MTTM)</span>
     </div>
 
-    <section class="ustad-grid">
-        
-        <div class="card">
-            <div class="card-img">
-                <span class="badge">Professional</span>
-                <img src="https://images.unsplash.com/photo-1551882547-ff43c63fedfe?auto=format&fit=crop&w=800&q=80" alt="Guide">
-            </div>
-            <div class="card-body">
-                <h3>MTTM एक्सपर्ट गाइड</h3>
-                <p>टूरिज्म में मास्टर डिग्री की विशेषज्ञता। हम आपको केवल रास्ता नहीं दिखाते, बल्कि विरासत की सच्ची रूह से रूबरू कराते हैं।</p>
-                <a href="https://wa.me/91XXXXXXXXXX?text=Hi Ustad, need MTTM expert guide service" class="btn-wa">बुकिंग शुरू करें</a>
-            </div>
+    <header class="tct-header">
+        <div class="tct-main-nav">
+            <a href="#" class="tct-logo">ZAHEER<span>ARSHAD</span></a>
+            <nav>
+                <ul class="tct-menu">
+                    <li class="tct-menu-item"><a href="#">Home</a></li>
+                    <li class="tct-menu-item">
+                        <a href="#">Holidays ▾</a>
+                        <div class="tct-mega-dropdown">
+                            <div class="tct-mega-col">
+                                <h4>Expertise Areas</h4>
+                                <ul>
+                                    <li><a href="#">MTTM Master Plans</a></li>
+                                    <li><a href="#">Bio-Safe Travel Audits</a></li>
+                                    <li><a href="#">Heritage Consultation</a></li>
+                                </ul>
+                            </div>
+                            <div class="tct-mega-col">
+                                <h4>Wildlife Special</h4>
+                                <ul>
+                                    <li><a href="#">Jim Corbett Elite</a></li>
+                                    <li><a href="#">Rajaji Safari Expert</a></li>
+                                    <li><a href="#">Bird Watching Tours</a></li>
+                                </ul>
+                            </div>
+                            <div class="tct-mega-col">
+                                <h4>Spiritual Path</h4>
+                                <ul>
+                                    <li><a href="#">Rishikesh Soul Trip</a></li>
+                                    <li><a href="#">Deoband Heritage</a></li>
+                                    <li><a href="#">Haridwar Divine</a></li>
+                                </ul>
+                            </div>
+                            <div class="tct-mega-col">
+                                <h4>Industrial Info</h4>
+                                <p style="font-size:12px; color:#999;">Combined Microbiology with Management Degree.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tct-menu-item"><a href="#">Photography</a></li>
+                    <li class="tct-menu-item"><a href="#" style="background:var(--tc-orange); color:#fff; padding:10px 20px; border-radius:50px;">Contact Expert</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div class="card">
-            <div class="card-img">
-                <span class="badge" style="background: var(--safe-green);">Hygienic</span>
-                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Hygiene">
-            </div>
-            <div class="card-body">
-                <h3>माइक्रो-हाइजीनिक ट्रैवल</h3>
-                <p>माइक्रोबायोलॉजी की गहरी समझ के साथ एक संक्रमण-मुक्त अनुभव। आपका स्वास्थ्य हमारी प्राथमिकता है, हर कदम पर सुरक्षित प्रोटोकॉल।</p>
-                <a href="https://wa.me/91XXXXXXXXXX?text=Hi Ustad, plan a bio-safe trip for me" class="btn-wa">सेफ प्लान बनवाएं</a>
-            </div>
+    <section class="tct-hero">
+        <div class="tct-hero-content">
+            <h1>TRUST THE SCIENTIST.</h1>
+            <p>Master of Tourism Management (MTTM) & Microbiology Consultant</p>
         </div>
-
-        <div class="card">
-            <div class="card-img">
-                <span class="badge" style="background: #ffd700; color: #000;">Premium</span>
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Hotels">
-            </div>
-            <div class="card-body">
-                <h3>प्रीमियम होटल कंसल्टेंसी</h3>
-                <p>जिम कॉर्बेट और ऋषिकेश के चुनिंदा होटल्स। हम 'Mass' नहीं 'Value' पर यकीन रखते हैं। बेहतरीन रेट्स और एक्सक्लूसिव एक्सेस।</p>
-                <a href="https://wa.me/91XXXXXXXXXX?text=Hi Ustad, need rates for luxury resorts" class="btn-wa">बेस्ट रेट्स पाएं</a>
-            </div>
-        </div>
-
     </section>
 
-    <section class="trust-banner">
-        <h2>Why Choose Ustad Travels?</h2>
-        <div class="trust-grid">
-            <div class="trust-item">
-                <h4>Master's</h4>
-                <p>In Tourism Management</p>
+    <section class="tct-services">
+        <div class="tct-card">
+            <i class="fas fa-microscope"></i>
+            <h3>Scientific Safety</h3>
+            <p>एक माइक्रोबायोलॉजिस्ट के रूप में, मैं आपकी यात्रा को 100% हाइजीनिक और सुरक्षित बनाता हूँ।</p>
+        </div>
+        <div class="tct-card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>MTTM Expertise</h3>
+            <p>प्रोफेशनल टूरिज्म मैनेजमेंट डिग्री के साथ प्रीमियम और व्यवस्थित ट्रिप प्लानिंग।</p>
+        </div>
+        <div class="tct-card">
+            <i class="fas fa-camera-retro"></i>
+            <h3>Visual Stories</h3>
+            <p>प्रोफेशनल फोटोग्राफी जो आपकी यादों को डिजिटल फ्रेम में अमर कर दे।</p>
+        </div>
+    </section>
+
+    <footer class="tct-footer">
+        <div class="tct-footer-grid">
+            <div class="tct-footer-addr">
+                <h3>ZAHEER ARSHAD (USTAD)</h3>
+                <p><strong>Headquarters:</strong><br>
+                मोहल्ला [आपका मोहल्ला], देवबंद<br>
+                सहारनपुर, उत्तर प्रदेश (247554)</p>
+                <p style="margin-top:20px;">Email: info@ustadtravels.com</p>
             </div>
-            <div class="trust-item">
-                <h4>Scientist</h4>
-                <p>Microbiology Expertise</p>
+            <div class="tct-footer-links">
+                <h4>Explore</h4>
+                <ul><li>About MTTM</li><li>Bio-Audit</li><li>Photography</li></ul>
             </div>
-            <div class="trust-item">
-                <h4>100%</h4>
-                <p>Hygienic Protocols</p>
+            <div class="tct-footer-links">
+                <h4>Support</h4>
+                <ul><li>Contact Us</li><li>Privacy Policy</li><li>FAQ</li></ul>
+            </div>
+            <div class="tct-footer-links">
+                <h4>Social</h4>
+                <div style="display:flex; gap:10px; font-size:20px;">
+                    <i class="fab fa-facebook"></i> <i class="fab fa-instagram"></i>
+                </div>
             </div>
         </div>
+        <div style="text-align:center; border-top:1px solid #333; margin-top:50px; padding-top:20px; font-size:12px; color:#777;">
+            © 2026 Zaheer Arshad Deoband. Created with Enterprise Standards.
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll engine
+        console.log("Thomas Cook Style Ustad Framework Loaded Successfully.");
+    </script>
+</body>
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaheer Arshad | Chitrakoot Expert Tour Packages</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --hf-primary: #ff433a; /* Holidify Red */
+            --tc-orange: #d74113;  /* Thomas Cook Orange */
+            --dark-blue: #002e6d;
+            --bg-light: #f8f9fa;
+        }
+
+        body { font-family: 'Manrope', sans-serif; background: #fff; margin: 0; color: #333; }
+
+        /* [Header & Navigation] */
+        .ustad-nav {
+            background: #fff; border-bottom: 2px solid var(--bg-light);
+            padding: 15px 10%; display: flex; justify-content: space-between;
+            align-items: center; position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { font-weight: 800; font-size: 24px; color: var(--dark-blue); text-decoration: none; }
+        .logo span { color: var(--hf-primary); }
+
+        /* [Hero Section with Scientific Edge] */
+        .hero-banner {
+            height: 60vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+            url('https://www.holidify.com/images/bgImages/CHITRAKOOT.jpg');
+            background-size: cover; background-position: center;
+            display: flex; flex-direction: column; justify-content: center;
+            align-items: center; color: #fff; text-align: center;
+        }
+        .hero-banner h1 { font-size: 48px; margin-bottom: 10px; font-weight: 800; }
+        .hero-banner p { font-size: 20px; font-weight: 400; max-width: 600px; }
+
+        /* [Package Listing Style - Holidify Inspired] */
+        .container { padding: 60px 10%; }
+        .package-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        
+        .package-card {
+            border: 1px solid #ddd; border-radius: 12px; overflow: hidden;
+            transition: 0.3s ease-in-out; position: relative;
+        }
+        .package-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        
+        .card-img { height: 200px; background: #ccc; position: relative; }
+        .price-tag {
+            position: absolute; bottom: 10px; left: 10px;
+            background: var(--hf-primary); color: #fff;
+            padding: 5px 15px; border-radius: 5px; font-weight: 700;
+        }
+
+        .card-content { padding: 20px; }
+        .card-content h3 { margin: 0 0 10px; font-size: 20px; color: var(--dark-blue); }
+        
+        /* [Expertise Badges] */
+        .expert-badge {
+            display: inline-block; background: #eef2f7; color: #555;
+            padding: 4px 12px; border-radius: 20px; font-size: 12px;
+            font-weight: 700; margin-bottom: 15px; border: 1px solid #d1d9e6;
+        }
+
+        /* [CTA Button] */
+        .btn-book {
+            display: block; width: 100%; padding: 12px; text-align: center;
+            background: linear-gradient(to right, #ff433a, #ff577c);
+            color: #fff; text-decoration: none; border-radius: 8px; font-weight: 700;
+        }
+
+        /* [Microbiology Trust Section] */
+        .trust-section {
+            background: var(--dark-blue); color: #fff; padding: 40px 10%;
+            margin-top: 50px; text-align: center; border-radius: 20px 20px 0 0;
+        }
+        .trust-section i { font-size: 30px; color: #00d1b2; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <nav class="ustad-nav">
+        <a href="#" class="logo">ZAHEER<span>ARSHAD</span></a>
+        <div style="font-weight: 700;">MTTM | Microbiology Consultant</div>
+    </nav>
+
+    <section class="hero-banner">
+        <h1>Chitrakoot Tour Packages</h1>
+        <p>Expert Planning by Zaheer Arshad (MTTM). Discover the spiritual essence of Mandakini banks.</p>
+    </section>
+
+    <div class="container">
+        <div class="package-grid">
+            <div class="package-card">
+                <div class="card-img" style="background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Ramghat_Chitrakoot.jpg/640px-Ramghat_Chitrakoot.jpg') center/cover;">
+                    <div class="price-tag">₹ 24,250/-</div>
+                </div>
+                <div class="card-content">
+                    <span class="expert-badge"><i class="fas fa-certificate"></i> Verified Itinerary</span>
+                    <h3>Chitrakoot Spiritual Trail</h3>
+                    <p style="font-size: 14px; color: #666;">Ram Ghat, Kamadgiri Parikrama, and Gupt Godavari with professional guide.</p>
+                    <a href="#" class="btn-book">Get Best Offer</a>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="card-img" style="background: url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=400') center/cover;">
+                    <div class="price-tag">₹ 18,500/-</div>
+                </div>
+                <div class="card-content">
+                    <span class="expert-badge"><i class="fas fa-shield-virus"></i> Bio-Safe Travel</span>
+                    <h3>Industrial & Heritage Visit</h3>
+                    <p style="font-size: 14px; color: #666;">Deep-dive into Chitrakoot's history with scientific hygiene standards.</p>
+                    <a href="#" class="btn-book">Get Custom Quote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="trust-section">
+        <i class="fas fa-microscope"></i>
+        <h2>Safe & Professional Tourism</h2>
+        <p>Being a Microbiology graduate and MTTM professional, I ensure your travel is not only spiritual but also safe, hygienic, and perfectly managed.</p>
     </section>
 
 </body>
+</html>
+
+<div class="itinerary-container" style="max-width: 900px; margin: 20px auto; border: 2px solid #002e6d; border-radius: 15px; overflow: hidden; font-family: 'Manrope', sans-serif;">
+    <div style="background: #002e6d; color: white; padding: 20px; text-align: center;">
+        <h2 style="margin: 0;">3 Days Expert Chitrakoot Circuit</h2>
+        <p style="margin: 5px 0 0;">Curated by Zaheer Arshad (MTTM & Microbiologist)</p>
+    </div>
+
+    <div style="padding: 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; background: #f4f7f9;">
+        <div style="background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <strong style="color: #ff433a;">Day 01: Spiritual Sink</strong>
+            <ul style="font-size: 13px; padding-left: 20px; margin-top: 10px;">
+                <li>Ram Ghat Aarti</li>
+                <li>Mandakini Eco-Tour</li>
+                <li>Janaki Kund</li>
+            </ul>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <strong style="color: #ff433a;">Day 02: Geologic Wonders</strong>
+            <ul style="font-size: 13px; padding-left: 20px; margin-top: 10px;">
+                <li>Kamadgiri Parikrama</li>
+                <li>Gupt Godavari Caves</li>
+                <li>Sati Anusuya</li>
+            </ul>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <strong style="color: #ff433a;">Day 03: Nature & Wildlife</strong>
+            <ul style="font-size: 13px; padding-left: 20px; margin-top: 10px;">
+                <li>Hanuman Dhara Trek</li>
+                <li>Ranipur Tiger Reserve</li>
+                <li>Industrial Hygiene Audit</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="background: #eef2f7; padding: 20px; text-align: center; border-top: 1px solid #ddd;">
+        <p style="font-size: 14px; color: #555;"><strong>Note:</strong> Every package includes a "Bio-Safety Briefing" & Water Quality Check report for stays.</p>
+        <button onclick="alert('Contacting Zaheer Arshad...')" style="background: #ff433a; color: white; border: none; padding: 12px 25px; border-radius: 25px; cursor: pointer; font-weight: bold;">Book Professional Package</button>
+    </div>
+</div>
+<div class="expert-qa-section" style="max-width: 800px; margin: 30px auto; border: 1px solid #e0e0e0; border-radius: 12px; font-family: 'TripSans', Arial, sans-serif; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+    
+    <div style="padding: 20px; border-bottom: 2px solid #00af87; display: flex; align-items: center; justify-content: space-between;">
+        <h3 style="margin:0; color: #2c2c2c;">Verified Expert Advice</h3>
+        <span style="background: #00af87; color: #fff; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold;">CHITRAKOOT SPECIALIST</span>
+    </div>
+
+    <div style="padding: 20px; border-bottom: 1px solid #f0f0f0;">
+        <p style="font-weight: bold; margin-bottom: 10px; color: #000;">❓ क्या गुप्त गोदावरी गुफाओं के अंदर पानी का स्तर मानसून में सुरक्षित रहता है?</p>
+        <div style="display: flex; gap: 15px;">
+            <div style="min-width: 45px; height: 45px; background: #002e6d; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">ZA</div>
+            <div>
+                <p style="margin: 0; font-size: 14px; color: #333; line-height: 1.5;">
+                    <strong>Zaheer Arshad (MTTM):</strong> मानसून में जल स्तर बढ़ता है। सूक्ष्म जीव विज्ञान के नज़रिए से, इस समय पानी में प्राकृतिक खनिज अधिक होते हैं, लेकिन फिसलन बढ़ जाती है। सुरक्षित यात्रा के लिए सुबह 10 बजे से पहले का समय सबसे अच्छा है।
+                </p>
+                <small style="color: #888;">Verified Answer • 2 days ago</small>
+            </div>
+        </div>
+    </div>
+
+    <div style="padding: 20px; background: #f9f9f9; text-align: center; border-radius: 0 0 12px 12px;">
+        <p style="margin-bottom: 15px; font-size: 15px;">अपना सवाल पूछें और 24 घंटे में एक्सपर्ट सलाह पाएँ।</p>
+        <button onclick="document.getElementById('question-input').style.display='block'" style="background: #000; color: #fff; border: none; padding: 10px 25px; border-radius: 25px; cursor: pointer; font-weight: bold;">Ask Zaheer a Question</button>
+        
+        <div id="question-input" style="display:none; margin-top: 15px;">
+            <textarea placeholder="Type your question here..." style="width: 100%; height: 80px; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+            <button style="margin-top: 10px; background: #00af87; border: none; color: white; padding: 8px 20px; border-radius: 5px;">Submit</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
 </html>
