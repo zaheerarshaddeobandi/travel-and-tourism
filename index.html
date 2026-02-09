@@ -631,5 +631,417 @@ function googleTranslateElementInit() {
 function showFullBrochure() { document.getElementById('fullBrochureOverlay').style.display = "block"; }
 function hideFullBrochure() { document.getElementById('fullBrochureOverlay').style.display = "none"; }
 </script>
+# ज़हीर का 'टूरिस्ट मैग्नेट' इंजन - पर्यटकों को आकर्षित करने के लिए
+def tourist_magnet():
+    print("==============================================")
+    print("WELCOME TO THE SILENT SPIRITUAL CAPITAL PORTAL")
+    print("==============================================")
+    
+    # 1. रिसीवर को समझना (Receiving Market Messages - Page 165)
+    name = input("Hi Traveller, what's your name? ")
+    origin = input("Which country are you from? ")
+    travel_style = input("What do you seek? (Peace / Adventure / Culture): ")
+
+    # 2. कस्टमाइज्ड 'Encoding' (हर किसी के लिए अलग मैसेज)
+    if origin.lower() == "india":
+        currency = "INR (₹)"
+        welcome_note = f"नमस्ते {name}, भारत की आध्यात्मिक विरासत में आपका स्वागत है।"
+        price_multiplier = 1
+    else:
+        currency = "USD ($)"
+        welcome_note = f"Welcome {name}, explore the ancient soul of India."
+        price_multiplier = 0.012  # डॉलर कन्वर्जन
+
+    # 3. 'Persuasion' स्ट्रेटेजी (राजी करने का तरीका - Page 164)
+    if travel_style.lower() == "peace":
+        package = "The Deoband Soul Retreat"
+        highlights = "Meditation, Islamic Architecture, Organic Cuisine"
+        base_price = 5000
+    elif travel_style.lower() == "culture":
+        package = "Heritage & Harmony Trail"
+        highlights = "Historical Walks, Artisan Meetups, Traditional Stay"
+        base_price = 7000
+    else:
+        package = "Explorer's Special"
+        highlights = "Local Markets, Hidden Gems, Street Food Tour"
+        base_price = 3500
+
+    # 4. 'Shared Meaning' स्थापित करना (Noise हटाना - Page 165)
+    print(f"\n{welcome_note}")
+    print(f"--- YOUR PERSONALIZED PLAN: {package} ---")
+    print(f"Experience Highlights: {highlights}")
+    
+    final_price = base_price * price_multiplier
+    print(f"Special Price: {currency} {final_price:.2f}")
+
+    # 5. सोशल इन्फ्लुएंस (Social Marketing - Page 164)
+    print("\n--- WHY CHOOSE US? ---")
+    print("* Your visit supports 10 local families.")
+    print("* Certified Safe & COVID-secure destination.")
+    print("* 24/7 Personal Concierge Support.")
+
+    # 6. फीडबैक और कॉल टू एक्शन (Closing the Loop)
+    print("\n--- LIMITED TIME OFFER ---")
+    decision = input("Book in the next 24 hours for a 15% discount! Interested? (Yes/No): ")
+
+    if decision.lower() == "yes":
+        print(f"CONGRATULATIONS {name.upper()}! Our manager will contact you for visa/travel assistance.")
+        print("Action: Tourist Converted Successfully! ✅")
+    else:
+        print("Wait! Check our 'Guest Testimonials' and see why thousands love us. 🌟")
+        print("Action: Follow-up with 'Retargeting' Message. 📧")
+
+# सिस्टम शुरू करें
+tourist_magnet()
+# ज़हीर की 'Dream Destination' गैलरी सिस्टम
+def photo_gallery_manager():
+    print("--- 📸 EXPLORE THE SILENT SPIRITUAL CAPITAL GALLERY ---")
+    
+    # पर्यटकों की पसंद के अनुसार श्रेणियाँ (Page-164: Target Segments)
+    categories = {
+        "1": "Spiritual Sites (Temples & Mosques)",
+        "2": "Nature & Landscape (Sunrise & Rivers)",
+        "3": "Local Life (Artisans & Food)",
+        "4": "Luxury Stay (Rooms & Pool)"
+    }
+
+    for key, value in categories.items():
+        print(f"{key}. {value}")
+
+    user_choice = input("\nWhich part of our soul do you want to see? (Select 1-4): ")
+
+    # विजुअल एनकोडिंग (Encoding through Images - Page 165)
+    if user_choice == "1":
+        print("\n[Loading Spiritual Gallery...]")
+        images = ["Ancient_Dome.jpg", "Prayer_Hall.png", "Sacred_Garden.jpg"]
+        description = "Experience Divine Peace and Architectural Marvels."
+    elif user_choice == "2":
+        print("\n[Loading Nature Gallery...]")
+        images = ["River_Fog.jpg", "Green_Valleys.png", "Orange_Sunset.jpg"]
+        description = "Connect with Nature in its Purest Form."
+    elif user_choice == "3":
+        print("\n[Loading Culture Gallery...]")
+        images = ["Handicraft_Worker.jpg", "Spicy_Kebab_Platter.png", "Local_Market.jpg"]
+        description = "Taste and Feel the Local Traditions."
+    elif user_choice == "4":
+        print("\n[Loading Luxury Gallery...]")
+        images = ["Royal_Suite.jpg", "Infinity_Pool.png", "Spa_Center.jpg"]
+        description = "Indulge in World-Class Comfort & Hospitality."
+    else:
+        print("Invalid choice! Showing 'Top Highlights' instead.")
+        images = ["Main_Gate.jpg", "Happy_Guest.png"]
+        description = "The Best of the Best."
+
+    # मैसेज डिस्प्ले (The Message Transmission)
+    print(f"\n✨ {description} ✨")
+    print("--------------------------------------")
+    for img in images:
+        print(f"🖼️ Displaying: {img} ... [Success]")
+    print("--------------------------------------")
+
+    # पेज-164: 'Persuading' the guest through the gallery
+    print("\nPRO TIP: Most tourists book after seeing these views!")
+    action = input("Did these photos inspire you? (Yes/No): ")
+    
+    if action.lower() == "yes":
+        print("Action: Opening Booking Page... Get 10% 'Insta-Discount'! 💸")
+    else:
+        print("Action: Sending more HD videos to your WhatsApp to clear 'Noise'. 📱")
+
+photo_gallery_manager()
+
+# ज़हीर का 'One-Stop' ट्रेवल पोर्टल
+def booking_engine():
+    print("==============================================")
+    print("   ZAHEER'S GLOBAL TRAVEL & STAY PORTAL      ")
+    print("==============================================")
+
+    # 1. सर्च इनपुट (Market Information System - Page 165)
+    destination = input("Where do you want to go? ")
+    travelers = int(input("Number of travelers: "))
+    service_type = input("What do you want to book? (Flights / Hotels / Both): ").lower()
+
+    # 2. फ्लाइट्स का लॉजिक (Informing the Guest - Page 164)
+    if "flights" in service_type or "both" in service_type:
+        print(f"\n✈️ Searching for best Flights to {destination}...")
+        # डायनामिक प्राइसिंग (Dynamic Pricing)
+        flight_base = 4500
+        total_flight_cost = flight_base * travelers
+        print(f"--- [Found] Indigo, Air India & Vistara ---")
+        print(f"Cheapest Option: ₹{total_flight_cost} (Refundable)")
+        print("Note: Special 10% 'Student Discount' applied for MTTM Scholars! 🎓")
+
+    # 3. होटल्स का लॉजिक (Persuading with Comfort - Page 164)
+    if "hotels" in service_type or "both" in service_type:
+        print(f"\n🏨 Finding Top-Rated Hotels in {destination}...")
+        print("1. Royal Heritage Resort (5-Star) - ₹8,000/night")
+        print("2. The Spiritual Inn (4-Star) - ₹3,500/night")
+        print("3. Budget Backpacker (3-Star) - ₹1,200/night")
+        
+        hotel_choice = input("Select your choice (1, 2, or 3): ")
+        
+        # 'People' Element (Page-163): Adding human service touch
+        if hotel_choice == "1":
+            print("Action: Personal Butler & Airport Pickup service added. ✨")
+            stay_cost = 8000
+        else:
+            print("Action: Standard room with Breakfast included. 🍳")
+            stay_cost = 3500 if hotel_choice == "2" else 1200
+            
+        total_hotel_cost = stay_cost * travelers
+
+    # 4. फाइनल कोटेशन और 'Action' (The Marketing Mix)
+    print("\n--- YOUR TRIP SUMMARY ---")
+    grand_total = 0
+    if "flights" in service_type or "both" in service_type:
+        print(f"Flight Cost: ₹{total_flight_cost}")
+        grand_total += total_flight_cost
+    if "hotels" in service_type or "both" in service_type:
+        print(f"Hotel Cost: ₹{total_hotel_cost}")
+        grand_total += total_hotel_cost
+
+    print(f"TOTAL AMOUNT: ₹{grand_total}")
+    
+    # Page-165: Feedback Loop
+    confirm = input("\nReady to confirm your booking? (Yes/No): ")
+    if confirm.lower() == "yes":
+        print(f"\nSUCCESS! E-tickets and Voucher sent to Zaheer's portal. ✅")
+        print("Don't forget to leave your FEEDBACK after the trip! (Page-165)")
+    else:
+        print("\nSaving your search. We'll alert you if prices drop! 📉")
+
+# इंजन चलायें
+booking_engine()
+
+# ज़हीर का 'International Wing' फ्लाइट मैनेजर
+def international_flight_portal():
+    print("--------------------------------------------------")
+    print("✈️  ZAHEER'S ASIA-PACIFIC FLIGHT SEARCH ENGINE  ✈️")
+    print("--------------------------------------------------")
+
+    # 1. रिसीवर की जानकारी (Market Research - Page 165)
+    origin = "Delhi (DEL)"
+    destination = "Kuala Lumpur (KUL)"
+    passengers = int(input("Enter number of travelers: "))
+    class_preference = input("Class (Economy / Business): ").lower()
+
+    # 2. एयर एशिया: Low-Cost Carrier (LCC) Logic - 'Inform & Persuade'
+    # Page-164: Focusing on Price-Sensitive Market
+    aa_base_fare = 12000
+    aa_tax = 3500
+    aa_total = (aa_base_fare + aa_tax) * passengers
+    
+    # 3. मलेशिया एयरलाइंस: Full-Service Carrier (FSC) Logic
+    # Page-163: Focusing on 'People' and 'Physical Evidence' (Comfort)
+    malaysia_base_fare = 22000
+    malaysia_tax = 5000
+    malaysia_total = (malaysia_base_fare + malaysia_tax) * passengers
+
+    # 4. तुलनात्मक एनकोडिंग (Encoding the Message - Page 165)
+    print(f"\n--- FLIGHT OPTIONS: {origin} to {destination} ---")
+    
+    print("\n1. AIR ASIA (The Budget King)")
+    print(f"   - Total Fare: ₹{aa_total}")
+    print("   - Perks: Lowest Price Guarantee, Point-to-Point Service.")
+    print("   - Note: Meals and Baggage are extra (Unbundled Pricing).")
+
+    print("\n2. MALAYSIA AIRLINES (The Premium Experience)")
+    print(f"   - Total Fare: ₹{malaysia_total}")
+    print("   - Perks: In-flight Dining, 30kg Baggage, Spacious Seating.")
+    print("   - Note: 'Hospitality Beyond Borders' (Page-164: Reputation).")
+
+    # 5. डिसीजन मेकिंग (Persuasion Strategy - Page 164)
+    choice = input("\nWhich Airline would you like to book? (Enter 1 or 2): ")
+
+    if choice == "1":
+        print(f"\n✅ Booking AIR ASIA for {passengers} people...")
+        print("Message: You saved money for your destination activities! (Yield Management)")
+    elif choice == "2":
+        print(f"\n✅ Booking MALAYSIA AIRLINES for {passengers} people...")
+        print("Message: Enjoy the premium Malaysian Hospitality! (Service Quality - Page 159)")
+    else:
+        print("\nInvalid selection. Let's restart the 'Dialogue' (Page-165).")
+
+    # 6. इंटरनेशनल डिस्काउंट (Encouraging Action)
+    if passengers > 3:
+        discount = 2000
+        print(f"\n🎉 Group Booking Alert! Zaheer has applied a ₹{discount} 'Buddy Discount'.")
+    
+    # 7. फीडबैक लूप (Feedback Loop - Page 165)
+    print("\n--- TRAVEL ADVISORY ---")
+    print("Please check Visa requirements for Malaysia before flying.")
+    print("Rate our search experience (1-5): ")
+    rating = input()
+    print(f"Thank you! Your feedback of {rating} helps us remove 'Communication Noise'.")
+
+# सिस्टम एक्टिवेट करें
+international_flight_portal()
+
+# ज़हीर का 2026 ट्रेंडिंग डेस्टिनेशन इंजन
+def trending_destinations_2026():
+    print("--- 🔥 TOP TRENDING DESTINATIONS 2026 (MTTM EDITION) ---")
+    
+    # डेटाबेस: 2026 के सबसे चर्चित नाम
+    trends = {
+        "India (Domestic)": {
+            "Jorhat & Majuli (Assam)": "Gateway to the world's largest river island. (493% Growth!)",
+            "Varanasi (UP)": "Spiritual heart, now with modern infrastructure.",
+            "Spiti Valley (HP)": "Trending for 'Astro-Travel' and Winter Adventures.",
+            "Kerala": "Leading the 'Glow-cation' (Skin & Longevity Wellness) trend."
+        },
+        "International (Short-Haul)": {
+            "Malaysia": "Visa-Free entry! Cameron Highlands & Langkawi are favorites.",
+            "Vietnam (Quy Nhon)": "The 'Next Beach Destination' of SE Asia.",
+            "Sri Lanka (Jaffna)": "Rising for its deep cultural tapestry and heritage.",
+            "Thailand": "Still #1 for budget-friendly beach vacations."
+        },
+        "Global (Long-Haul)": {
+            "Japan (Naoshima)": "A tiny art-island becoming a global design pilgrimage.",
+            "Georgia (Tbilisi)": "Europe's next big cultural and café-scene hotspot.",
+            "Egypt (Cairo)": "Grand Opening of the Grand Egyptian Museum (GEM)."
+        }
+    }
+
+    # डिस्प्ले लॉजिक
+    for category, places in trends.items():
+        print(f"\n🌍 CATEGORY: {category}")
+        for place, fact in places.items():
+            print(f"📍 {place}: {fact}")
+
+    # Unit-9: Understanding 'Receiver' Needs (Page-164)
+    print("\n" + "-"*50)
+    budget = input("Manager Zaheer, what is the guest's vibe? (Budget / Luxury / Spiritual): ").lower()
+
+    if budget == "budget":
+        print("Recommendation: **Vietnam or AirAsia to Malaysia**. (Yield Management: High Volume)")
+    elif budget == "spiritual":
+        print("Recommendation: **Varanasi or Sri Lanka**. (Cultural Immersion - Page 164)")
+    elif budget == "luxury":
+        print("Recommendation: **Japan or Egypt's New Resorts**. (Service Quality - Page 159)")
+    else:
+        print("Recommendation: Suggest **Jorhat, Assam** – It's the #1 Trend of 2026!")
+
+trending_destinations_2026()
+# ज़हीर का 'वर्ल्ड वाइड' एडवेंचर पोर्टल
+def global_bucket_list_2026():
+    print("--- 🌍 TOP GLOBAL EXPERIENCES 2026: THE MANAGER'S CHOICE ---")
+    
+    # श्रेणियों के अनुसार अनुभव (Ref: Unit 9, Page 164)
+    experiences = {
+        "A": "Spiritual & Wellness (For the Soul)",
+        "B": "Extreme Adventure (For the Thrill)",
+        "C": "Unique Stays (For the Memory)",
+        "D": "Cultural Deep-Dive (For the Knowledge)"
+    }
+
+    for key, value in experiences.items():
+        print(f"{key}. {value}")
+
+    choice = input("\nZaheer, which bucket should we open? (A-D): ").upper()
+
+    # लॉजिक: डेस्टिनेशन और एक्टिविटी
+    if choice == "A":
+        print("\n✨ SPIRITUAL & WELLNESS")
+        print("- Bhutan: Mindful hikes and hot stone baths in Himalayan serenity.")
+        print("- India (Rishikesh/Kerala): 'Glow-cation' – Wellness that heals you.")
+        print("- Japan (Naoshima): Art as meditation on a tiny art-island.")
+    elif choice == "B":
+        print("\n🔥 EXTREME ADVENTURE")
+        print("- Iceland: Float between continental plates (Silfra Fissure).")
+        print("- Antarctica: Snow camping and zodiac excursions among icebergs.")
+        print("- Tanzania: Walking safari in the heart of the Serengeti.")
+    elif choice == "C":
+        print("\n🏨 UNIQUE STAYS")
+        print("- Maldives: Sleep in a 'Beach Bubble' under the stars (Finolhu).")
+        print("- Finland: Stay in a Glass Igloo to watch the Northern Lights (Ivalo).")
+        print("- Egypt: High Tea like royalty at the Old Cataract Hotel, Aswan.")
+    elif choice == "D":
+        print("\n🏛️ CULTURAL DEEP-DIVE")
+        print("- Egypt (Cairo): The Grand Opening of the Grand Egyptian Museum (GEM).")
+        print("- South Korea: Cherry blossom trails (Less crowded than Japan!).")
+        print("- Uzbekistan: Re-living the Silk Road in the bazaars of Samarkand.")
+    else:
+        print("Invalid Choice! Let's follow the 'Communication Loop' again (Page 165).")
+
+    # Page-158: Yield Management - Best time to book
+    print("\n💡 MANAGER'S PRO-TIP (Page 158):")
+    print("For these experiences, book 'Off-Peak' (Shoulder Season).")
+    print("Example: Japan in Autumn or Morocco in Spring for better GOP (Profit)!")
+
+global_bucket_list_2026()
+
+# ज़हीर का ट्रेंडिंग एक्टिविटीज ट्रैकर (2026 Edition)
+def trending_activities_2026():
+    print("==================================================")
+    print("🚀 ZAHEER'S 2026 GLOBAL ACTIVITY & ADVENTURE HUB 🚀")
+    print("==================================================")
+
+    # 1. डेटा माइनिंग (Market Intelligence - Page 165)
+    activity_categories = {
+        "1": "Wellness & Glow-cations (Healing)",
+        "2": "Celestial & Astro-Tourism (Stars)",
+        "3": "Eco-Adventures & Rewilding (Nature)",
+        "4": "Digital Detox & Slow Living (Peace)"
+    }
+
+    for k, v in activity_categories.items():
+        print(f"[{k}] {v}")
+
+    user_interest = input("\nManager Zaheer, select a trend to explore (1-4): ")
+
+    # 2. ट्रेंड्स का विस्तृत विवरण (Encoding the Message - Page 165)
+    if user_interest == "1":
+        print("\n✨ TREND: GLOW-CATIONS")
+        print("- Activity: Bio-hacking Retreats in Switzerland.")
+        print("- Activity: Ayurveda & Sound Healing in Kerala.")
+        print("- Why it's trending: Focus on 'Longevity' and 'Self-care' (Page-164).")
+        
+    elif user_interest == "2":
+        print("\n🌌 TREND: ASTRO-TOURISM")
+        print("- Activity: Stargazing in Spiti Valley, India.")
+        print("- Activity: Aurora Borealis (Northern Lights) camping in Norway.")
+        print("- Why it's trending: High demand for 'Dark Sky' preserves.")
+
+    elif user_interest == "3":
+        print("\n🌿 TREND: REWILDING & ECO-ACTION")
+        print("- Activity: Coral Reef restoration in Maldives.")
+        print("- Activity: Tiger Tracking & Conservation walks in Ranthambore.")
+        print("- Why it's trending: Conscious travelers want to 'Give Back' (Social Marketing).")
+
+    elif user_interest == "4":
+        print("\n🧘 TREND: DIGITAL DETOX")
+        print("- Activity: Off-grid 'Hush Trips' in the Scottish Highlands.")
+        print("- Activity: Monastery Stays in Deoband & Rishikesh (Silent Retreats).")
+        print("- Why it's trending: Escaping the 'Noise' of digital life (Page-165).")
+
+    # 3. ऑपरेशनल प्लानिंग (People & Process - Page 163)
+    print("\n" + "-"*40)
+    print("PLANNING THE LOGISTICS:")
+    
+    group_size = int(input("Enter expected Group Size: "))
+    
+    # 80-20 Principle: Focus on the 20% activities that give 80% revenue
+    if group_size > 10:
+        discount = "15% Group Rebate"
+        manager_note = "Assign a dedicated 'Activity Coordinator' for safety."
+    else:
+        discount = "No Discount"
+        manager_note = "Focus on 'Personalized Attention' (High Quality Service)."
+
+    # 4. फाइनल आउटपुट (The Marketing Communication Mix)
+    print("\n--- ZAHEER'S STRATEGIC SUMMARY ---")
+    print(f"Selected Trend: {activity_categories.get(user_interest, 'Mixed')}")
+    print(f"Incentive: {discount}")
+    print(f"Management Note: {manager_note}")
+    
+    # Page-165: Feedback Loop
+    print("\nAction: Send this proposal to International Clients? (Yes/No)")
+    if input().lower() == "yes":
+        print("Status: Message Encoded & Transmitted through WhatsApp/Email. ✅")
+    else:
+        print("Status: Proposal saved for 'A/B Testing'. 📁")
+
+# रन करें
+trending_activities_2026()
 
 
