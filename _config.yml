@@ -1,0 +1,17 @@
+# ज़हीर की नई कॉन्फ़िगरेशन फाइल
+title: Silent Spiritual Capital
+author: Zaheer Arshad (MTTM)
+email: your-email@example.com
+description: >-
+  Professional Tourism & Spiritual Excellence. 
+  Bridging ancient traditions with modern standards.
+baseurl: "" 
+url: "https://yourusername.github.io"
+
+# थीम्स (Themes) - अगर थीम इंस्टॉल नहीं है तो इसे खाली छोड़ें
+theme: minima
+remote_theme: jekyll/minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
